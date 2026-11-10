@@ -63,6 +63,12 @@ stage2/
   index/stage2_targets.csv            # target -> finding_uid list
   index/stage2_addresses.csv          # project -> address list with evidence URL
   index/stage2_summary.json           # counts
+prior/
+  PRIOR_TRACE.md                      # protocol for the prior-campaign layer
+  PRIOR_MASTER.md                     # 615 unpublished/un-hunted findings traced
+  results.tar.gz                      # 13 batch outputs
+  index/prior_master.csv              # finding -> address
+  index/prior_targets.csv             # target -> finding list
 legacy/
   EXTRACTABLE_VALUE_MASTER.md         # earlier campaign's live/gated findings
 ```
