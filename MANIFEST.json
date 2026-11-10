@@ -1,0 +1,64 @@
+{
+  "project": "web3-audit-profit-hunt",
+  "stage": "1-complete,2-complete",
+  "generated": "2026-11-10",
+  "sources": {
+    "github": {
+      "repo": "DicksonWu654/web3-audit-findings",
+      "snapshot": "corpus-v1.3.0",
+      "source_snapshot": "2026-10-22",
+      "finding_occurrences": 175640,
+      "reports": 13522,
+      "publishers": 63
+    },
+    "huggingface": {
+      "dataset": "daveytea/x23-solidity-vulnerabilities-audit-findings",
+      "sha": "04642c222befcfd2f04cf817f5e3886dcb531cd3",
+      "findings": 55134,
+      "reports": 4395
+    }
+  },
+  "unified": {
+    "critical_high_occurrences": 30622,
+    "critical_high_clusters": 24983,
+    "critical": 5084,
+    "high": 19899
+  },
+  "stage1": {
+    "clusters_batched": 24966,
+    "clusters_unbatched_dos_only": 17,
+    "profit_plausible": 6792,
+    "dos_only": 6639,
+    "unclear": 4874,
+    "uneconomic": 4709,
+    "privileged": 1952,
+    "project_groups": 3479
+  },
+  "stage2": {
+    "findings": 6792,
+    "profit_yes": 6598,
+    "profit_no": 44,
+    "profit_uncertain": 150,
+    "trace_found": 1968,
+    "trace_partial": 1678,
+    "trace_not_found": 3146,
+    "with_address": 3837,
+    "unique_addresses": 1696,
+    "target_rows": 2399,
+    "batch_results": 139
+  },
+  "files": {
+    "stage1_master": "stage1/index/stage1_master_profit.csv",
+    "stage1_projects": "stage1/index/stage1_projects.csv",
+    "stage1_targets": "stage1/index/stage1_targets.csv",
+    "stage1_clusters": "stage1/index/ch_master_clusters.csv.gz",
+    "stage1_results_archive": "stage1/results.tar.gz",
+    "stage2_master": "stage2/STAGE2_MASTER.md",
+    "stage2_findings": "stage2/index/stage2_master.csv",
+    "stage2_targets": "stage2/index/stage2_targets.csv",
+    "stage2_addresses": "stage2/index/stage2_addresses.csv",
+    "stage2_summary": "stage2/index/stage2_summary.json",
+    "stage2_results_archive": "stage2/results.tar.gz",
+    "legacy": "legacy/EXTRACTABLE_VALUE_MASTER.md"
+  }
+}

@@ -1,0 +1,7 @@
+github-web3-audit-findings/
+hf-x23/
+raw/
+*.parquet
+*.jsonl
+*.zst
+.env

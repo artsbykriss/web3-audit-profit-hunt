@@ -1,0 +1,99 @@
+{
+ "generated": "2026-11-10",
+ "findings": 6792,
+ "with_address": 3837,
+ "unique_addresses": 1696,
+ "unique_projects": 3203,
+ "targets": 2399,
+ "profit_yes": 6598,
+ "profit_no": 44,
+ "profit_uncertain": 150,
+ "found": 1968,
+ "partial": 1678,
+ "not_found": 3146,
+ "critical": 1917,
+ "high": 4875,
+ "high_conf": 2013,
+ "by_chain": [
+  [
+   "Ethereum",
+   1339
+  ],
+  [
+   "Arbitrum",
+   257
+  ],
+  [
+   "Base",
+   134
+  ],
+  [
+   "Optimism",
+   73
+  ],
+  [
+   "Solana",
+   70
+  ],
+  [
+   "BNB Chain",
+   66
+  ],
+  [
+   "Polygon",
+   42
+  ],
+  [
+   "Avalanche",
+   26
+  ],
+  [
+   "Berachain",
+   20
+  ],
+  [
+   "Terra",
+   17
+  ],
+  [
+   "Canto",
+   16
+  ],
+  [
+   "zkSync Era",
+   15
+  ],
+  [
+   "",
+   14
+  ],
+  [
+   "Sonic",
+   13
+  ],
+  [
+   "BNB Smart Chain",
+   12
+  ],
+  [
+   "Sui",
+   12
+  ],
+  [
+   "Blast",
+   12
+  ],
+  [
+   "NEAR",
+   12
+  ],
+  [
+   "Aptos",
+   10
+  ],
+  [
+   "Sei",
+   9
+  ]
+ ]
+}
