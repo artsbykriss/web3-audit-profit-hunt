@@ -1,7 +1,7 @@
 # Web3 Audit Profit Hunt
 
 **Stage 1 — critical/high triage for external, unprivileged profit.** Complete: 24,966 clusters triaged.
-**Stage 2 — finding reconfirmation and deployment address trace.** Complete: 6,792 findings, 3,837 mapped to 1,696 deployment addresses.
+**Stage 2 + re-trace — deployment address trace.** Complete: 6,254 of 7,479 fund-draining C/H findings mapped to a deployment address; `NOT_FOUND` reduced to 168 findings / 101 projects.
 
 ## Scope
 
@@ -63,6 +63,15 @@ stage2/
   index/stage2_targets.csv            # target -> finding_uid list
   index/stage2_addresses.csv          # project -> address list with evidence URL
   index/stage2_summary.json           # counts
+final/
+  FINAL_FUND_DRAINING.csv             # clean C/H fund-draining deliverable
+  FINAL_MASTER.csv                    # all rows incl. uncertain/lower severities
+  FINAL_SUMMARY.md                    # counts, columns, caveats
+  FINAL_SUMMARY.json
+retrace/
+  RETRACE.md                          # strict no-tooling-failure protocol
+  index/retrace_projects.csv          # 1,748-project worklist
+  results.tar.gz                      # 123 re-trace batch outputs
 prior/
   PRIOR_TRACE.md                      # protocol for the prior-campaign layer
   PRIOR_MASTER.md                     # 615 unpublished/un-hunted findings traced
