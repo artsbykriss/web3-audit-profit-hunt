@@ -63,6 +63,13 @@ stage2/
   index/stage2_targets.csv            # target -> finding_uid list
   index/stage2_addresses.csv          # project -> address list with evidence URL
   index/stage2_summary.json           # counts
+stage3/
+  STAGE3.md                           # live-audit protocol
+  MASTER_LOG.csv                      # 588 priority-1 targets audited
+  results.tar.gz                      # 196 batch outputs
+  index/stage3_targets.csv            # all 3,685 targets
+extractables/
+  01..06 dossiers                     # live fund-draining findings with PoCs
 final/
   FINAL_FUND_DRAINING.csv             # clean C/H fund-draining deliverable
   FINAL_MASTER.csv                    # all rows incl. uncertain/lower severities
