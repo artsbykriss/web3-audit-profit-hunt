@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-025",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0191",
+   "lane": "A_NO_ADDRESS",
+   "project": "Polynomial Protocol contest",
+   "chain": "Optimism",
+   "trace_status": "PARTIAL",
+   "n_findings": "3",
+   "critical": "0",
+   "high": "3",
+   "titles": "`KangarooVault.removeCollateral` updates storage without actually removing collateral, resulting in lost collateral | Short positions can be burned while holding collateral | Missing totalFunds update in LiquidityPool's `OpenShort()`, causing LiquidityPool token holder to lose a portion of their token value",
+   "uids": "finding:aed46826f971eb37d97b3d16dd927c9072a11fb3f41bfe2f5573acb2917ca83d;finding:60e77ecf36a169ef9e72adada15a43629d8ced7b810b84d97b9c91d725472a5e;finding:96c74a1894e382025251c7558b955d606a83d1d48b9736243d6dc7a81d10f85a",
+   "report_urls": "reports/code4rena/2023/polynomial-protocol-contest-2a70e6d5.md",
+   "evidence_urls": "https://github.com/code-423n4/2023-03-polynomial-findings/blob/c255b5ffed6d45afa70f30afdd950d0139e13928/report.md",
+   "known_addresses": "",
+   "known_address_notes": "Code4rena Mar-2023 contest over KangarooVault / LiquidityPool / PowerPerp on Optimism. The public report contains four 0x addresses but all are test fixtures inside warden PoCs (Synthetix PerpsV2MarketSettings 0x0979\u20264Ad1, mock vault-token holders); none are Polynomial deployments. C4 audit repo is not public, Polynomial-Protocol org has no v1 perps repo with an address book, and Optimism Blockscout/Etherscan name search is unavailable. Contract identities (KangarooVault, LiquidityPool) confirme",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0234",
+   "lane": "A_NO_ADDRESS",
+   "project": "SuiPad",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "3",
+   "critical": "0",
+   "high": "3",
+   "titles": "Incorrect Function Visibility | Lack of Validation for Campaign and Whitelist ID in invest | Incorrect Calculation of amount_to_claim in cl aim",
+   "uids": "finding:2a3eb7db908803dfe64315564ab3e4a4b8e7b6c0a2de09e6c994faf45d76ccde;finding:77f18417716c16861fc9b91f5da99e64d665a5238c4967483e962251a11c6cdd;finding:f243268be8d68b2e6d622f6a4ff83bf844a8c502451e5978e7b6904e1efdbadb",
+   "report_urls": "reports/movebit/2023/suipad-98244880.md",
+   "evidence_urls": "https://github.com/movebit/Sampled-Audit-Reports/blob/9f2027ef1500342dec1f1385db425688858ec51d/reports/SuiPad-Smart-Contract-Audit-Report.pdf",
+   "known_addresses": "",
+   "known_address_notes": "MoveBit 2023 report on SuiPad's Move contracts (repo github.com/SuiPad/suipad-contract; findings 'Incorrect Function Visibility', campaign/whitelist id validation, amount_to_claim). No package id / object id in the report. SuiPad/suipad-contract is 404 via GitHub API (org search 'user:Suipad-Tech' shows only suipad-main/airdrop/odyssey), docs.suipad.xyz no longer resolves (DNS), Wayback snapshot of docs.suipad.xyz (2025) contains no 0x64-hex Sui ids, suipad.xyz app bundles expose no package ids.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0277",
+   "lane": "A_NO_ADDRESS",
+   "project": "for Fuel",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "3",
+   "critical": "0",
+   "high": "3",
+   "titles": "Signature confusion due to EIP-712 non- compliance | Rounding errors can be exploited profitably | No amount out protection on Market order",
+   "uids": "finding:3b828840e77fa4e5ed1af867ab5793180fa1ecdf661ee447cda3f0907ba47463;finding:0e72d6560d61b48dc9a6f2c1bfe97f54cd8d5e9bb6cb3d92ff0ad5e3ba036d3e;finding:dce7043fddb6106122d322bf30c7eb18b9976fac0356d8f4d2e98a4a154792c9",
+   "report_urls": "reports/hexens/2025/for-fuel-1c3c5830.md;reports/hexens/2025/for-fuel-4031268d.md",
+   "evidence_urls": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/84e78849628ca0d9114b66bf886ae11d9e0f8a50/fuel-o2-aug-25%28Final%29.pdf;https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/84e78849628ca0d9114b66bf886ae11d9e0f8a50/fuel-o2-oct-25%28Final%29.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Hexens Aug/Oct-2025 reviews of Fuel Labs' FuelO2Orderbook (Sway, on Fuel). Chain confirmed; the product is live (O2 exchange, docs.o2.app). The report references a CONTRACT_ID constant but prints no value. Live O2 identifiers from docs (Accounts Registry 0x284c6802...cddb2, Books Registry 0xcf500730...666f, Books Blacklist 0x02c7b1ed..., Fast Bridge 0x12a1cf2d..., EVM Messenger 0x2B1c1E13... on Base/Ethereum) are recorded as candidates in notes only \u2014 mapping of the audited orderbook CONTRACT_ID",
+   "project_addresses": ""
+  }
+ ]
+}

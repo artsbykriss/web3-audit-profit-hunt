@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-072",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0024",
+   "lane": "C_FOUND",
+   "project": "2025-01-02-gamic-sca-gamic-gamic-airdrop-dec2024-sca-gamic-gamic-airdrop-dec2024",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Potential Exploit Due to Premature and Unauthorized Initialization of Allocation Points",
+   "uids": "2025-01-02-gamic-sca-gamic-gamic-airdrop-dec2024-sca-gamic-gamic-airdrop-dec2024::premature-and-unauthorized-initialization-of-allocation-points",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0xe0162b2D9305BC33ca9FEacAc03Fe4949898A8b6;0xf05215b8753cc5b58345b598445F6bD16Da7a89b",
+   "known_address_notes": "Hacken page: Platform=Base, repo Artist3-NFT/gamic-airdrop @d4020cb (now 404), contracts AirdropVault/Airdrop/Staking. Blockscout Base search found the verified AirdropVault that actually holds GNG (token-balances API), distinguishing it from an unrelated 0xAd0f1eda... vault. Mainnet explorer name search was the only route because the repo and Basescan UI are unavailable (Basescan blocked by Cloudflare; Etherscan V2 free tier rejects chainid 8453, code read via Alchemy).",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0030",
+   "lane": "C_FOUND",
+   "project": "2025-10-sequence",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Chained signature with checkpoint usage disabled can bypass all checkpointer validation",
+   "uids": "2025-10-sequence::2025-10-sequence_H-01",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0x00000000000018A77519fcCCa060c2537c9D6d3F;0x0000000000001f3C39d61698ab21131a12134454;0xD0ae8eF93b7DA4eabb32Ec4d81b7a501DCa04D4C",
+   "known_address_notes": "Audit scope src/Factory.sol, Stage1Module.sol, Stage2Module.sol, Guest.sol of 0xsequence/wallet-contracts-v3. live-contracts README publishes the sequence_v3/rc_6 row set; addresses are ERC-2470 deterministic and identical across supported EVM chains. Blockscout independently shows the same Stage1Module implementations. Chained-signature/checkpointer logic lives in Stage1Module/Stage2Module.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0038",
+   "lane": "C_FOUND",
+   "project": "Aftermath Perpetuals Oracle",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Missing Assistant Authorization Check",
+   "uids": "finding:bbd0edf573c9a63ee9007a45f802564073094c99fd02111e88034c0d7d67bc50",
+   "report_urls": "reports/ottersec/2025/aftermath-perpetuals-oracle-f1734342.md",
+   "evidence_urls": "https://osec.io/reports/2fe84d4e-4146-802e-898f-ec9d4df151f5",
+   "known_addresses": "0x9237337d846fc90b0a7acbdee4ab91809298691873d28e1d64d91e6303ff6ba4",
+   "known_address_notes": "OtterSec scope file is packages/oracle-aggregator/sources/price.move. Aftermath's published package table names the 'oracle' package 0x923733...; GraphQL confirms modules price/price_feed/source. Config (oracle) object 0xd41beee1... is listed too. The audited oracle-aggregator is the ancestor of this published 'oracle' package.",
+   "project_addresses": ""
+  }
+ ]
+}

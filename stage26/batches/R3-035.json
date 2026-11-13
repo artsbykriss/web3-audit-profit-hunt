@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-035",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0073",
+   "lane": "A_NO_ADDRESS",
+   "project": "ClickPesa Oracle Aggregator Stellar",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "The Oracle Aggregator Can Be Hijacked By Third-Parties",
+   "uids": "finding:b4b548c13a7796cf6a7c6d1effb279653705ee6faee2fc5265cb4d5ef001caa0",
+   "report_urls": "reports/runtime-verification/2024/clickpesa-oracle-aggregator-stellar-6780d3bb.md",
+   "evidence_urls": "https://github.com/runtimeverification/publications/blob/c30a9c50b8b2eed9e58fab92d8925800a372fc41/reports/smart-contracts/ClickPesa%20Oracle%20Aggregator.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Runtime Verification 2024-12 audited ClickPesa Debt Fund's fork of Blend's Soroban Oracle Aggregator (commit e57d0607). The report (Jina text) contains no contract ID; the repo publishes none; Blend's mainnet deployment table has no ClickPesa entry; stellar.expert search for 'clickpesa'/'oracle-aggregator' returns no contract. Core lending pool is live per the report, but the audited oracle contract ID is unpublished.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0085",
+   "lane": "A_NO_ADDRESS",
+   "project": "DVX",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "[H-01] Swapper.sol::Swap - No slippage control on token swap.",
+   "uids": "hashlock-dvx-2024-06-dvx-smart-contract-audit-report::h-01-swapper-sol-swap-no-slippage-control-on-token-swap",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Hashlock report states network=ARBITRUM, platform Arbitrum/Solidity, audited commit 5f4cb3a5df264383ca8704c069469a3610066fcd; scope is a perp-trading stack (Swapper.sol, AccountProxy.sol/Account.sol, Exchange.sol). Code delivered via private GitHub. No addresses in the report; no deployment/address page found for the DVX app (searches returned unrelated Arbitrum DEXes). -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0087",
+   "lane": "A_NO_ADDRESS",
+   "project": "Dapper Labs Dapper Smart Contract Wallet",
+   "chain": "Flow",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Replay Attacks on Co-signer Signed Invocations",
+   "uids": "finding:25a4f15207cce6a6e4b1188625f2aaabb183603fa24624308c434666be81cac6",
+   "report_urls": "reports/sigma-prime/2019/dapper-labs-dapper-smart-contract-wallet-0b47cca2.md",
+   "evidence_urls": "https://github.com/sigp/public-audits/blob/7d9046e092e1e93623164e39df8c552a16f2fe5d/reports/dapper-wallet/review.pdf",
+   "known_addresses": "",
+   "known_address_notes": "The published Sigma Prime review (2019) is of the EVM wallet (CoreWallet + WalletFactory, see dapperlabs/dapper-contracts), not of a Cadence/Flow contract; the corpus 'Flow' label therefore has no matching in-scope artifact. Dapper's Flow-side wallet contracts are deployed under a Dapper-controlled Flow account that is not published in docs, the review, or the repo. No Flow account/contract address recoverable -> PARTIAL.",
+   "project_addresses": ""
+  }
+ ]
+}

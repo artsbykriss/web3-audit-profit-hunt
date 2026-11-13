@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-001",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0015",
+   "lane": "A_NO_ADDRESS",
+   "project": "2023-11-07-metatime-sca-metatime-layer-2-oct2023-s",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "5",
+   "critical": "5",
+   "high": "0",
+   "titles": "Drain of funds by calling unsubscribe() function due to reentrancy | F-2023-0927 - Vote functionality in TxValidator is open to manipulation | F-2023-0926 - Over-rewarding users due to inconsistency on MinerFormulas | F-2023-0925 - Drain of funds by calling unsubscribe() function due to reentrancy | Over-rewarding users due to inconsistency on MinerFormulas",
+   "uids": "2023-11-07-metatime-sca-metatime-layer-2-oct2023-sca-metatime-layer-2-oct2023::F-2023-0925;2023-11-07-metatime-sca-metatime-layer-2-oct2023-sca-metatime-layer-2-oct2023::f-2023-0927;2023-11-07-metatime-sca-metatime-layer-2-oct2023-sca-metatime-layer-2-oct2023::f-2023-0926;2023-11-07-metatime-sca-metatime-layer-2-oct2023-sca-metatime-layer-2-oct2023::f-2023-0925;2023-11-07-metatime-sca-metatime-layer-2-oct2023-sca-metatime-layer-2-oct2023::F-2023-0926",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Audit target is the public Metatime Genesis Contracts repo (TxValidator, MinerFormulas, MinerPool, RewardsPool, BSC bridge), MetaChain mainnet chain 571 (launched 2023-11-11, right after the Oct-2023 audit). The repo has one deploy script (scripts/deploy/00_bridge.ts) driven by env/constants; the only committed address is the BSC MTC token 0xB93ee4522C44Ef4cD7EE8c83B9Fe1A421b4b42C3 (constructor arg), which is the token, not the audited Miner contracts. rpc.metatime.com is behind Cloudflare (403/",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0235",
+   "lane": "A_NO_ADDRESS",
+   "project": "SundaeSwap V1 Contracts",
+   "chain": "Cardano",
+   "trace_status": "PARTIAL",
+   "n_findings": "5",
+   "critical": "5",
+   "high": "0",
+   "titles": "Any tokens with the currency symbol as the hash of poolMintingPolicyContract can be minted | Integer division is used multiple times in computation of token amount | Assets in escrow contract can be stolen when redeeming liquidity tokens | Minting of unlimited number of sundae tokens | Assets in escrow contract can be stolen when upgrading pool",
+   "uids": "finding:74072e7dd87289eb2e70d3b2c70c508b38fef70ba7d2a1e8731198287f95213c;finding:295324ddde2e99cd0b73d348932e7088f92ae10ae7a894f865da83b3e26b543c;finding:5c92481222d3261131f9018a51fdfbb2a89d094211c5b45dc4582e66528563e5;finding:ead0c36ad920c13646531b7a7d8798c50f9ec1388efafbb4df849dc3aee52f7f;finding:c808a7b4dc5a475f9189080feac571d812053046afaebf6b6004e61b481390b9",
+   "report_urls": "reports/runtime-verification/2021/sundaeswap-v1-contracts-0dd3e725.md",
+   "evidence_urls": "https://github.com/runtimeverification/publications/blob/c30a9c50b8b2eed9e58fab92d8925800a372fc41/reports/smart-contracts/SundaeSwap.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Runtime Verification 2021 audit of the SundaeSwap V1 Plutus (v1) AMM: poolMintingPolicy, escrow, order and pool upgrade validators (5 criticals in batch). SundaeSwap-finance/sundae-contracts README now states version 1 was 'closed source Plutus v1 contracts written in 2021' and the repo only holds v3+ (order.ak/pool.ak/settings.ak), so the audited source itself is not public and no v1 script hash is published there. docs.sundaeswap.finance publishes only the SUNDAE policy id (9a9693a9...53554e44",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0116",
+   "lane": "A_NO_ADDRESS",
+   "project": "Groupcoin",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "6",
+   "critical": "4",
+   "high": "2",
+   "titles": "Tokens can be launched to Uniswap v3 anytime, allowing to drain ETH | [C-02] Tokens can be launched to Uniswap v3 anytime, allowing to drain ETH | Uniswap v3 launch can be enabled without raising enough ETH | The same Groupcoin can be launched more than once",
+   "uids": "finding:bfbbf518dae970db4ecf4d66b5fb9b5ca382441a44708422b95f3b88cc5eaab4;pashov-team-2024-10-11-groupcoin-security-review::tokens-can-be-launched-to-uniswap-v3-anytime-allowing-to-drain-eth;group:90:0;group:90:1;finding:c9e52a531c419b5bb698d3d56ab37624bc4667e2bd3579477b7311c79ed0dc40;group:90:2",
+   "report_urls": "reports/pashov-audit-group/2024/groupcoin-6184e3fe.md",
+   "evidence_urls": "https://github.com/pashov/audits/blob/e615d8a5319647f95e217616d21770b3d8372f50/team/md/Groupcoin-security-review.md",
+   "known_addresses": "",
+   "known_address_notes": "Pashov Audit Group review 2024-10-11 of Groupcoin (bonding-curve token launcher that migrates to a Uniswap v3 pool via enableUniswapV3Launch/deploy()). Report contains no repo, chain or address; blockscout Ethereum name search for 'Groupcoin' returns nothing; GitHub 'groupcoin' repos are unrelated. No deployed instance located.",
+   "project_addresses": ""
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-050",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0317",
+   "lane": "A_NO_ADDRESS",
+   "project": "zap protocol",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "High-severity findings \u2014 2024-03-zap-protocol-judging",
+   "uids": "broad:sherlock:261:0",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Contest 243 confirms 'ZAP is a token launch and distribution protocol, initially built on Blast'. The repo's deployment artifacts exist only for blast_sepolia (LPToken 0xe126515746ea0c353efB0D31d68aFD6Bd00f89cC), mumbai and hardhat; README lists the Blast Sepolia testnet set (ERC20Factory 0x1B7AFb1C3A820B153f8B6B0fCF184b1FAd0D890F, SimpleERC20 0xc4b8d768d530F8369C1b582711Ef0e143fdA03BB, Admin 0x6fa6aBa7342454Ec81Cd952C8d7e6cF07a8B1Eb5, TokenSale 0x33489774b58f6a7EeC010DaeA285c8fa5b955377, LPtoke",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0285",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "mell Stable Gas Pricing _",
+   "chain": "Ethereum",
+   "trace_status": "PARTIAL",
+   "n_findings": "4",
+   "critical": "4",
+   "high": "0",
+   "titles": "borrowedVGas Is Set To 0 Before Subtraction | Traders Pro\ufb01t Can Be Stolen When Closing | Undercollateralized Positions Can Be Created | Settled Trading Positions Can Be Closed",
+   "uids": "finding:a98ffeb739603aa688e5f23880656fd97a9397ec110c752ca9e572966975b8f2;finding:e4aa377022dd3b09422d8d39bfbf5a0228ab1728a98b0798dffc5588628deff3;finding:57765e17d6907d199f9c622ef6992b3038cd49e19094afc4ee51665a401f4ed4;finding:35049df49759ea33d5931e403cfdfbee6143fdcdcb3c52e77c1c4306e73b1559",
+   "report_urls": "reports/guardianaudits/2024/mell-stable-gas-pricing-3a70fc99.md",
+   "evidence_urls": "https://github.com/GuardianAudits/Audits/blob/36fcc39d51fd84a6ec2c72b9c9fda8f8b6ac169d/Foil/2024-10-28_Foil.pdf",
+   "known_addresses": "0x20ba5e24ad8a5b9502d4882607f0c8526a1f3205;0xd732917866d0cdc7e9ed8ef719c9f122ef71a61e",
+   "known_address_notes": "Corpus project label is a truncation; the report is the Guardian review of project 'Foil' (repo folder Foil/, team replies signed 'Foil Team', files Position.sol / vEth accounting / stable gas pricing). Foil docs (docs.foil.xyz) confirm the same product: 'Gas and Blobspace with Stable Pricing', L1-gas Position/settlement contracts. foil.xyz (final URL www.foil.xyz) links its live Trade app to chain 8453 (Base) market 0x20ba5e24ad8a5b9502d4882607f0c8526a1f3205, a verified FoilYin proxy backed by ",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0237",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "THORChain / Rujira",
+   "chain": "THORChain",
+   "trace_status": "PARTIAL",
+   "n_findings": "5",
+   "critical": "3",
+   "high": "2",
+   "titles": "Public trigger enumeration enables rebate theft via overwrite | Exponential Growth in Filled Amounts After Partial Distribution | Users Can Claim Excess Funds After Pool Reset | Deposit value not multiplied by token price | Overpayment refunded in shares instead of base tokens",
+   "uids": "finding:6492462f956feb188f66135cf1f3e7b8057677190fd6b0aaef631e1045f9254c;finding:e0b366b9096fe14e0d9d45691bf49376044a15ad0b52c01bf4e2ffdef42b4cad;finding:f9e8b886136491224c09c7b491331017a1a80dfe1aef33580838d260a9aabe39;finding:db8c723efa14692f454ca89ed69da1d81aaf3fee92d27c609c0064f452ed4cc1;finding:3f194c9a4d3fa87555ee791cf283dbbb2a761f5d77d73615be1a36d1564aa93d",
+   "report_urls": "reports/halborn/2025/thorchain-rujira-65d63476.md;reports/halborn/2025/thorchain-rujira-9321403f.md;reports/halborn/2025/thorchain-rujira-9440ccc9.md;reports/halborn/2025/thorchain-rujira-bcfb31e9.md",
+   "evidence_urls": "https://www.halborn.com/audits/thorchain-rujira/calc---managerschedulerstrategy-85fd22;https://www.halborn.com/audits/thorchain-rujira/nami-protocol-rujira-index-product-0612c8;https://www.halborn.com/audits/thorchain-rujira/ruji-lending-48bc98;https://www.halborn.com/audits/thorchain-rujira/ruji-trade-fin-4604e5",
+   "known_addresses": "thor1ekkt8wfls055t7f7yznj07j0s4mtndkq546swutzv2de7sfcxptq27duyt;thor18e6gxcvmqfn06l09gurgwh3urlj9xztqagaslgspl2l74ejuujnqqlzzun",
+   "known_address_notes": "Four Halborn 2025 engagements under thorchain-rujira: CALC ManagerSchedulerStrategy, NAMI Protocol Rujira index product, Ruji Lending, Ruji Trade FIN. Rujira is the THORChain app layer (gitlab.com/thornode/thorchain/app-layer, CosmWasm). Official docs publish the money-market addresses (Ghost Credit + per-asset Ghost Vaults) used here as anchors; the index/strategy/FIN contracts behind the five findings are not individually published and no on-chain check was possible because every THORChain RES",
+   "project_addresses": ""
+  }
+ ]
+}

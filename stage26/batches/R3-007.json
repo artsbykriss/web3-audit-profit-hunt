@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-007",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0097",
+   "lane": "A_NO_ADDRESS",
+   "project": "Ember",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "2",
+   "high": "0",
+   "titles": "No replay protection | Hardcoded conversion rate",
+   "uids": "finding:cf298b5b07afd75e27b4cc6e15e8aee2a195598a94749af6398cc2a501f7355d;finding:d69824f18547c35f82164d3c2ad8ac70a017f24a554e6be3d67fae85b2e8aa8a",
+   "report_urls": "reports/pessimistic/2020/ember-820c1d0e.md",
+   "evidence_urls": "https://github.com/pessimistic-io/audits/blob/d45fd8767d769729e378a82beb6fbcad7c131689/Ember%20Security%20Audit%20by%20Pessimistic.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Report body shows a Set Protocol v1 fork: SmartWallet.addModule/removeModule (no replay protection), PriceOracle with hardcoded addresses, BtcOracle/EthOracle/IOracle, SetV1Valuer, AtomicSwapERC20ToERC20Module - i.e. Ethereum-style Solidity, but the report never names a chain, repo or address. 'Ember' is ambiguous: the live ember.so is a different (RWA) protocol with 2025 OtterSec audits; the 2020 Set-fork code has no public repo or deployment registry. No address recoverable -> PARTIAL (identit",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0141",
+   "lane": "A_NO_ADDRESS",
+   "project": "Lingo Token",
+   "chain": "Solana",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "2",
+   "high": "0",
+   "titles": "Insu\ufb03cient validations allow attackers to steal by increasing refundable fee amount with- out any transfer fees | Attacker can become the authority of the con\ufb01g account",
+   "uids": "finding:9a428a7c9ea5f0e9c6028fdec51b5d3fafa574f78e893c8396f29e04d0e34e0e;finding:0b52dfb04af284bd2c2b6552ee05daeb9b72b60597210dcef1f124306b4de68a",
+   "report_urls": "reports/cantina/2025/lingo-token-d7e8a051.md",
+   "evidence_urls": "https://cdn.cantina.xyz/reports/cantina_lingo_february2025.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Cantina report (Feb 2025) is a Solana Anchor/Token-2022 transfer-hook whitelist program (Config.authority, AccountWhitelist.refundable_amount, initialize_extra_account_meta_list); fix commit points at github.com/LingoCoin/LingoToken, which is 404 (private/removed) so no declare_id() or deployments file is reachable. No program id or mint is named in the report. Checked Jupiter token search + Dexscreener for a Lingo mint: only unrelated pump.fun memecoins (5qc24MU4\u2026pump, ECAU44z7\u2026pump); a 'Lingo ",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0145",
+   "lane": "A_NO_ADDRESS",
+   "project": "Liquid Loot",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "2",
+   "high": "0",
+   "titles": "Lack of constraint on NFT collection allows draining of all lender funds | A malicious lender can prevent repayment and refinancing, to steal the borrower's NFT",
+   "uids": "finding:c4478ff37495d0ef158eb68d90838e943684734b5e9cc343d6ae113ffb25928d;finding:659c32c5d48e4a9965c5575ef0acb03ae6eee89bb782cfb1987629016111e11e",
+   "report_urls": "reports/obsidian-audits/2025/liquid-loot-26705bca.md",
+   "evidence_urls": "https://github.com/ObsidianAudits/audits/blob/d43dee47b37b1b582a888c706133be61f95ce4fe/2025-07-LiquidLoot-Lending-Obsidian-Audit.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Obsidian case study confirms a July 2025 5-day audit of Liquid Loot NFT-lending contracts on Solana, followed by a Three Sigma fix review; the PDF (text unavailable) names no program id, and no repo/deployments page is linked. Project site liquidloot.xyz does not resolve (HTTP 422 through reader). Program id and staker/lender PDAs remain unpublished.",
+   "project_addresses": ""
+  }
+ ]
+}

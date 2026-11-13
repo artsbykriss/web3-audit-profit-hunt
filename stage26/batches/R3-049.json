@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-049",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0307",
+   "lane": "A_NO_ADDRESS",
+   "project": "team 2024 10 03 apdao",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "[H-01] Users can manipulate the NFT chosen for the auction",
+   "uids": "pashov-team-2024-10-03-apdao-security-review::users-can-manipulate-nft-chosen-for-auction-via-queue-frontruns",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Report identifies repo 0xHoneyJar/apdao-contracts (ERCO20DAO-style ERC721A membership token + Nouns-fork Auction House using Pyth Entropy). GitHub API: 0xHoneyJar/apdao-contracts = 404 (deleted/private) and the 48 remaining 0xHoneyJar repos contain no apdao/auction repo. Both docs sites (docs.apiologydao.xyz and docs.0xhoneyjar.xyz/docs/apdao) describe the token + auction house in technical detail but publish no addresses (0x-address grep = 0); the old docs page says 'Blockchain: Ethereum Mainne",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0308",
+   "lane": "A_NO_ADDRESS",
+   "project": "team 2025 01 25 omo",
+   "chain": "HyperEVM",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "OmoOracle getLiquidityAmounts() uses spot price making it manipulatable",
+   "uids": "pashov-team-2025-01-25-omo-security-review::h-08-omooracle-getliquidityamounts-uses-spot-price-making-it-manipulatable",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Report: repo omo-protocol/omo-mvp @c52b6d39 (ERC4626 vault system: OmoVault, OmoStaking, OmoVaultFactory, AgentSetter, OmoRouter, OmoOracle). GitHub API: omo-protocol/omo-mvp = 404 (deleted/private); the org's 13 repos (neko-vault, neko-vault-v2, Omo-Vaults ...) contain no omo-mvp and no deployment of the audited contracts. Chain HyperEVM is confirmed indirectly: the org's current product ships address books keyed to chainId 999 (neko-vault json/999-core.json, Pendle-based vaults) which is Hyper",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0310",
+   "lane": "A_NO_ADDRESS",
+   "project": "teneo 2024 06 teneo smart contract audit",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "[H-02] TeneoRewardProtocol#distributeRewards - Whale Users Can Sandwich distributeRewards to Steal Rewards From Users Who Have Been Staked In The Protocol For Longer",
+   "uids": "hashlock-teneo-2024-06-teneo-smart-contract-audit::legacy-0002-477fd1ab6187",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Report (8 pages, 28,317 chars) scopes TeneoRewardProtocol (distributeRewards) and states 'Teneo is an ecosystem built on the Ethereum Network ... users can purchase tokens from security pools, and stake and collect rewards', platform tag 'peaq'; it contains zero 0x addresses and no repo name. No project site, docs or address book was located for this RWA 'security pools' product. The well-indexed 'Teneo Protocol' (teneo-protocol.ai, TNO token on Base/BNB, DePIN bandwidth) and its token addresses",
+   "project_addresses": ""
+  }
+ ]
+}

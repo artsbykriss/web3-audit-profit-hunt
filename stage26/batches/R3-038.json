@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-038",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0118",
+   "lane": "A_NO_ADDRESS",
+   "project": "Haven1 Feb25th",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Oracle refreshment can fail without notifying, leading to the use of a stale price affecting the fees.",
+   "uids": "finding:713b2213a83393ba0a1ee7b5d817054f9b6ea422c7c1015128f958975171310e",
+   "report_urls": "reports/zokyo/2025/haven1-feb25th-cfbc9a2b.md",
+   "evidence_urls": "https://github.com/zokyo-sec/audit-reports/blob/39b9e51ac1b68a42ac03b222167760f7035bf16e/Haven1/Haven1_Zokyo_audit_report_Feb25th_2025.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Zokyo Feb-2025 review; finding high-2 is in FeeContract.sol (updateFee() pulls IFeeOracle price and can silently keep a stale price, affecting H1 application fees). Docs page 'FeeContract.sol' publishes only TESTNET deployments - implementation 0x716C2a405A658F96FCe7E7C2eE81C0C718bb3d76, proxy 0xe003BdBa0529ED4E1F2B7f40E4E136904fcaD435 (links go to explorer.testnet.haven1.org). Mainnet FeeContract/FeeOracle addresses are unpublished; code check impossible: rpc.haven1.org Cloudflare 1016, rpc.tes",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0149",
+   "lane": "A_NO_ADDRESS",
+   "project": "Lumiterra",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "buyHashCore signature check is switched off allowing anyone to buy a hascore",
+   "uids": "finding:80999f54db62e76415f58aa16b8ca9702145ee14da51e3a84333d0184b21e859",
+   "report_urls": "reports/code4rena-zenith/2025/lumiterra-592c1e9b.md",
+   "evidence_urls": "https://github.com/zenith-security/reports/blob/bf794d06dd31f476a65fe0f27d5221d90cd25077/reports/Lumiterra%20-%20Zenith%20Audit%20Report.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Zenith report (Oct 2025) targets neuronest-solidity @ d451be958fee3e5273074586c8a6f3ebac6a8e94: LumiTownExtension.buyHashCore, CommonExtension, ILaunchpad \u2014 a game/economy contract set, not the 2023 community contracts. Report states no chain and no address; Lumiterra's live chain is Ronin (game item ERC-1155 verified there, see P25-0150). Exact deployment of neuronest unpublished.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0153",
+   "lane": "A_NO_ADDRESS",
+   "project": "Marco Polo DEX",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Incorrect Farm Reward Distribution",
+   "uids": "finding:4af78d97270e81640b43134dd59bb4f9e88f311c84ecd5c7fa63b880e9b2940f",
+   "report_urls": "reports/ottersec/2022/marco-polo-dex-65822cd8.md",
+   "evidence_urls": "https://osec.io/reports/fbc3244e-09ee-4d58-a78a-d4158dc7968d",
+   "known_addresses": "",
+   "known_address_notes": "OtterSec (Aug 2022) assessed the Solana program 'marcopolo-dex' (add_tokens, farm rewards, swap, PDAs); Appendix A names github.com/marcopolo-org/Dex, which now returns 404 (no Anchor.toml, no declare_id). Report gives no program id and no deployment. Program address unpublished; project appears dormant.",
+   "project_addresses": ""
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-009",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0217",
+   "lane": "A_NO_ADDRESS",
+   "project": "Security Technology for Smart Contracts Immunefi",
+   "chain": "Ethereum",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "2",
+   "high": "0",
+   "titles": "The adversary can alter the amount in Distributor.deposit VestingNFTReceiver is removed, similar threats need to be considered architecture upon future audits) | The adversary can transferOwnership on vestingNFTReceiver",
+   "uids": "finding:11d2438d9f748a7209e5dbfa53f36e8120fde5176c25d6525be5432996b4d2c4;finding:d788962d19cc009132ea5de38c224b3e26eca41a200fcae1628a312312570dba",
+   "report_urls": "reports/dedaub/2021/security-technology-for-smart-contracts-immunefi-8e86b8f8.md",
+   "evidence_urls": "https://github.com/Dedaub/audits/blob/431ec937802fd7118f9c6d533a530aaaf33a2c3a/Immunefi/Immunefi%20audit%20Jul%2021.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Dedaub Jul-2021 audit of Immunefi BugReportNotary/Escrow + lib/math/utils + token/distributor/vesting modules at commit a6095b96. PDF extracted (24.9KB text): no address, no explorer link, no repo URL beyond the commit hash. Immunefi org repos are docs/PoC only (Web3-Security-Library, forge-poc-templates); no public contract repo, no published vesting/distributor address found -> instance unpublished.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0313",
+   "lane": "A_NO_ADDRESS",
+   "project": "veTenet",
+   "chain": "Tenet",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "2",
+   "high": "0",
+   "titles": "Cloning a `subGauge` can result in an uninitialized proxy | Codebase is using a vulnerable Vyper compiler version",
+   "uids": "group:97:0;group:97:1",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Report: veTenet (Curve-style vote-escrow gauge system: AddressRegistry, GaugeProxy, RewardVault, TLSD Factory, subGauges) deployed on Tenet; repo tenet-org/veTenet-contracts @434bcc0a. GitHub API: tenet-org/veTenet-contracts = 404 (deleted) and the veTenet repo is not among the 34 remaining tenet-org repos, so no deployments/ or broadcast/ artifacts. Chain itself could not be queried: rpc.tenet.org returns an empty body for eth_chainId and eth_blockNumber, explorer.tenet.org returns empty for ap",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0170",
+   "lane": "A_NO_ADDRESS",
+   "project": "Nomyx",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "5",
+   "critical": "1",
+   "high": "4",
+   "titles": "Malicious user can steal NFTs from anybody | Merkle proof can be used numerous times | Merkle proof verification can be bypassed | Malicious users can frontrun non malicious buyers, and make them overpay | Trade deal participants can steal the APR from other participants",
+   "uids": "finding:d0279cbe823535b001d1a184ff3ed75db6fb1d59598cc5560c14824a85e71770;finding:52de7dd13ff70d120752d24f49cd4861770bba2c79bad78aa7bfbf9be042073d;finding:e9f2ea83c4805ff37d7ad7213d18f3cb0a62a3d6d341c5c80eb79f72cca13dfe;finding:744aa184af9283ee9e1037dd2dbc2a489aacf7c4b5da8b61173243d167d1868c;finding:cf2f4a1b3e95913dbf94b0038c847943e723b3320600c28530fb35b451a59224",
+   "report_urls": "reports/halborn/2025/nomyx-b3cde63e.md",
+   "evidence_urls": "https://www.halborn.com/audits/nomyx/gemforce-contracts-576e80",
+   "known_addresses": "",
+   "known_address_notes": "Halborn audit (2025) of Nomyx Gemforce: EIP-2535 diamond (DiamondFactory, ERC721A/Marketplace/MultiSale/Identity facets). Contracts are diamond-deployed per customer, and neither the report nor the Gemforce docs publish a diamond or factory address (the 0x... addresses printed in the report body are forge test-log EOAs, e.g. 0x328809Bc... appearing as 'owner of the NFT' in a local test). Chain not stated; docs describe multi-network deployment. No deployable address found.",
+   "project_addresses": ""
+  }
+ ]
+}

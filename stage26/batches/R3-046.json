@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-046",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0280",
+   "lane": "A_NO_ADDRESS",
+   "project": "hashlock-db-cherry-2025-05-db-cherry-smart-contract-audit-report",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "[H-01] SmartWallet#validateUserOp - Missing Authorization in validateUserOp Allows Front-running and Fund Theft",
+   "uids": "hashlock-db-cherry-2025-05-db-cherry-smart-contract-audit-report::smartwallet-validateuserop-missing-authorization-allows-front-running-and-fund-theft",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Identity confirmed: DB Cherry (fiat/crypto wallet, ERC-4337 SmartWallet with validateUserOp and paymaster flows), Hashlock May-2025 audit. PDF supports ETH/MATIC/USDT/USDC across standards (suggests Ethereum + Polygon) but names no chain id and no address. dbcherry.com no longer resolves (000), no repo/address book found. EntryPoint used by such wallets (0x0000000071727De22E5E9d8BAf0edAc6f37da032) is a canonical singleton, not project code, so no address asserted -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0283",
+   "lane": "A_NO_ADDRESS",
+   "project": "lend audit contest",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "High-severity findings \u2014 2025-05-lend-audit-contest-judging",
+   "uids": "broad:sherlock:328:0",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Identity resolved from the Sherlock contest repo README Q&A: 'Lend-V2' cross-chain lending (Compound-V2 fork + LayerZero CoreRouter/CrossChainRouter). Deployment chains stated in README: Base, Ethereum, Sonic, Monad, BNB. Repo contains only Lend-V2 source + README, no deployments/broadcast/address book; contest page (908) lists no addresses; lend.finance resolves to an unrelated CeFi lending-desk aggregator, not this protocol. No live instance identified -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0289",
+   "lane": "A_NO_ADDRESS",
+   "project": "odx contracts",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "_mint() can mint more than the limit",
+   "uids": "2025-04-25-odx-contracts::mint-can-exceed-epoch-limit",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Cantina PDF: 'ODX is the first permissionless perpetual protocol with custom zkEVM App-chain'; scope src/WrappedAsset.sol, src/Controller.sol, ODXOracle (Chainlink latestRoundData + L2 sequencer check), upgradeable proxies. Deployment is on ODX's own zkEVM app-chain (listed by GoldRush/Covalent as 'ODX zkEVM'). No explorer address book, docs deployment page or repo (private) publishes contract addresses; Cantina report carries no address. Core chain identified, exact audited instances unpublishe",
+   "project_addresses": ""
+  }
+ ]
+}

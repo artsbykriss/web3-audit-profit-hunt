@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-067",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0140",
+   "lane": "C_FOUND",
+   "project": "Limit Break June12th",
+   "chain": "Ethereum",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Edge case in business logic leads to stolen funds",
+   "uids": "finding:c2094fa98013894c6a7e8abd94d9fd8cc43e291702c3562e7e1e26757beb70f5",
+   "report_urls": "reports/zokyo/2023/limit-break-june12th-b7e5e7b0.md",
+   "evidence_urls": "https://github.com/zokyo-sec/audit-reports/blob/39b9e51ac1b68a42ac03b222167760f7035bf16e/Limit%20Break/Limit%20Break_Zokyo_audit_report_June12th_2023.pdf",
+   "known_addresses": "0x009a1dC629242961C9E4f089b437aFD394474cc0;0x9a1d00bed7cd04bcda516d721a596eb22aac6834",
+   "known_address_notes": "Zokyo report (2023-06-12) audits PaymentProcessor.sol (setCollectionSecurityPolicy, _executeMatchOrderSale). Limit Break's own payment-processor-v1 README pins the production Ethereum address 0x009a1dC629242961C9E4f089b437aFD394474cc0 (single-module build, solc 0.8.9, verified). A later modular PaymentProcessor deployment at 0x9a1d00be... (verified proxy, solc 0.8.19, implementation slot = ModuleOnChainCancellation) belongs to the same product line and is recorded as a second instance; it is not",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0165",
+   "lane": "C_FOUND",
+   "project": "NFTR Market",
+   "chain": "Ethereum",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Two Names For One Token",
+   "uids": "finding:9778ac365057e4ad30bea28616ebbc6ad2f818fc82fc748261ceff4e12521086",
+   "report_urls": "reports/guardianaudits/2023/nftr-market-1fe938d3.md",
+   "evidence_urls": "https://github.com/GuardianAudits/Audits/blob/36fcc39d51fd84a6ec2c72b9c9fda8f8b6ac169d/NFTR/NFTR_Market_Audit.pdf",
+   "known_addresses": "0x0402342Dd3B083C8A928C8BfCe3795124C767BF6",
+   "known_address_notes": "Guardian audit (2023-04-08) of NFTR 'NameMarketplace' (scope https://github.com/NFTRegistry/NameMarketplace, repo now 404). Mainnet NameMarketplace verified source contains NFTR-specific revert strings ('NameMarketplace: can't set nftr to zero') and the IPunks path referenced by the audited 'Two Names For One Token' finding. Deployed 2023-07-12 (block 17680382, tx 0x4c590a2e425c08106bd0b6d184d014f92e3818e9090781244ba151c96ae396d1) by 0x04a040bbc188c0a893cccb913a6a93f643761c70, i.e. after the aud",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0178",
+   "lane": "C_FOUND",
+   "project": "OpenZeppelin Stack for Zama: Smart Accounts",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Inner userOp Signature Is Not Verified in _validateEnableMode",
+   "uids": "finding:98148f16d9ab9b47ba69a2d51f579ac861da1a1e7e1a699840ac5d134d6624fe",
+   "report_urls": "reports/openzeppelin/2025/openzeppelin-stack-for-zama-smart-accounts-20651fd1.md",
+   "evidence_urls": "https://www.openzeppelin.com/news/openzeppelin-stack-for-zama-smart-accounts-audit",
+   "known_addresses": "0xD178927b9B3a6A96F9C67F8f8935723AE77b0b50;0xDe07475f844664bEca030aAa67C077B683479668;0x2940e228e93Fb6841D881Ed80D1832956ed929D6;0xAd05109AB2730DB2da308398cB10B6956eE6bd0d",
+   "known_address_notes": "OZ audit of the ERC-7579/7913 account framework built for Zama's fhEVM; scope commit 6e14ef83. The repo publishes deployments.json with a Sepolia block (chain 11155111) containing the factory, account implementation and the validators named in the report; three were code-checked and are source-verified. No mainnet deployment exists in the manifest, so the exact audited instance is the Sepolia deployment.",
+   "project_addresses": ""
+  }
+ ]
+}

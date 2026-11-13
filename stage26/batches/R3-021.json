@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-021",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0265",
+   "lane": "A_NO_ADDRESS",
+   "project": "ZAP auditreport April11th",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Unrestricted call to setConfig",
+   "uids": "finding:8e7b57231a753f25026aa34ec435ca4ad4b2c3517f7b66fd865ee16f16652f45",
+   "report_urls": "reports/zokyo/2024/zap-auditreport-april11th-71ea2848.md",
+   "evidence_urls": "https://github.com/zokyo-sec/audit-reports/blob/39b9e51ac1b68a42ac03b222167760f7035bf16e/zap/ZAP_Zokyo_auditreport_April11th_2024.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Zokyo report audited TokenSaleETH.sol, TokenSaleUSDB.sol and Admin.sol; the code hard-codes Blast USDB (0x4300...0003) and one finding is 'USDB address refers to a test chain', so chain = Blast (zap.tech launchpad also runs Base 8453). zap.tech front end (main.b46e8bbe.js) exposes only network ids (REACT_APP_BLAST_NETWORK_ID 81457, REACT_APP_BASE_NETWORK_ID 8453) and no contract addresses; no docs/address book; audited repo private. Admin/TokenSale addresses unpublished -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0266",
+   "lane": "A_NO_ADDRESS",
+   "project": "ZIGChain Reward Contract",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Users can claim past their allowed_amount via cumulative cap bypass",
+   "uids": "finding:61e863cef88647de4d148733d923650dbf7334646abb6e6751d9dd61f4081398",
+   "report_urls": "reports/oak-security/2025/zigchain-reward-contract-5a076329.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/ZIGChain/2025-11-11%20Audit%20Report%20-%20ZIGChain%20Reward%20Contract.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Oak Nov-2025 audit of a CosmWasm reward-claim contract (exec.rs/state; cumulative allowed_amount cap). Chain confirmed as ZIGChain; the ZIG Rewards Program went live 2025-11-05 and finalized 2026-05-03 via hub.zigchain.com, i.e. the code was deployed. ZIGChain/audits repo holds only the PDF; ZIGChain/zigchain-registry has no reward contract entry; docs/claim page gives no address; no ZIGChain Blockscout-style search with contract labels. Exact zig1... instance unpublished -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0292",
+   "lane": "A_NO_ADDRESS",
+   "project": "pashov-team-2024-05-22-curio-security-review",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "[C-01] Game fee handling is incorrect",
+   "uids": "pashov-team-2024-05-22-curio-security-review::c-01-game-fee-handling-is-incorrect",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Pashov report names repository curio-research/flagship-contracts (game contracts, 'game fee handling'). GitHub API: curio-research/flagship-contracts = 404 (deleted/private); funding and product sources (curio.gg, keystone, treaty-contracts) publish no deployment addresses; the studio ships games on its own game-server stack with no public explorer. No audited contract address obtainable -> PARTIAL.",
+   "project_addresses": ""
+  }
+ ]
+}

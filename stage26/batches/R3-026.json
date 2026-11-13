@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-026",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0063",
+   "lane": "A_NO_ADDRESS",
+   "project": "BuyBurner",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "0",
+   "high": "2",
+   "titles": "Manipulatable oracle and breaking slippage protection",
+   "uids": "finding:13a656fdcd4696c84f19a485c296dae1e274885553216a3c0fc980b5bf6ac459;group:16:0",
+   "report_urls": "reports/pashov-audit-group/2024/buyburner-6ef718a1.md",
+   "evidence_urls": "https://github.com/pashov/audits/blob/e615d8a5319647f95e217616d21770b3d8372f50/team/md/BuyBurner-security-review_2024-12-14.md",
+   "known_addresses": "",
+   "known_address_notes": "Pashov 2024-12-14 reviewed a single BuyBurner contract that buys BEAM with USDC/ETH via UNISWAP_V2_ROUTER_02.getAmountsOut. Reviewed repo avierauy/buyburner is 404. Ethereum Blockscout name search returns 'BuyBurner' 0x55Fc3543... and BUYBURN tokens; I pulled that contract's verified source (Etherscan V2 chainid 1): ContractName BuyBurner, compiler 0.7.4, source has no getAmountsOut and no slippage logic, so it is not the audited code. Base Blockscout search rate-limited, no candidate. Deploymen",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0071",
+   "lane": "A_NO_ADDRESS",
+   "project": "Chirper AI",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "0",
+   "high": "2",
+   "titles": "Manager#buy, sell - No slippage protection leaves users vulnerable to front-running and sandwich attacks | [H-04] Manager#buy, sell - No slippage protection leaves users vulnerable to front-running and sandwich attacks",
+   "uids": "hashlock-chirper-ai-2025-01-chirper-ai-smart-contract-audit-report::manager-buy-sell-no-slippage-protection-mev-risk;hashlock-chirper-ai-2025-01-chirper-ai-smart-contract-audit-report-2::manager-buy-sell-no-slippage",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Hashlock Jan-2025 audited Chirper AI (Manager#buy/sell, no slippage protection); platform chains Mode and Vana. Mode Blockscout search returns only community 'Chirper <name>' ERC20s (e.g. 0x6C33C2fa 'Chirper Mode', 0xB41dbe35 'Chirper Zero'), none verified as the audited Manager; 'Manager' search returns Aura ManagedPool contracts. Vana explorer endpoints (explorer.vana.org / vana.blockscout.com) returned no search API. No address asserted.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0084",
+   "lane": "A_NO_ADDRESS",
+   "project": "DB Cherry",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "0",
+   "high": "2",
+   "titles": "SmartWallet#validateUserOp - Missing Authorization in validateUserOp Allows Front-running and Fund Theft | [H-01] SmartWallet#validateUserOp - Missing Authorization in validateUserOp Allows Front-running and Fund Theft",
+   "uids": "security-audit-db-cherry-aa-wallet::smartwallet-validateuserop-missing-authorization-in-validateuserop-allows-front-running-and-fund-theft;security-audit-db-cherry-aa-wallet::smartwallet-validateuserop-missing-authorization-allows-front-running-and-fund-theft",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Hashlock report v1 (May 2025) states network=ETHEREUM, platform Ethereum/Solidity, audited commit 0e8f1033776bb389632c3264204b10b6595b5147, fix commit 37c131e0d5cc8e405367ed96415a31d0a93ecb0e; code was supplied as private GitHub access. Scope: SmartWallet (ERC-4337 account) deployed as clones from a precomputed address, i.e. there is no single canonical SmartWallet instance. PDF and the dbcherry.com security page contain no addresses; no entrypoint/factory address published anywhere found. Proje",
+   "project_addresses": ""
+  }
+ ]
+}

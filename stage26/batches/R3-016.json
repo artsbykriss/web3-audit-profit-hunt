@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-016",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0148",
+   "lane": "A_NO_ADDRESS",
+   "project": "Loopring on May 21st, 2020.",
+   "chain": "Ethereum",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "BaseVault.execute(..) transactions can be replayed.",
+   "uids": "finding:d3e6bf3488ea61cf877f081baa64a79234ead9d58cf723208a3c64f8059f768a",
+   "report_urls": "reports/solidified/2020/loopring-on-may-21st-2020-1ec3ccbb.md",
+   "evidence_urls": "https://github.com/solidified-platform/audits/blob/5ff5fa144b32ad65b649f032465e440b4990988d/Audit%20Report%20-%20Loopring%20Hebao%20Wallet%20%5B21.05.2020%5D.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Audit is the Loopring Hebao v1 smart wallet (BaseVault.execute replay). Wayback CDX proves the code lived at Loopring/protocols packages/hebao_v1 (audit_report_solidified_response.md, docs/DESIGN.md) but every current raw path under master/main now 404s (folder removed/archived), so no config or deployment manifest is retrievable. Hebao v1 module/factory mainnet addresses are not published on any surviving docs page found; none recorded.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0152",
+   "lane": "A_NO_ADDRESS",
+   "project": "Manifest Finance",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Manifest Finance security review (RWA, 2025-08)",
+   "uids": "unpub:106",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Guardian review (Nov 2025) of the Manifest Finance Protocol: Uniswap-v4 hook (AuthHook.sol) plus StakedUSHBase / sUSH with KYC-sanctions gating; scope repo gitlab.com/manifest-finance/ush is private (GitLab API 404), report states no chain and no addresses. DefiLlama 'Manifest' (Ethereum 0x21585BBcD5bDC3f5737620cf0Db2E51978cf60AC) resolves to an unrelated 'ManifestERC20Token' v0.7.5 and is excluded. Deployed USH/sUSH/hook not located; chain assumed Ethereum (v4 hooks).",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0162",
+   "lane": "A_NO_ADDRESS",
+   "project": "Mysten Republic",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Repeated Invocation Resulting in Excessive Claims",
+   "uids": "finding:87ad95daf65a555796f8607d6204caa81e3d66b840dd42ebae706aaeb89259b6",
+   "report_urls": "reports/ottersec/2024/mysten-republic-259c9017.md",
+   "evidence_urls": "https://osec.io/reports/15b84d4e-4146-80d7-bdac-d474829869b1",
+   "known_addresses": "",
+   "known_address_notes": "OtterSec report (Oct 2024, follow-up Apr 2025) states scope = Sui Move package 'republic' (treasury management with roles/abilities) in https://github.com/MystenLabs/security-token at commit ff7d0a0 (follow-up 13e91eb). Repo is private/404, no package ID, Move.toml or Published.toml is published anywhere. Sui RPC cannot be searched by package name, so no on-chain instance could be verified.",
+   "project_addresses": ""
+  }
+ ]
+}

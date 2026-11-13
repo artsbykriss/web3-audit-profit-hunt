@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-015",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0034",
+   "lane": "A_NO_ADDRESS",
+   "project": "Abstract Account Contract",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Missing sender validation allows anyone to add and remove authenticators",
+   "uids": "finding:464068cfafcf535e69a0d906176e02e7b06579067b5769e6c64481434f3d9549",
+   "report_urls": "reports/oak-security/2024/abstract-account-contract-90cec549.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/Abstract/2024-12-31%20Audit%20Report%20-%20Abstract%20Account%20Contract%200.26.0%20v1.0.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Oak report is 'Abstract Account Contract 0.26.0' and the body references deployment on XION. AbstractSDK/xion-contracts/contracts.json lists 'Abstract Account' code_id 16 (release v0.25.0, data_hash D3D18E16...77DA) plus code_id 17 (XION-specific) and code_id 22 (Module Factory). LCD check https://api.xion-mainnet-1.burnt.com/cosmwasm/wasm/v1/code/16 returns the matching data_hash, so the core account contract is live; no 0.26.0 entry is published, so the exact audited revision/instance is not p",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0115",
+   "lane": "A_NO_ADDRESS",
+   "project": "GoMarket May25",
+   "chain": "Sei",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "LMSR Saturation Enables Free Share Minting and Vault Theft",
+   "uids": "finding:3cedf3f1a9232bddb94a5610c19a1d5d96883ce9d299fef3c3a5f5bff7fe5781",
+   "report_urls": "reports/zokyo/2026/gomarket-may25-2ee4e70e.md",
+   "evidence_urls": "https://github.com/zokyo-sec/audit-reports/blob/39b9e51ac1b68a42ac03b222167760f7035bf16e/GoMarket/GoMarket_Zokyo_audit_report_May25_2026.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Zokyo May-2026 GoMarket report (77 MB, LFS) explicitly frames the codebase as Solana ('Solana network's fast-paced environment'), contradicting the corpus chain 'Sei'; finding is an LMSR saturation bug, so the audited code is an on-chain LMSR market/vault program. Report has no program ID, no repo and zero 0x addresses (only Zokyo gist links for PoCs); gomarket.xyz is a parked/for-sale domain; no Sei or Solana deployment found. Program ID unpublished.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0142",
+   "lane": "A_NO_ADDRESS",
+   "project": "Lingo Token",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Insufficient validations allow attackers to steal by increasing refundable fee amount without any transfer fees",
+   "uids": "2025-02-05-lingotoken::insufficient-validations-allow-attackers-to-steal-by-increasing-refundable-fee-amount-without-any-transfer-fees",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Duplicate of P25-0141 from a second corpus feed (same finding text). Chain resolved to Solana from the Cantina report (Anchor instructions, PDA 'config' account, transfer_hook). Program id still unpublished; repo LingoCoin/LingoToken returns 404.",
+   "project_addresses": ""
+  }
+ ]
+}

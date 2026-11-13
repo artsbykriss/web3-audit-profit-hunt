@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-061",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0167",
+   "lane": "C_FOUND",
+   "project": "Nawa Finance",
+   "chain": "ZIGChain",
+   "trace_status": "FOUND",
+   "n_findings": "4",
+   "critical": "3",
+   "high": "1",
+   "titles": "Missing caller authentication in execute_receive_nft allows malicious actors to steal funds from legitimate depositors | Untrusted user_address in execute_receive_nft enables unauthorized withdrawals | Incorrect loss percentage calculation | Missing price bound checks in Deposit and ReceiveNft enable sandwich attacks",
+   "uids": "finding:16ef480b232776db12d3f99f0d4901a863c9434df77e49fdc90e31287c536d51;finding:e68ddbe6ee30f9c521e0c0ebf31e3343dd4dc80cb4cec55195a1d94ee664413a;finding:a8bd25bcac3beb83219c4a9bca298b83204ddceb3a35acee5fdba3a28da7f7bc;finding:bb8f2012cc66a4ff9db8978fc7f488dc5f6a906a676a1fabe358fe308eb37bfa",
+   "report_urls": "reports/oak-security/2025/nawa-finance-d1ebfab4.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/Nawa/2025-10-15%20Audit%20Report%20-%20Nawa%20Finance%20.pdf",
+   "known_addresses": "zig1fqxfjv54zavyr9464vj6n2jgw9fxgdnxucf866spedunntw0skcsq9gz33;zig1fn4rrr5knlg93nf3wyme9fzmgve3fftxu5l7wv90llp77mwg7ctq2lfwtd",
+   "known_address_notes": "Oak Security audit (2025-10-15) of Nawa Finance's ZIGChain CosmWasm contracts (stZIG vault: redeem/deposit/execute_receive_nft). Nawa publishes no address list; the two live CosmWasm vaults (stZIG vault + USDC vault) were taken from the DefiLlama adapter and confirmed on ZIGChain mainnet (chain-id zigchain-1) via LCD contract_info. Exact code_id/revision audited by Oak is not stated in the report, so the audited instance is mapped by vault role rather than by code hash.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0099",
+   "lane": "C_FOUND",
+   "project": "Ethereum Foundation BLS Wallet",
+   "chain": "Arbitrum Goerli (testnet)",
+   "trace_status": "FOUND",
+   "n_findings": "3",
+   "critical": "3",
+   "high": "0",
+   "titles": "Operations Are Vulnerable To Signature Replay Via Reentrancy | Ownership of ProxyAdmin May Be Transferred To Any Wallet | BLS Rogue Key Attack Allows Executing Arbitrary Transactions",
+   "uids": "finding:3968f446ef48c0d9a2545a49fbfc66feac5ee523386446bb43c156d6476883aa;finding:4732df9762dd3bbee42ae8b3395786832985d1c57e30e6f8436281f6900e8828;finding:60a4f9fbce374a230b9f621a0b0d4811a3a8f3480d90a270eba509c6d9706619",
+   "report_urls": "reports/sigma-prime/2022/ethereum-foundation-bls-wallet-f1ae29f1.md",
+   "evidence_urls": "https://github.com/sigp/public-audits/blob/7d9046e092e1e93623164e39df8c552a16f2fe5d/reports/bls-wallet/review.pdf",
+   "known_addresses": "0xE25229F29BAD62B1198F05F32169B70a9edc84b8;0x30Ae0d96Ba812F53F69deDefd8b472ce43af23A5;0x6eb8F8d661eFe36daB11147830A1e690249bB830;0x4bD2E4e99B50A2a9e6b9dABfA3C8dCD1f885F008",
+   "known_address_notes": "Repo moved web3well/bls-wallet -> getwax/bls-wallet. contracts/networks/arbitrum-goerli.json is the project's own deployment registry for chainid 421613 (genesisBlock 18628869, deployedBy 0x9D5e..., version 0d52ddb2 matching the audited era): verificationGateway 0xE25229..., blsExpander 0x30Ae0d..., precompileCostEstimator 0x6eb8F8..., utilities 0x4bD2E4..., testToken 0x30e69A.... Only testnet artifacts exist - there is no networks/*.json for a mainnet chain, which supports the corpus chain labe",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0122",
+   "lane": "C_FOUND",
+   "project": "Honey",
+   "chain": "Solana",
+   "trace_status": "FOUND",
+   "n_findings": "3",
+   "critical": "3",
+   "high": "0",
+   "titles": "Partial Liquidation Should Not Be Allowed | Solvent Liquidation Is Not Admin-Gated | Solvent NFT Withdrawal Is Not Admin-Gated",
+   "uids": "finding:72806feeccd2b83e443b4dfb289926f7bd95cb96362ee3e9573ad4ab090d5f3e;finding:3e8234394f03622402f5216f9cb00c8e388cd5f63dbdc72b6e86fd432bd9f203;finding:83de6bba7117d4ca16dd28470ab349484c1dfdafb3ce7ca70f32dd2fe2fc6394",
+   "report_urls": "reports/ottersec/2022/honey-b69338c4.md",
+   "evidence_urls": "https://osec.io/reports/e7106dcd-db67-4e5e-95f6-a805d507aff5",
+   "known_addresses": "hNEYyRsRBVq2La65V1KjvdbTE39w36gwrdjkmcpvysk",
+   "known_address_notes": "OtterSec PDF scope = 1 Solana program 'honey', repo github.com/honey-labs/nftLendBorrow @1437e33 (repo now 404/private). Program ID taken from Honey's own frontend constant HONEY_PROGRAM_ID. Secondary constant SOLVENT_PROGRAM GwRvoU6vTXQAbS75KaMbm7o2iTYVtdEnF4mFUbZr9Cmb (liquidator wrapper) has NO account on Solana mainnet (getAccountInfo null) - it is the devnet/test constant, so it was not recorded as an address.",
+   "project_addresses": ""
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-014",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0275",
+   "lane": "A_NO_ADDRESS",
+   "project": "eBridge AElf Bridge",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "Unchecked sender in QueryOracle function leading to potential oracle manip- | Invalid signature handling in ConfirmReport function",
+   "uids": "finding:52ce94f1eddbc1b6f6c3e996ee437e8df7c9f602e0c632915a2c033c5ec33ba9;finding:f62389b4a401c70fa253af5f9c5bc65d2a475146c652b9111e690bfad334f58b",
+   "report_urls": "reports/zellic/2024/ebridge-aelf-bridge-cfe6137d.md",
+   "evidence_urls": "https://github.com/Zellic/publications/blob/73cc37579b498cfd95da0312518d5f85f3124c2e/eBridge%20AElf%20Bridge%20-%20Zellic%20Audit%20Report.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Zellic audit (2024) of eBridge's lock/release + oracle/confirm-report contracts; findings reference QueryOracle and ConfirmReport. Chain confirmed: aelf <> Ethereum <> BNB Smart Chain (ebridge.exchange states decentralised nodes on those three). Report PDF contains no deployed addresses; ebridge.exchange ships no address list; aelf-side contracts use aelf base58 addresses rather than 0x, so without an aelf explorer seed they cannot be named. EVM-side bridge address unpublished -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0014",
+   "lane": "A_NO_ADDRESS",
+   "project": "2023-10-17-ripio-sca-lachain-bridge-oct2023-sca-lachain-bridge-oct2023",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Unvalidated Deposit Amount",
+   "uids": "2023-10-17-ripio-sca-lachain-bridge-oct2023-sca-lachain-bridge-oct2023::unvalidated-deposit-amount",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Hacken reviewed Ripio's LaChain ChainBridge (Bridge.sol / ERC20Handler.sol, Polygon+others, Oct-2023) and publishes no addresses. LaChain mainnet is alive and reachable this pass (chain 274, rpc1.mainnet.lachain.network block 23,472,941), but its explorer (explorer.lachain.network, Blockscout build) exposes no working api/v2 or api?module endpoint (all return the SPA 404 page), the gitbook is an unfinished template with no contract registry, and no Ripio bridge repo/address surfaced. PARTIAL: ch",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0021",
+   "lane": "A_NO_ADDRESS",
+   "project": "2024-09-30-aerobloc-sca-aerobloc-aerobloc-contract",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Sandwich Attack in postReward Function Allows Attacker to Gain Disproportionate Rewards",
+   "uids": "2024-09-30-aerobloc-sca-aerobloc-aerobloc-contracts-sep2024-sca-aerobloc-aerobloc-contracts-sep2024::sandwich-attack-in-postreward-function-allows-attacker-to-gain-disproportionate-rewards",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Hacken audit page gives Platform=Polygon, repo github.com/chefwop0x0/aerro @1bfdf59, token $AERRO (StakingV2.postReward). Repo now 404 (checked GitHub API: Not Found), so no broadcast/ or address book. Tried DDG for 'AERRO token polygon contract', site:polygonscan.com AERRO, coingecko search 'aerro'/'aerobloc' (no coin record), DefiLlama protocol list (no aerobloc entry). Project site ioa.aero not crawled for a deployments page. Exact staking/DAO contract unpublished -> PARTIAL.",
+   "project_addresses": ""
+  }
+ ]
+}

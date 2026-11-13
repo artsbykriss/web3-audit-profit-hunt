@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-051",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0251",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "Ulysses Protocol",
+   "chain": "Unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "5",
+   "critical": "3",
+   "high": "2",
+   "titles": "Lack of the RootBridgeAgent contract verification | Missing access control for Multicall | Multiple redeems of the same deposit are possible | Missing access control on anyExecuteNoSettlement | Unlimited cross-chain asset transfer without deposit re-",
+   "uids": "finding:8c4dbd68f43f2077fc2545f66fc27e18bf1cd2fa91960e9fc2b83bb363db74a6;finding:e6285224c9c9ea25bbb4cc0efe2213d3c9a45c49acbdfa813d7f664c70088a01;finding:b3cc7d7126f0a456c551a6bd8761562341f2a5f6301c208b6236551f2f4f14e1;finding:8ca6a34cb6c69824883a14ec4c95584c8eeae887c99c28c55a581322dcf17cef;finding:7ebb9e226076b475fcd3260551f8b82e7fe643db9c789bf659c7c68f09a5acd2",
+   "report_urls": "reports/zellic/2023/ulysses-protocol-6aeb0fbf.md",
+   "evidence_urls": "https://github.com/Zellic/publications/blob/73cc37579b498cfd95da0312518d5f85f3124c2e/Maia%20DAO%20Ulysses%20Protocol%20May%202023%20-%20Zellic%20Audit%20Report.pdf",
+   "known_addresses": "0xd3e3599517f2036fa314e468d62135714fc03c56;0x79f4b04FFCa54BC946aa0ef8E33eE723467f0192",
+   "known_address_notes": "Zellic 2023-05 scope: Maia-DAO/maia-ecosystem-monorepo @322a2568 (pre-deployment review; report says code 'requires improvement before deployment'). Ulysses is live: DefiLlama's adapter gives the branch Ports (arbitrum 0x79f4..., fraxtal 0x6BeEf9B5..., default 0x0000151d...). On-chain rootPortAddress() on 0x79f4... resolves to RootPort 0xd3e35995...; both are verified with those exact contract names. The findings sit in RootBridgeAgent/BranchBridgeAgent/Multicall; getBranchBridgeAgent()/bridgeAg",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0181",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "PAID Network (Master Ventures)",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "2",
+   "high": "0",
+   "titles": "C01. withdrawPurchasedAmount() Can Be Called Without Emergency Event | C05. withdrawPurchasedAmount() Function Allows Dual Benefits for Users",
+   "uids": "smart-contract-code-review-and-security-analysis-report-for-paid-network-master-ventures::c01-withdrawpurchasedamount-can-be-called-without-emergency-event;smart-contract-code-review-and-security-analysis-report-for-paid-network-master-ventures::c05-withdrawpurchasedamount-allows-dual-benefits",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0x1614F18Fc94f47967A3Fbe5FfcD46d4e7Da3D787",
+   "known_address_notes": "Unit shipped no report/evidence URLs. Titles C01/C05 + function withdrawPurchasedAmount() point to a CertiK-style review of PAID/Master Ventures purchase-sale contracts (2021). GitHub code search for the exact selector returns only unrelated Ignition launchpad Pool/Vesting contracts on Arbitrum (0xD03b\u2026CC8F etc.), which do not carry PAID/MasterVentures identifiers; those were rejected. Only the project token anchor (PAID, PROXY) could be confirmed on-chain. Audited sale/vesting contract address ",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0195",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "Primodium",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "2",
+   "high": "0",
+   "titles": "`MagnetTurnPlanets` table is not cleared when the game is reset | Lack of access control in `ResetSystem::resetGame()`",
+   "uids": "group:87:2;group:87:3",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0xcdde8dc29bcb7a7b30e22318746dfd81f0510b43",
+   "known_address_notes": "Audited code is a MUD project (ResetSystem.resetGame, MagnetTurnPlanets table in src/systems). The repo's worlds.json only lists test/dev deployments: 10017 \u2192 0xcdde8dc29bcb7a7b30e22318746dfd81f0510b43 (block 8283703), 84532 (Base Sepolia) \u2192 0x6eda5e0ce08c96cee26b4ff16462bef938789495, and local 31337; a second example world 0x46c1e9dd144fcf5477a542d3152d28bc0cfba0b6 sits at block 4306527. No Redstone-mainnet (690) world address is published. Code check blocked by DNS resolution failure for all R",
+   "project_addresses": ""
+  }
+ ]
+}

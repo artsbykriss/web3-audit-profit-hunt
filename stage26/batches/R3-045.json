@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-045",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0260",
+   "lane": "A_NO_ADDRESS",
+   "project": "Vortex - September 02 2021",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Users can stake, harvest, and withdraw their stake in the same transactions",
+   "uids": "finding:a5265f8f3f284423256ee95f2adc8646ef4c9a3fb0d66591bfeb713d866e4c22",
+   "report_urls": "reports/solidified/2021/vortex-september-02-2021-ea9bacf5.md",
+   "evidence_urls": "https://github.com/solidified-platform/audits/blob/5ff5fa144b32ad65b649f032465e440b4990988d/Audit%20Report%20-%20Vortex%20%5B02.09.2021%5D.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Solidified 2021-09-02 scope: github.com/BlockzeroLabs/vortex-contracts @9687b422, files contracts/Portal.sol + IMigrator.sol (staking with multi-token reward claiming). Repo is now 404 on both main and master (README/hardhat.config/package.json absent), there is no deployment section in the report and no address in it. Blockzero Labs' 'Vortex' (dropzero.io/vortex) is the same team but publishes no contract address or chain; DefiLlama's 'Vortex Protocol' is Tezos and 'Vortex DAO' is Avalanche, ne",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0272",
+   "lane": "A_NO_ADDRESS",
+   "project": "althea liquid infrastructure",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "High-severity findings \u2014 2024-02-althea-liquid-infrastructure-findings",
+   "uids": "broad:code4rena:171:0",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "C4 Feb-2024 scope: LiquidInfrastructureERC20.sol / LiquidInfrastructureNFT.sol / OwnableApprovableERC721.sol, to be deployed on Althea-L1 (Cosmos chain with EVM). Chain confirmed live: EVM chain id 258432 (eth_chainId 0x3f180 on https://rpc.althea.zone:443). althea-net/liquid-infrastructure-contracts has hardhat deploy scripts but no address manifest; Althea Blockscout (explorer.althea.link) returns 'default backend - 404' for /api/v2 (dead); the docs' single ERC20 address 0xf9e595... has no cod",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0279",
+   "lane": "A_NO_ADDRESS",
+   "project": "hashlock-black-tie-2025-03-black-tie-asset-hub-smart-contract-audit-report",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "[H-01] UserManager#investInProperty - investInProperty Allows Unauthorized Token Movement and Incorrect Fee Calculation Due to Incorrect Identity Validation",
+   "uids": "hashlock-black-tie-2025-03-black-tie-asset-hub-smart-contract-audit-report::usermanager-investinproperty-unauthorized-token-movement-and-fee-miscalculation",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Identity confirmed: BT Asset Hub by Black Tie Holdings (real-estate/RWA tokenisation), Hashlock Apr-2025 audit of UserManager.sol, AuthorityManager.sol, Token.sol. PDF gives no address, no chain id (only that the system is multi-chain and replay protection omits chain id). btassethub.digital returns 403 to non-browser clients; app has no public address book; no GitHub org. Env-level ERC20/token addresses unpublished -> PARTIAL.",
+   "project_addresses": ""
+  }
+ ]
+}

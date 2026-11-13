@@ -61,6 +61,23 @@ waves remaining  = ceil(2,364 / (3 × N))
 
 If priority 2 and priority 4/5 are run separately (not mixed in a wave), use 39 + 41 = 80 waves at 10 agents.
 
+### Known gap: 148 units with no deployment at all
+
+Stage 2.5 resolved 317 units. The `PARTIAL` verdict has two very different sub-cases, and only one of
+them reached Stage 3:
+
+| Stage 2.5 status | Units | With address | Stage 3 targets |
+|---|---:|---:|---:|
+| `FOUND` | 45 | 45 | — (already targets) |
+| `PARTIAL` — anchor found | 29 | 29 | 131 |
+| `PARTIAL` — nothing found | **148** | **0** | **0** |
+| `NOT_DEPLOYED` | 7 | 0 | 0 |
+| `NOT_FOUND` | 88 | 0 | 0 |
+
+Those **148 units are auditable findings with no contract to audit**. They are outside the 3,816
+targets. Stage 2.6 (`stage26/`) is the queue that closes this gap, and it also re-derives the
+deployment for the 45 `FOUND` and 29 anchored units, because a single anchor is not proof.
+
 ---
 
 ## 3. The 14 extractables
@@ -139,6 +156,62 @@ A `NOT_EXTRACTABLE` verdict is only accepted when:
 
 A separate QA pass samples 20% of negatives plus 100% of targets with >$100k value at risk. Weak negatives are re-audited by fresh agents; the wave does not count until QA accepts. Full checklist: `stage3/QA_CHECKLIST.md`.
 
+## 4c. Address independence — the batch address is a lead, not evidence
+
+This is now mandatory in every audit and is the fix for the weakest part of the corpus.
+
+**The failure mode.** `PARTIAL` means *project located, exact audited instance unproven*. `FOUND` means
+*one instance identified*, which says nothing about siblings, proxies, other chains, or later
+versions. Agents that audited the batch address and stopped inherited that uncertainty: a negative on
+the wrong version is worthless, and an extractable bug sitting in an unlisted instance is missed
+entirely.
+
+**The rule.** Every target gets a Step 0 deployment re-derivation before any audit work:
+
+1. Independently locate the deployment (repo `deployments/`/`broadcast/`/address books, frontend JS
+   bundle, explorer creation data, deployer-EOA pivot, DefiLlama, Wayback, chain-native tooling).
+2. Prove the code exists on chain and tie it to the project with a source URL.
+3. Version-test it against the audited commit (`EXACT_MATCH` / `MATCH_EXCEPT_IMMUTABLES` /
+   `DIFFERENT_VERSION`). On `DIFFERENT_VERSION`, find the matching instance.
+4. Enumerate instances: factory count, clones, proxies/impl, other chains.
+5. Record it all in `derived_addresses`, and audit the derived address set, not just the lead.
+
+**Multi-instance rule.** If the protocol deploys the same code many times, one negative covers one
+instance only. Check the worst-case/highest-value instance and state the count.
+
+## 4d. Stage 2.6 — the recon queue (`stage26/`)
+
+222 units, 74 batches (`R3-001..R3-074`), 3 units per batch. Read `stage26/RECON.md` before launching;
+it is a complete protocol (ladder, pivots, version test, instance enumeration, non-EVM specifics,
+output schema).
+
+| Lane | Units | Batches | What they are |
+|---|---:|---:|---|
+| `A_NO_ADDRESS` | 148 | 50 | `PARTIAL` with no address at all — the real gap |
+| `B_PARTIAL_ANCHOR` | 29 | 10 | `PARTIAL` with an unproven anchor |
+| `C_FOUND` | 45 | 15 | `FOUND`, but only one instance is known |
+
+Units are chunked 3-per-batch in lane order, so one batch (`R3-050`) mixes lane A and B; the JSON
+carries each unit's `lane` field. Counts above sum past 74 because of that shared batch.
+
+Files:
+
+```
+stage26/RECON.md                 # protocol
+stage26/index/recon_units.csv    # 222 units, sorted by criticality within lane
+stage26/batches/R3-*.json        # 3 units each
+stage26/results/, work/          # outputs
+stage26/merge_recon.py           # accepted deployments -> new Stage 3 targets + batches
+```
+
+Recon statuses: `CONFIRMED` (audited code proven), `ANCHORED` (family located, identity unproven),
+`UNRESOLVED` (ladder exhausted, every rung recorded), `NOT_DEPLOYED`.
+
+**Merging.** `python3 stage26/merge_recon.py` is a dry run; `--apply` appends new targets to
+`stage3/index/stage3_targets.csv` (ids continue past S3-3816), writes new 3-target batches, and is
+idempotent via `stage26/index/merge_state.json`. Recon output is not audited work — do not count it as
+coverage until the merged targets are audited.
+
 ## 5. How to run a wave
 
 1. Pick the next N batches from `stage3/batches/` (each batch = 3 targets).
@@ -154,6 +227,13 @@ Execute Stage 3 batch {{item}}. Read /workspaces/CA/stage3/STAGE3.md and follow 
 Your batch is /workspaces/CA/stage3/batches/{{item}}.json with 3 protocols.
 For each target create /workspaces/CA/stage3/work/{{item}}/<slug>/ and do the aggressive
 live audit: headline first, then all-round fund-draining review.
+STEP 0 is mandatory: the batch address is a LEAD, not evidence. Independently re-derive the
+deployment set (repo deployments/ and broadcast/ and address books, official frontend JS bundle,
+explorer creation data, deployer-EOA pivot, DefiLlama, other claimed chains), version-test against
+the audited commit, enumerate factory/clone instances and proxy/impl pairs, and audit the derived
+set rather than the lead. Record `derived_addresses` with source + code check + bytecode match.
+Follow /workspaces/CA/stage26/RECON.md sections "The derivation ladder", "Version-drift test",
+"Enumerate, do not stop at one".
 Use Foundry, Etherscan V2 ($ETHERSCANV2_API_KEY), Alchemy ($ALCHEMY_API_KEY_2 in
 /workspaces/CA/alchemy.env), Infura, Ankr, Jina Reader, bytecode decompilation/disassembly,
 and alternative public RPCs.
@@ -184,6 +264,9 @@ Current batch ranges:
 | 5 | S3-808..869 + S3-1231..1274 | 213 |
 
 **Priority 2 remaining:** S3-337..720 (384 batches; 1,151 targets).
+
+**Stage 2.6 recon:** R3-001..R3-074 (74 batches; 222 units). Separate queue, separate protocol
+(`stage26/RECON.md`), no audit. Its accepted deployments merge into Stage 3 as new targets (§4d).
 
 **Priority 4 is built:** S3-870..S3-1230 (361 batches, 1,082 targets), plus the Stage 2.5 additions in S3-1231..S3-1274 (44 batches, 131 targets: 102 priority 4, 29 priority 5). Validated: every target appears once, batch counts are 3 except the last, 0 overlap with earlier targets.
 
@@ -255,11 +338,20 @@ df -h /workspaces
 
 Under the hardened standard:
 
-- **Per accepted target:** `NOT_EXTRACTABLE` is HIGH by construction (full coverage + safe_reasons + closure artifact + QA). Target-level assurance ~85%.
+- **Per accepted target:** `NOT_EXTRACTABLE` is HIGH by construction (full coverage + safe_reasons + closure artifact + derived_addresses + QA). Target-level assurance ~85%.
 - **Per wave:** QA acceptance; a wave with weak negatives is rejected.
-- **Overall:** coverage × QA acceptance. At 100% coverage and a clean QA pass, ~85–90% — not 100%, because unverified code and time bounds remain.
+- **Overall:** coverage × QA acceptance × **address identity**. At 100% coverage and a clean QA pass, ~85–90% — not 100%, because unverified code and time bounds remain.
 
-Current coverage is 1,452/3,816 (38%). The remaining 2,364 targets must be run under the hardened standard; the overall figure rises as coverage rises.
+**Address identity is the third factor and the one that was silently assumed before.** A negative is
+only as good as the address it was tested on. For `PARTIAL`-derived targets (131 in the corpus) the
+anchor was never proven to be the audited version; for multi-instance protocols a single-address
+negative covers one instance. Step 0 (§4c) plus the Stage 2.6 recon lane is what converts that
+assumption into evidence. Until a target has `derived_addresses` with a version verdict and instance
+coverage, treat its negative as **provisional**, not accepted.
+
+Current coverage is 1,452/3,816 (38%). The remaining 2,364 targets must be run under the hardened
+standard; the overall figure rises as coverage rises. The 148 address-less units in §2 are outside
+that denominator entirely.
 
 ## 11. Directory map / what not to delete
 
@@ -273,10 +365,15 @@ Current coverage is 1,452/3,816 (38%). The remaining 2,364 targets must be run u
     STAGE3.md                       # protocol
     MASTER_LOG.csv                  # 1,452 audited targets
     index/stage3_targets.csv        # all 3,816 targets
-    batches/S3-*.json               # 869 built; priority 4 not built
+    batches/S3-*.json               # 1,274 built, all priorities
     results/S3-*.json|.md           # batch outputs
     work/S3-*/<protocol>/           # kept PoCs/evidence for >$5 targets
     results.tar.gz                  # archive
+  stage26/
+    RECON.md                        # recon protocol (read before launching R3 batches)
+    index/recon_units.csv           # 222 units
+    batches/R3-*.json               # 74 recon batches
+    merge_recon.py                  # merged deployments -> new Stage 3 targets
   research/
     corpus2/stage1/index/           # Stage 1 master/targets
     corpus2/stage2/index/           # Stage 2 master/targets/addresses
@@ -303,10 +400,16 @@ GH_TOKEN="$CHRIS_GITHUB_API_KEY_2" git push origin main
 
 ## 12. First actions for the successor
 
-1. Read `/workspaces/CA/stage3/STAGE3.md` and this brief.
+1. Read `/workspaces/CA/stage3/STAGE3.md`, `/workspaces/CA/stage3/QA_CHECKLIST.md`, `/workspaces/CA/stage26/RECON.md` and this brief.
 2. Rebuild `MASTER_LOG.csv` and confirm 1,452 targets / 14 unique extractables.
 3. Ask the user how many agents per wave (3 targets/agent constant); compute waves as `ceil(2,364 / (3 × N))`.
 4. Continue priority 2 from **S3-337**; when exhausted, use the already-built priority 4 batches **S3-870..S3-1230** plus the Stage 2.5 batches **S3-1231..S3-1274**.
-5. Keep ≤10 agents per wave unless the user explicitly authorizes more; retry failures with fresh agents.
-6. Publish checkpoints to GitHub + HF.
-7. Do not claim “nothing missed” without stating the coverage and confidence above.
+5. Run the Stage 2.6 recon lane **R3-001..R3-074** (3 units/agent, `stage26/RECON.md`) in parallel or between audit waves; `merge_recon.py --apply` turns `CONFIRMED`/`ANCHORED` deployments into new audit targets. Do not count recon as coverage.
+6. Keep ≤10 agents per wave unless the user explicitly authorizes more; retry failures with fresh agents.
+7. Publish checkpoints to GitHub + HF.
+8. Do not claim “nothing missed” without stating the coverage, the address-identity basis and the confidence above.
+
+**Never do these:** start an audit wave without the user's agent count; audit a batch address without
+Step 0; accept a negative that lacks `derived_addresses`; treat the 148 address-less units as covered;
+re-open the closed decisions (3 targets/agent, HIGH-only negatives, no `NEEDS_MORE`, duplicate
+`economic_id`s not double-counted).

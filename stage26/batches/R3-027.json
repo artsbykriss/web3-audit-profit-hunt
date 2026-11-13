@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-027",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0110",
+   "lane": "A_NO_ADDRESS",
+   "project": "Fyllo Smart",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "0",
+   "high": "2",
+   "titles": "Token balance manipulation in the CToken contract | No access control to update the interest rate model",
+   "uids": "finding:b2c26d8dd63a7d6cffb45d7e05c198881c0140195db06e67a55e54d070b268a9;finding:7b0226322890a30fcbd94d8e0ecd04a89821c7e20b10f91c84e6e6c333868eb4",
+   "report_urls": "reports/blocksec/2023/fyllo-smart-8e0e28f7.md",
+   "evidence_urls": "https://github.com/blocksecteam/audit-reports/blob/9da368848d5a3b2a4e0f76a4e6dd04091de5d623/solidity/blocksec_fyllo_v1.1-signed.pdf",
+   "known_addresses": "",
+   "known_address_notes": "BlockSec 2023 review of 'fyllo-lending' v1.1: CToken (Compound fork), ChainlinkAdaptor.sol, Vyper controller (_checkpoint_dao). Report gives no chain, repo or address. fyllo.io is an unrelated creator-marketing SaaS; GitHub 'fyllo' repos are unrelated. No public contract or deployment page found.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0113",
+   "lane": "A_NO_ADDRESS",
+   "project": "Glider Protocol",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "0",
+   "high": "2",
+   "titles": "Epoch gate ignores NAV report freshness | JIT claims skim returned yield",
+   "uids": "finding:a64f57dd740f94f56a048c367d1bd3e655b83cdd3c2e1371b92ca54961f79b94;finding:64795cacbc6c768ebb2b0a2da647611fb714f0128b06b68f73b0f35d36c5f401",
+   "report_urls": "reports/guardianaudits/2026/glider-protocol-1ee79423.md",
+   "evidence_urls": "https://github.com/GuardianAudits/Audits/blob/36fcc39d51fd84a6ec2c72b9c9fda8f8b6ac169d/Glider/2026-09-18_Glider_Protocol_Review.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Guardian 2026-09-18 review of github.com/glider-fi/glider-contracts-audit; scope 1,387 lines / 6 files incl. onchain-base-type4/contracts/Staking.sol, staking/StakingCore.sol, staking/StakingMethods.sol and GliderScan/lib/kernel/src/Kernel.sol (Base-oriented naming). Repo returns 404; glider.fi is live but publishes no contract addresses; no explorer/deployment data. No address.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0119",
+   "lane": "A_NO_ADDRESS",
+   "project": "Helios protocol",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "0",
+   "high": "2",
+   "titles": "TOB-HELI-8: Accounting bug in withdraw enables sandwich and flashloan attacks | TOB-HELI-2: Yield distribution is susceptible to front-running",
+   "uids": "helios-global-security-assessment-summary-report::tob-heli-8-accounting-bug-in-withdraw-enables-sandwich-and-flashloan-attacks;helios-global-security-assessment-summary-report::tob-heli-2-yield-distribution-is-susceptible-to-front-running",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Trail of Bits 'Helios Global Security Assessment' (2024-02-27). Helios Global = RWA platform onboarding investments into solar-energy projects; scope is the regional pools and related contracts (AbstractPool is ERC20+ReentrancyGuard, secondary accounting, unlockedToWithdraw), findings TOB-HELI-2/8 match the corpus titles. Fix commits b5b28ea, 50a7a0a, e894498 referenced but no repo, chain or address is given. No public repo/site or deployed pool located.",
+   "project_addresses": ""
+  }
+ ]
+}

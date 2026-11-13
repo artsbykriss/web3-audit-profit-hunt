@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-028",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0144",
+   "lane": "A_NO_ADDRESS",
+   "project": "LiquiFi Vesting Contracts V1",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "0",
+   "high": "2",
+   "titles": "Staggered vesting\u2019s getClaimableAmount computes wrong awardAmount | Staggered vesting\u2019s _awardAmount is never verified when claiming tokens",
+   "uids": "sherlock-security-review-for-liquifi::staggered-vesting-getclaimableamount-computes-wrong-awardamount;sherlock-security-review-for-liquifi::staggered-vesting-awardamount-not-verified-when-claiming",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "LiquiFi was the token-vesting/distribution platform; liquifi.finance now 301-redirects to coinbase.com/tokenmanager (acquired), and no V1 deployment page survives (Wayback has no archived deployment doc). Sherlock review covers StaggeredVesting (getClaimableAmount / _awardAmount); no factory or vesting address is published. Etherscan lookup of a contract literally named 'Vesting' (0x2290eefea24a6e43b26c27187742bd1fedc10bdb, v0.7.6, verified) showed no StaggeredVesting/awardAmount symbols, i.e. n",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0268",
+   "lane": "A_NO_ADDRESS",
+   "project": "Zap Protocol",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "0",
+   "high": "2",
+   "titles": "Reentrancy in Vesting.sol:claim() will allow users to drain the contract due to executing .call() on user's ad- dress before setting s.index = uint128(i) | Reentrancy in Vesting.sol:claim() will allow users to drain the contract due to executing .call() on user's address before setting s.index = uint128(i)",
+   "uids": "finding:164aa667838be1064266d264aab335f14ebb53a86bba4091fac7f137e0c50e90;sherlock-security-review-for-zap::reentrancy-in-vesting-sol-claim-allows-drain-before-updating-index",
+   "report_urls": "reports/sherlock/2024/zap-protocol-750db9f1.md",
+   "evidence_urls": "https://github.com/sherlock-protocol/sherlock-reports/blob/10e76f5bd13701970c995924f310258290043230/audits/2024.03.20%20-%20Final%20-%20Zap%20Protocol%20Audit%20Report.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Sherlock Mar-2024 contest on Lithium-Ventures zap-contracts-labs (TokenSale.sol, Vesting.sol); contest repo references Base as the deployment target (the 0x5B0091... address in the report is a test fixture). Lithium-Ventures/zap-contracts-labs now 404 and the org has no zap repo, so no broadcast/address book. Brand/codebase overlaps the ZAP launchpad in P25-0265 (zap.tech, Base+Blast), whose front end also publishes no addresses. Exact TokenSale/Vesting instance unpublished -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0282",
+   "lane": "A_NO_ADDRESS",
+   "project": "hashlock-honeypot-finance-2024-08-honeypot-finance-yexfto-smart-contract-audit-r",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "0",
+   "high": "2",
+   "titles": "[H-01] YexFTOPair - No incentives to deposit early into a pair. Users can deposit right before the endTime to earn tokens | YexFTOPair - No incentives to deposit early into a pair. Users can deposit right before the endTime to earn tokens",
+   "uids": "hashlock-honeypot-finance-2024-08-honeypot-finance-yexfto-smart-contract-audit-report::h-01-yexftopair-no-incentives-to-deposit-early-into-a-pair-users-can-deposit-right-before-the-endtime-to-earn-tokens;hashlock-honeypot-finance-2024-08-honeypot-finance-yexfto-smart-contract-audit-report-4::yexftopair-no-incentives-to-deposit-early",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Report: Network BERACHAIN; scope YexFTOFacade.sol / YexFTOFactory.sol / YexFTOLaunchToken.sol / YexFTOPair.sol. Audited source located in YexLabs/FTO_Launchpad_Model (contracts/core/YexFTOFactory.sol, YexFTOPair.sol, YexFTOFacade.sol). The repo's scripts/FTO/createFTO.ts uses factory 0x16b7e526cE35061de7c26E6D943687460637BB6D with USDT 0x5d116b0032188519e62858dFd3b7917ccEcad170; both return 0 bytes of code on Berachain mainnet (Alchemy berachain-mainnet eth_getCode), i.e. dead/dev addresses. ber",
+   "project_addresses": ""
+  }
+ ]
+}

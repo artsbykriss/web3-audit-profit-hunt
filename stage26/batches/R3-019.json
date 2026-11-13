@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-019",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0186",
+   "lane": "A_NO_ADDRESS",
+   "project": "Picasso Network",
+   "chain": "Picasso",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Ability To Initialize Multiple Times",
+   "uids": "finding:ba436edc5a462b185de9e8ef83ee5a0febe731995a2687e9c12cdc1e83411db3",
+   "report_urls": "reports/ottersec/2024/picasso-network-5a3bc0c9.md",
+   "evidence_urls": "https://osec.io/reports/b924da7f-7c9e-4d03-b3db-b701ecbeab60",
+   "known_addresses": "",
+   "known_address_notes": "OtterSec Apr-2024 assessment of the 'emulated-light-client' CosmWasm program (finding OS-CFI-ADV-00, initialize multiple times). Scope = CosmWasm contract, not Solidity. Code repo ComposableFi/emulated-light-client exists but has been gutted \u2014 default branch master carries no files, remaining branches are attic/*. Picasso REST/RPC hosts (picasso-rest.composable.finance, picasso-rpc.composable.finance) no longer resolve, so no code id / contract address could be read or published. Program identit",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0189",
+   "lane": "A_NO_ADDRESS",
+   "project": "Poly-notes",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Invoice without paying",
+   "uids": "finding:bd4c58f2b763e8e46e2a04bb3ab476d71d3a18070253b4ee8a9b8784a437fa9d",
+   "report_urls": "reports/sec3/2023/poly-notes-e4e1c927.md",
+   "evidence_urls": "https://github.com/sec3-service/reports/blob/13c2f82d576164c7db728108d09a8d3727234a3d/reports/sec3_poly-notes_report.pdf",
+   "known_addresses": "",
+   "known_address_notes": "sec3 (ex-Soteria) 2023-02 review of the 'poly-notes' Solidity contract, tag Mainnet-Alpha-0.1.0, commit d5e61c91\u2026, in a *private* repository; audited units BulletBond/Documents with invoice issuance (finding 'Invoice without paying'). Report states no chain and no address; no repo, docs page, token or protocol footprint found (Dexscreener 'polynotes' empty). Code version identified by tag/commit only.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0204",
+   "lane": "A_NO_ADDRESS",
+   "project": "ReWind",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Front-runnable withdrawal",
+   "uids": "finding:3ec7792f5b4c4101992e57887dbddb3c9b7da3abb47da993f1d0ba85b8438da1",
+   "report_urls": "reports/pessimistic/2023/rewind-e5f15027.md",
+   "evidence_urls": "https://github.com/pessimistic-io/audits/blob/d45fd8767d769729e378a82beb6fbcad7c131689/ReWind%20Security%20Analysis%20by%20Pessimistic.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Pessimistic 2023-02/03 analysis of Token + Operator contracts (withdrawalWithDiscount, _refund, _spend); developer comment says 'we are launching on cheap networks', so L2/alt-L1 but no chain is named. Report contains no addresses, repo or deployment section; no ReWind deployment address book located -> core anchor (project + contract set) only.",
+   "project_addresses": ""
+  }
+ ]
+}

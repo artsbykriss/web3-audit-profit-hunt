@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-055",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0233",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "Substance Exchange Exchange V4 Smart Contract Security",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "INCONSISTENCY IN USER BALANCE CALCULATIONS ALLOWS FOR EXPLOITS IN WITHDRAWALS",
+   "uids": "finding:a48ac812da38c41cddc0fafec3319977e85f3ec60521694c1fd72a88592080b6",
+   "report_urls": "reports/halborn/2023/substance-exchange-exchange-v4-smart-contract-security-c1a2b417.md",
+   "evidence_urls": "https://github.com/HalbornSecurity/PublicReports/blob/4f3d1c6451ac01ba669a43072dd30b857ef9aa90/Solidity%20Smart%20Contract%20Audits/Substance_Exchange_Exchange_V4_Smart_Contract_Security_Assessment_Report_Halborn_Final.pdf",
+   "known_addresses": "0x65fb9385A0b493d27AfF1e653b6a30E47399B826",
+   "known_address_notes": "Halborn 2023 review of 'Substance Exchange V4', repository SubstanceExchangeV1 (private) @70064da, remediation commits 51d826b..d9201004; chain is ZetaChain (docs.substance.exchange: ZETA gas, V2 native-BTC margin). The repo is private, so the audited commit cannot be matched. Live SubstanceX on Zeta was enumerated via Blockscout: SubstanceXToken 0x436abA3B.., LiquidityPool (SLP) 0x65fb9385.. / 0xc4dE117b.. / 0x641DeAa2.., all verified after the 2023 audit, so none is provably the audited V4 ins",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0250",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "UFarm",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "totalCost parameter may be manipulated",
+   "uids": "finding:7813708c7a6a9240ac24b8797bc69e3c3a10a707a181ea8d3a17a4bd8125bd29",
+   "report_urls": "reports/decurity/2023/ufarm-c6721ef1.md",
+   "evidence_urls": "https://github.com/Decurity/audits/blob/736e3b80199dca77f5e3ee727c1d5853a9247f76/UFarm/ufarm-audit-report-2023-1.1.pdf",
+   "known_addresses": "0xe92B70d6C805B7a487C387a8e8bec177d991f305;0x46Df84E70deDB8a17eA859F1B07B00FB83b8a81F",
+   "known_address_notes": "Decurity 2023 scope: github.com/UFarmDigital/ufarm-evm-contracts @3d87f961 (contracts/main/contracts/pool/*, PriceOracle, UnoswapV2Controller). DefiLlama's ufarm-digital adapter publishes the live 'ufarmCore' on Ethereum and Arbitrum with the same implementation; both proxies return bytecode and are verified as ERC1967Proxy, but the implementation source is not verified on either explorer and the repo's ignition/parameters.sample.json addresses (0x97076a3c..., 0x52388497...) are placeholders/tes",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0264",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "XION and Burnt Contracts",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "check_ownable is incorrectly implemented which allows attackers to list any tokens",
+   "uids": "finding:1b62a3b9f815b85673c55e674e9d1b17e852b8324b799d01fde3e26d79559f30",
+   "report_urls": "reports/oak-security/2023/xion-and-burnt-contracts-c4e4377f.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/Burnt%20%28XION%29/2023-09-22%20Audit%20Report%20-%20XION%20and%20Burnt%20Contracts%20v1.1.pdf",
+   "known_addresses": "xion1eazhnhk9f8w04yg0s7z57kvcu2aeqkr42tw54cyujg5z92cctjcsd7jpck;xion1euxqypuag7tpvqe99zx4l7ug8w0lt4286jw088pcl29q4mzv965qhn5gc4",
+   "known_address_notes": "Finding is in cw-std:sellable/src/execute.rs (check_ownable always Ok). The 2023 crate repo is gone (burnt-labs/cw-std, cw-nfts, cw721-sellable all 404). Burnt's live successor is xion-nft-marketplace (code_id 65, migrated path to 69) plus the asset contract (code_id 64) which carries the sellable plugin (contracts/asset/src/tests/plugin/sellable.rs in the current repo). Code IDs and instantiated contracts verified on xion-mainnet-1; the exact 2023 sellable version cannot be pinned, hence PARTIA",
+   "project_addresses": ""
+  }
+ ]
+}

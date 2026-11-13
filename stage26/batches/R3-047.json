@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-047",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0293",
+   "lane": "A_NO_ADDRESS",
+   "project": "pashov-team-2024-12-14-buyburner-security-review",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "[H-01] Manipulatable oracle and breaking slippage protection",
+   "uids": "pashov-team-2024-12-14-buyburner-security-review::manipulatable-oracle-and-breaking-slippage-protection",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Report identifies repository avierauy/buyburner (buyback-and-burn / oracle+slippage issue). GitHub API: avierauy/buyburner = 404 (deleted or private); no fork, site or address book located, and no chain is stated in the report. Target instance not identifiable -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0294",
+   "lane": "A_NO_ADDRESS",
+   "project": "pashov-team-2025-08-27-funnel-security-review",
+   "chain": "Sonic",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "swapTokens does not account for SwapX router fees when the out token is native",
+   "uids": "pashov-team-2025-08-27-funnel-security-review::swaptokens-does-not-account-for-swapx-router-fees-when-out-token-is-native",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Pashov report: repositories acc8-labs/funnel-vault @95019239 and acc8-labs/v3-core @2c14fb74 ('Funnel is a system for deploying and managing Uniswap V3-style liquidity pools... HIP-1 ticker acquisition, HYPE bridging'), plus acc8-labs/swapx-router-contracts (SwapX.takeFee) referenced in H-02 - i.e. Sonic deployment with the SwapX router. GitHub API: acc8-labs/funnel-vault = 404 (deleted/private); sonicscan name searches for 'FunnelVault' return 'did not match any records'; three candidate Sonic ",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0296",
+   "lane": "A_NO_ADDRESS",
+   "project": "rio vesting escrow",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "High-severity findings \u2014 2024-01-rio-vesting-escrow-judging",
+   "uids": "broad:sherlock:251:0",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Identity: Rio Network's fork of Lido Vesting Escrow (minimal proxies with immutable args, OpenZeppelin governance support), audited via Sherlock contest 159 (README: 'The liquid restaking network'). Upstream repo rio-org/rio-vesting-escrow exists and its README documents build/test but no deployment addresses or factory address; sherlock contest repo carries code only. No published escrow-factory/implementation address -> PARTIAL.",
+   "project_addresses": ""
+  }
+ ]
+}

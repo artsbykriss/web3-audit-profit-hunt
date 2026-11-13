@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-023",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0314",
+   "lane": "A_NO_ADDRESS",
+   "project": "veTenet",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Cloning a `subGauge` can result in an uninitialized proxy",
+   "uids": "finding:ceb1de9f30514d219f0e77ec6e15f25eca609338fe75790a361a7e57f6481d8a",
+   "report_urls": "reports/pashov-audit-group/2023/vetenet-f886b27e.md",
+   "evidence_urls": "https://github.com/pashov/audits/blob/e615d8a5319647f95e217616d21770b3d8372f50/solo/md/veTenet-security-review.md",
+   "known_addresses": "",
+   "known_address_notes": "Same engagement and finding as P25-0313 (finding-hash entry 'Cloning a subGauge can result in an uninitialized proxy'); identical tracing result and blockers were re-checked: tenet-org/veTenet-contracts 404, rpc.tenet.org empty, explorer.tenet.org empty. No audited address obtainable -> PARTIAL (kept as its own unit because it is a separate corpus finding id).",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0316",
+   "lane": "A_NO_ADDRESS",
+   "project": "xycLoans",
+   "chain": "Stellar",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Rounding Error",
+   "uids": "finding:d37354120aa51bc86c1911f08f76f698295e8781f3b990adf189312cf2524642",
+   "report_urls": "reports/ottersec/2024/xycloans-3cc64a5d.md",
+   "evidence_urls": "https://osec.io/reports/37434c3c-d4d4-41db-8e67-1a331967ab5e",
+   "known_addresses": "",
+   "known_address_notes": "Identity confirmed: xyclooLabs' flash-loan protocol for Soroban (pool + factory + moderc3156 crates), repo xycloo/xycloans exists (52 blobs: pool/, factory/, moderc3156/, examples/), audited by OtterSec. No contract id is published: repo README/tree has no address constants or deployment env, docs.xycloans.app (GitBook) has no 'contracts/deployments' page (sitemap-pages.xml has no loc entries), main.xycloans.app renders only marketing copy (0 C...-ids in extracted text), and api.stellar.expert r",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0006",
+   "lane": "A_NO_ADDRESS",
+   "project": "2022-02-concur",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "4",
+   "critical": "0",
+   "high": "4",
+   "titles": "ConvexStakingWrapper, StakingRewards Wrong implementation will send concur rewards to the wrong receiver | ConvexStakingWrapper._calcRewardIntegral() Can Be Manipulated To Steal Tokens From Other Pools | Repeated Calls to Shelter.withdraw Can Drain All Funds in Shelter | Shelter claimed mapping is set with _to address and not msg.sender",
+   "uids": "2022-02-concur::2022-02-concur_H-04;2022-02-concur::2022-02-concur_H-11;2022-02-concur::2022-02-concur_H-03;2022-02-concur::2022-02-concur_H-07",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Concur Finance (Curve/Convex reward-sharing, Feb-2022 Code4rena contest: ConvexStakingWrapper, StakingRewards, Shelter, MasterChef). concur.finance is now a Dan.com for-sale page and app.concur.finance has no Wayback snapshots (CDX query returned none; Wayback API was itself offline during this pass). The C4 repo ships sources only, no deployments/broadcast. Etherscan has no name-search API; Blockscout Ethereum search returns 403 from this network; the CONCUR ERC-20 0xbcbcecee4cf93636568e9f7d654",
+   "project_addresses": ""
+  }
+ ]
+}

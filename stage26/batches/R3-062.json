@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-062",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0161",
+   "lane": "C_FOUND",
+   "project": "Moonbite GmbH",
+   "chain": "Stellar",
+   "trace_status": "FOUND",
+   "n_findings": "4",
+   "critical": "2",
+   "high": "2",
+   "titles": "Pool contract can be drained due to negative referral fee | Incorrect access control when updating pool configuration | Factory can be made to deploy malicious pools | Incorrect return_amount in stable pool",
+   "uids": "finding:61b38ebfda0f338db1a95248ae81b7e7b21dbea4151e4a47e5474d149029a735;finding:de8111fbd744214101eee5b1aecadeb45f4f8734a3887f9acf714b1c145caf32;finding:7f58f52d930ad92bb6a06c982e0566dc0d4ef8a5428b0461e936687622f6b504;finding:534168f50c1e705ad9e56d2d90233aab05e04fcb07638bac6fb93ac95eb2463c",
+   "report_urls": "reports/veridise/2024/moonbite-gmbh-48dd298b.md",
+   "evidence_urls": "https://github.com/Phoenix-Protocol-Group/phoenix-contracts/blob/d91219ff714ea4ada5900c01688a9e939a3d77ed/docs/VAR_MoonBite_240103_OfficialR.pdf",
+   "known_addresses": "CB4SVAWJA6TSRNOJZ7W2AWFW46D5VR4ZMFZKDIKXEINZCZEGZCJZCKMI;CCLZRD4E72T7JCZCN3P7KNPYNXFYKQCL64ECLX7WP5GNVYPYJGU2IO2G;CD5XNKK3B6BEF2N7ULNHHGAMOKZ7P6456BFNIHRF4WNTEDKBRWAE7IAA;CBHCRSVX3ZZ7EGTSYMKPEFGZNWRVCSESQR3UABET4MIW52N4EVU6BIZX",
+   "known_address_notes": "Veridise audit (2024-01-18) of phoenix-contracts: factory, pool and stable pool (contracts/factory, contracts/pool). Project identity: Phoenix DEX on Soroban. Mainnet factory/pool/multihop IDs come from the project's own upgrade_mainnet.sh; on-chain contract meta self-identifies as Phoenix Protocol Factory / XYK Liquidity Pool. Deployed wasm is built with newer toolchain (rsver 1.81, sdk 22.0.7) than the Jan-2024 audit commit d91219ff, so byte-level revision match with the audited code is not es",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0131",
+   "lane": "C_FOUND",
+   "project": "IxoSwap",
+   "chain": "Impact Hub",
+   "trace_status": "FOUND",
+   "n_findings": "2",
+   "critical": "2",
+   "high": "0",
+   "titles": "Attackers can swap lower-value tokens for valuable assets | Attackers can trigger a share inflation attack to steal user funds",
+   "uids": "finding:ed30e3621fdb60e1eb53a0093b32d730eafadb8bfc83606828eb56c043822329;finding:5fd6ffa0994e572d529f59ee886116a58f600bb4834059b11d28a0d79c36742c",
+   "report_urls": "reports/oak-security/2024/ixoswap-2b7c82bf.md;reports/oak-security/2024/ixoswap-c2979f3d.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/ixo/2024-03-15%20Audit%20Report%20-%20IxoSwap%20v1.0.pdf;https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/ixo/2024-09-13%20Audit%20Report%20-%20IxoSwap%20v1.1.pdf",
+   "known_addresses": "ixo14zpkpwze2cu86mx0gt5zjc8jr2fjrfyv658r6sj9g2kcyavg3ugq08v4p6;ixo18zetphyuy0znf73r9vm6qv0542tpuru7c0at7njdpjcx83kv7cesjs3ph3",
+   "known_address_notes": "REST gateways on Impact Hub return {\"code\":12,\"message\":\"Not Implemented\"} for wasm queries, so the chain was scanned over JSON-RPC abci_query: Codes -> 72 code ids, ContractsByCode -> 540 instances, ContractInfo labels. One swap instance found: code_id 30, label 'Carbon DAX CARBON Swap' at ixo14zpkpwze2cu86mx0gt5zjc8jr2fjrfyv658r6sj9g2kcyavg3ugq08v4p6. A SmartContractState query on it is parsed by ixoswap::msg::QueryMsg, which is precisely the contract Oak audited (ixo-swap/src/contract.rs; fin",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0287",
+   "lane": "C_FOUND",
+   "project": "nolus-money-market",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "2",
+   "critical": "2",
+   "high": "0",
+   "titles": "Lack of authorization for privileged operations in the lpp contract allows users to manipulate the market | Lack of instantiation authorization in the lease contract allows attackers to instantiate it with arbitrary parameters and hence prevent liquidation and use arbitrary prices",
+   "uids": "finding:a9d5ff6eb5835362b9f462c51b9befe231a402dae19fce59e35038d1de2ebc27;finding:153e4417905f46388795cd50c2ad6b400dafdbbbcca454703d4b24ca2b58a1c8",
+   "report_urls": "reports/oak-security/2023/nolus-money-market-bcb33255.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/Nolus/2023-01-27%20Audit%20Report%20-%20Nolus%20Money%20Market%20v1.1.pdf",
+   "known_addresses": "nolus1gurgpv8savnfw66lckwzn4zk7fp394lpe667dhu7aw48u40lj6jsqxf8nd;nolus1f0pqlmj609l8cy74g65737usspn38sfqyf7pprdef5knv8mm50ss06qlfw;nolus123v3560y4r5es0w85crkrflx36vprfesw7yst2xqzgpxjpfnfdzqx6dh4h",
+   "known_address_notes": "Chain corrected to Nolus (Cosmos, chain-id pirin-1, confirmed via LCD node_info). Report scope is the CosmWasm money market: contracts/lpp (lending pool) and contracts/lease. Nolus docs publish the admin/registry contract and the live per-protocol registry query; querying admin for 'SOLANA-METIS-USDC' yields lpp + leaser + oracle + profit + reserve + remote_lease. All three recorded addresses are live wasm contracts (code_ids 984/988/987). Note: these are current code_ids; the audited 2023 code_",
+   "project_addresses": ""
+  }
+ ]
+}

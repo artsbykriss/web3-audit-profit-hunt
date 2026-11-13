@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-052",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0125",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "Increment",
+   "chain": "zkSync Era",
+   "trace_status": "PARTIAL",
+   "n_findings": "3",
+   "critical": "1",
+   "high": "2",
+   "titles": "Redeem period is less than intended down to 0 | `StakedToken` is vulnerable to share inflation attack via donation | Stakers could lose extra rewards due to accrual on behalf",
+   "uids": "group:113:0;group:113:1;group:113:2",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0x9200536A28b0Bf5d02b7d8966cd441EDc173dE61;0xCbba059D8E8AcC2C69bA94400686106b2396d786",
+   "known_address_notes": "Same group as P25-0124 (zkSync Era). All three findings (redeem period, StakedToken donation inflation, accrual-on-behalf) live in peripheral-contracts StakedToken/SMRewardDistributor. No published StakedToken/SafetyModule address (repo has no constants/deployments file; deploy scripts read MAINNET_RPC_URL only). PARTIAL: chain + protocol core verified, audited instance unpublished.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0150",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "Lumiterra Community Contracts",
+   "chain": "Ronin",
+   "trace_status": "PARTIAL",
+   "n_findings": "3",
+   "critical": "1",
+   "high": "2",
+   "titles": "Addressing overpayment risk in reward distribution due to rate update delays | Potential reentrancy risk in VAMM's _mintByPRToken function | Exploitation risk with arbitrary payToken in VAMM's _mintByPRToken function",
+   "uids": "finding:1d9d0dc567f4e914f085480244c0aff3856d865b0e93bf6491f58be86bab9a5b;finding:0413689ff8752d0190273d7a95c5bf83f24d788a84518bbead98a401703e01d4;finding:75ae53ee7e635f8416188c78828f7546046850e5cd2351c1a34d144fc0467a64",
+   "report_urls": "reports/slowmist/2023/lumiterra-community-contracts-80b0535a.md",
+   "evidence_urls": "https://github.com/slowmist/Knowledge-Base/blob/ca4ff9fe9f633c174c09fd189658902d9e3619d0/open-report-V2/smart-contract/SlowMist%20Audit%20Report%20-%20Lumiterra%20Community%20Contracts_en-us.pdf",
+   "known_addresses": "0xcc451977a4Be9aDeE892F7E610fe3e3b3927b5A1",
+   "known_address_notes": "SlowMist (2023-12-13) covers UtilityToken + VAMM (_mintByPRToken, payToken checks) of Lumiterra Community Contracts on Ronin. The report discloses only the owner multisig 0x7e502E2cF358d9191EB5ae437b7e6d1e674E7498 (a Safe, not audited code) \u2014 no VAMM or UtilityToken address. Ronin explorer v2 search for Lumiterra/VAMM/HashCore returns only the verified ERC-1155 game-item token recorded above (probed as a project anchor); the audited VAMM remains unpublished.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0291",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "pashov-team-2024-03-06-tapiocadao-security-review",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "3",
+   "critical": "1",
+   "high": "2",
+   "titles": "The read() function returns the wrong value because it is not properly scalable | Multisig wallets that call StargateLbpHelper.participate() could cause received token to be stolen | Use of only higher price in Seer makes it vulnerable to price manipulation",
+   "uids": "pashov-team-2024-03-06-tapiocadao-security-review::c-01-the-read-function-returns-the-wrong-value-because-it-is-not-properly-scalable;pashov-team-2024-03-06-tapiocadao-security-review::h-03-multisig-wallets-that-call-stargatelbphelper-participate-could-cause-received-token-to-be-stolen;pashov-team-2024-03-06-tapiocadao-security-review::h-04-use-of-only-higher-price-in-seer-makes-it-vulnerable-to-price-manipulation",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0x7A3B760AcFaB78f6bc6a1AD80F7743f5bA0513Dc;0xA805E1b42590be85D2c74E09c0e1c1B6063Ea1A7",
+   "known_address_notes": "Scope confirmed from the Pashov report: repository 'tapioca-periph' (Seer oracle wrapper, StargateLbpHelper, TapiocaOptionBroker). Arbitrum is the primary chain (also Ethereum). Upstream Tapioca repos are deleted (Zealynx Shadow Arena notes 'all upstream source repos deleted') and docs.tapioca.xyz no longer resolves to docs (tapioca.xyz now redirects to Alto Foundation). The only project address book found is the LBP/vesting DEPLOY_CONFIG (DAO multisig + PCNFT), which does not include Seer/LbpHe",
+   "project_addresses": ""
+  }
+ ]
+}

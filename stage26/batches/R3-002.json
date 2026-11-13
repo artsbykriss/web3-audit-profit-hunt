@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-002",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0093",
+   "lane": "A_NO_ADDRESS",
+   "project": "Degensafe Protocol",
+   "chain": "Solana",
+   "trace_status": "PARTIAL",
+   "n_findings": "5",
+   "critical": "4",
+   "high": "1",
+   "titles": "Authority Hijacking In SOL Deposit | Attacker Can Drain Arbitrary User Stake | Vault Authority Takeover | Anyone Can Takeover Pool And Corrupt State | Varied Reward And Deposit Token Leads To Drain",
+   "uids": "finding:9f21a929d32c34b749297edceef39bb6fed2e7803c53e843dfcc4b9ad2de07f5;finding:be16a30952dda2fb2f5234e655ac33e0853083dce3f1d0f890ad79326593113f;finding:5d55aea6671805529456fbc9552ec6b5fd414da4d1fd9534401a445d47fc6767;finding:214811e2fa97775ec9cfe92982a1874bfe1d3c0e21b7e0bb81235783f7bc1b21;finding:0c457fae3ec7e5011029fba699d87d38b6702b1c555583f9843bf9c84828b59f",
+   "report_urls": "reports/guardianaudits/2026/degensafe-protocol-c0c3099f.md",
+   "evidence_urls": "https://github.com/GuardianAudits/Audits/blob/36fcc39d51fd84a6ec2c72b9c9fda8f8b6ac169d/Degen%20Safe/Degensafe_Protocol_Review_report.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Identity confirmed: app.degensafe.fun is live (Solana token launch pad; token pages under /token/<mint>). Report covers two Anchor programs (sol_deposit and lc_deposit, pool/vault_state/staking PDAs) but contains no program IDs and no base58 keys (regex scan found none). The front-end bundle (/assets/index-APaOVv2k.js, 2.6 MB) contains only SPL/SNS/sysvar constants - no project program ID is hardcoded. No docs site with program IDs found. -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0083",
+   "lane": "A_NO_ADDRESS",
+   "project": "Curio",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "4",
+   "critical": "4",
+   "high": "0",
+   "titles": "Winner's payout is incorrectly calculated | Game fee handling is incorrect | Incorrect logical check in `endGame` function",
+   "uids": "finding:1868cb0cdfabd091e2eed065aea2c3e7f435075c26018e14ec3bdf2e066eef45;group:94:0;group:94:1;group:94:2",
+   "report_urls": "reports/pashov-audit-group/2024/curio-33932723.md",
+   "evidence_urls": "https://github.com/pashov/audits/blob/e615d8a5319647f95e217616d21770b3d8372f50/team/md/Curio-security-review.md",
+   "known_addresses": "",
+   "known_address_notes": "Report names repo curio-research/flagship-contracts at commit 19d6cd40f8a28ec842be9a52c91a1fad76d01df2 (fix review 25a268fd). That repo now returns 404 and the org listing shows only treaty-contracts, keystone, gevm, demo-contracts - flagship-contracts is private/deleted. Scope was a single Game contract (endGame/gameFee payouts). No deployment page, no address in the report, no DefiLlama entry. Identity resolved, deployment not published -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0219",
+   "lane": "A_NO_ADDRESS",
+   "project": "Serious",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "4",
+   "critical": "4",
+   "high": "0",
+   "titles": "[C-02] Uniswap's pool can be initialized with a different price | [C-01] Locking collected ETH by triggering createPoolAndAddLiquidity twice | Uniswap's pool can be initialized with a different price",
+   "uids": "pashov-team-2024-06-25-serious-security-review::c-02-uniswaps-pool-can-be-initialized-with-a-different-price;pashov-team-2024-06-25-serious-security-review::c-01-locking-collected-eth-by-triggering-createpoolandaddliquidity-twice;finding:a2dc59beb37a34cdb2c1ee8b0d32e06858f095e5ba430621c2c7a97fa427217f;group:55:1",
+   "report_urls": "reports/pashov-audit-group/2024/serious-9a617a71.md",
+   "evidence_urls": "https://github.com/pashov/audits/blob/e615d8a5319647f95e217616d21770b3d8372f50/team/md/Serious-security-review.md",
+   "known_addresses": "",
+   "known_address_notes": "Pashov 2024-06-25 review; findings concern createPoolAndAddLiquidity / Uniswap pair price initialization and locked ETH. Report gives no repo path, no commit and no address; GitHub code search for createPoolAndAddLiquidity returns only unrelated TypeScript SDKs; no Serious deployments repo or address book located. Core anchor only.",
+   "project_addresses": ""
+  }
+ ]
+}

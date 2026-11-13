@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-069",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0200",
+   "lane": "C_FOUND",
+   "project": "Public - PandExchange Smartcontracts",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "The tokenInLockedAmount variable is miscalculated",
+   "uids": "finding:d31828d416ae9ddaa0eae0177bc3770a93868a00b3328b13d6ff89dbaccf24b0",
+   "report_urls": "reports/verichains/2023/public-pandexchange-smartcontracts-0f321a25.md",
+   "evidence_urls": "https://github.com/verichains/public-audit-reports/blob/3ff2d281a466ba67b65be54725d01e029efb5687/Verichains%20Public%20Audit%20Report%20-%20PandExchange%20Smartcontracts%20-%20v1.1.pdf",
+   "known_addresses": "0xbeF28Aab3e70dFc5C69587eDf85694aD3138c187",
+   "known_address_notes": "Verichains Feb-2023 (v1.1) review of PandExchange at commit fea24a98\u2026, repo IARD-Solutions/PandExchange (now 404). Report has no address or chain. Verified PandExchange instance located on Polygon mainnet (0xbeF28\u20268c187, v0.8.16, matching the Feb-2023 timeframe) and the same address also appears in the Arbitrum verified-source sanctuary as a deterministic deployment; Polygon instance confirmed by code + getsourcecode. A second Polygon build exists at 0x0b41\u20266190 (v0.8.19, newer).",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0216",
+   "lane": "C_FOUND",
+   "project": "Seascape Lighthouse",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "CLAIM CAN SKIP LEVEL ZERO",
+   "uids": "finding:cdc4bca4cf637a1a94adaddd8fd71291dfc51264f0562019ffa71b1d3566ee4c",
+   "report_urls": "reports/halborn/2021/seascape-lighthouse-79202de6.md",
+   "evidence_urls": "https://github.com/HalbornSecurity/PublicReports/blob/4f3d1c6451ac01ba669a43072dd30b857ef9aa90/Solidity%20Smart%20Contract%20Audits/Seascape_Lighthouse_Smart_Contract_Security_Audit_Report_Halborn_Final.pdf",
+   "known_addresses": "0x9066b28c2f3F712268D71893877d16Bb52A69c5c;0x5f64BB041D1d2E111406B6d63b0Ca6c4C66F2052",
+   "known_address_notes": "Halborn 2021 scope = LighthouseAuction/Mint/Allocation/Project/Registration/Burn/Nft/Prefund, and the critical HAL-01 'CLAIM CAN SKIP LEVEL ZERO' code location is contracts/LighthouseTier (lines 121,124). The fix note says the contract 'was already deployed on the mainnet' and a wrapper LighthouseTierWrapper was written - both are in the repo's addresses.js on chain 56 (plus Moonriver 1285). Verified by bytecode presence, not by source match.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0221",
+   "lane": "C_FOUND",
+   "project": "Shift USDT0 Bridge & Strategies",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Source-chain compose injection on the destination adapter FIXED AS OF 6820a6dd",
+   "uids": "finding:23ca3ab7aa65988bd61fc503ec176b5144a3a7e00346cc6ca3b90a2a6dee0c9d",
+   "report_urls": "reports/mixbytes/2026/shift-usdt0-bridge-strategies-0a8664ce.md",
+   "evidence_urls": "https://github.com/mixbytes/audits_public/blob/3bbdea1996b26961a75a063badec305b26d39391/Shift/USDT0%20Bridge%20%26%20Strategies/Shift%20USDT0%20Bridge%20%26%20Strategies%20Security%20Audit%20Report%20.pdf",
+   "known_addresses": "0x9101f81a129609ad9B2Bbc1624ABFF322314345a;0x1d71c888961c4600cF0E31F6196b4dA7fE72e4B3",
+   "known_address_notes": "Identity from the MixBytes report itself: in-scope files are ShiftDeFi/shift-defi-strategies (CurveGauge, MorphoVault, FluidSupply), ShiftDeFi/shift-defi-bridge-adapter-usdt0 (USDT0BridgeAdapter) and ShiftDeFi/shift-defi-platform (BridgeAdapter parent). DefiLlama 'shift-defi' = shiftdefi.com, Ethereum-only, no address field -> adapter file gives the Container vault. shiftdefi.com and app.shiftdefi.com are Cloudflare/RBAC 403 through Jina, and no repo ships a deployments/address book, so the live",
+   "project_addresses": ""
+  }
+ ]
+}

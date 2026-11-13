@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-032",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0026",
+   "lane": "A_NO_ADDRESS",
+   "project": "2025-04-cabal-liquid-staking-token",
+   "chain": "Initia",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "LP unstaking only burns the shares but leaves the underlying tokens in the system, which distorts the shares-to-tokens ratio and leads to incorrect amounts being calculated during staking and unstaking",
+   "uids": "2025-04-cabal-liquid-staking-token::2025-04-cabal-liquid-staking-token_H-01",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "C4 DOCUMENTATION.md confirms Initia L1 Move modules (cabal, cabal_token, bribe, voting_reward, pool_router). DefiLlama lists Cabal on Initia. Module/package addresses are not in the repo docs; thecabal.xyz/docs renders client-side and returned no address strings through Jina Reader; no Initia explorer name search available in this pass. Exact package address unpublished -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0029",
+   "lane": "A_NO_ADDRESS",
+   "project": "2025-08-24-foresight-contracts",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Attackers can arbitrage through splitPosition()",
+   "uids": "2025-08-24-foresight-contracts::attackers-can-arbitrage-through-splitposition",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Cantina report scope: ConditionalTokens.sol / marketMaker (LMSR/LSLMSR) / RewardsManager. docs.foresight.now/llms.txt states supported networks Katana, Base, Citrea; the docs index has no deployment/contract-address page, and the Cantina page exposes no repo or address. No explorer name search possible for Katana/Citrea in this pass. Exact ConditionalTokens/MarketMaker instance unpublished -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0033",
+   "lane": "A_NO_ADDRESS",
+   "project": "ACHIP & ACHAIR GUILD VENTURES PTE. LTD.",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Unprotected initializer functions.",
+   "uids": "finding:3eb211bd3d26b9ccb9e8207f7486f7f676aefc6b9e257a194bfa8fffdff8a2a5",
+   "report_urls": "reports/hacken/2022/achip-achair-guild-ventures-pte-ltd-484f97dc.md",
+   "evidence_urls": "https://github.com/choco-cupcake/AuditSearcher/blob/bc907c9a314e7b63aaaec698d2640afa17dda118/audits/AAG_15032022_SCAudit_Report_3.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Corpus body was empty, so the Hacken PDF was downloaded and text-extracted: 'Platform Harmony / Solidity', type Staking + ERC721, customer ACHIP & ACHAIR GUILD VENTURES PTE. LTD., dated 2022-03-15. No repo, contract name or address in the report. Harmony explorer could not be queried by name in this pass. Chain resolved, instance not published -> PARTIAL.",
+   "project_addresses": ""
+  }
+ ]
+}

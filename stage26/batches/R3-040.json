@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-040",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0188",
+   "lane": "A_NO_ADDRESS",
+   "project": "Pluz Protocol",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Improper withdraw() Logic in LendingPool",
+   "uids": "finding:144376c0afe63f7b141884461a750a151002a935e11011597e1bb636aabe9318",
+   "report_urls": "reports/peckshield/2024/pluz-protocol-7408dd06.md",
+   "evidence_urls": "https://github.com/peckshield/publications/blob/37558e095a7c82c9f4f8db4a84af313ed5eba67c/audit_reports/PeckShield-Audit-Report-Pluz-v1.0.pdf",
+   "known_addresses": "",
+   "known_address_notes": "PeckShield 2024-216, lending protocol with LendingPool + UniswapV3 strategies. Repo pluzfi/pluz exists at the audited commits (68f3217 \u2192 b8648fe) but contains only contracts/ (159 files) \u2014 no deployments/, broadcast/, address book or README content. pluz.finance / app.pluz.finance / docs.pluz.finance do not resolve, and no Pluz protocol or token appears on DefiLlama or Dexscreener. Chain is not stated in the report. Audited repo identified, deployment not.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0218",
+   "lane": "A_NO_ADDRESS",
+   "project": "Seismic Finance",
+   "chain": "Blast",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Borrow index isn't updated correctly",
+   "uids": "2024-03-25-final-seismic-finance-audit-report::borrow-index-isnt-updated-correctly",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Chain confirmed Blast (DefiLlama chainTvls Blast + Blast-borrowed; project self-describes as 'Blast-native lending market'). Lending market with borrow index matches the 2024-03-25 finding. DefiLlama gives no address, its adapter file (projects/seismic/index.js) is absent; blast.blockscout.com does not exist (404 backend) and api blastscan name search was not usable; no Seismic Finance deployments repo found (the GitHub hit Seismics-Finance/seismics-finance-contract is an unrelated 2022 repo).",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0224",
+   "lane": "A_NO_ADDRESS",
+   "project": "Slash Payment Aug23(Web3 Payment Platform)( ) upd",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "FORWARDER SOFT ERROR CAN LEAD TO STOLEN ETH AND CENSORED TRANSACTIONS",
+   "uids": "finding:64d5ffaadb18fbb262e2e6ff4b881cc8ff25536363c934a280bfa18f09911b28",
+   "report_urls": "reports/hexens/2023/slash-payment-aug23-web3-payment-platform-upd-873e9caa.md",
+   "evidence_urls": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/84e78849628ca0d9114b66bf886ae11d9e0f8a50/Slash_Payment_Aug23%28Web3%20Payment%20Platform%29%28Public%29_upd.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Hexens 2023-08-31 review of Slash V2: scope is Forwarder.sol (SLSF-21 execute soft-error -> stolen ETH / censored tx), PaymentWrapper, NftVault (ERC-20/721/1155 vaults), all under contracts/ with no repo URL, commit or address in the PDF (grep for 0x-addresses returns only address(0)). slash.fi now returns Cloudflare 'Origin DNS error' 530 and docs.slash.fi is dead (Jina 422), so no deployment page. Blockscout Ethereum name search for PaymentWrapper (0 hits), NftVault (several unrelated 2024 vau",
+   "project_addresses": ""
+  }
+ ]
+}

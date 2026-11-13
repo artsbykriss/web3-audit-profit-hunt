@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-056",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0248",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "Trustless Work Stellar",
+   "chain": "Stellar",
+   "trace_status": "PARTIAL",
+   "n_findings": "6",
+   "critical": "0",
+   "high": "6",
+   "titles": "Missing Authentication Guards on Critical Endpoints | Login authentication procedure does not authenticate user | Smart Escrow uses signed integer type i128 without sign checks | Bypass of the Escrow Initialization Validations | Front-running attack by a malicious platform on fund_escrow with update_escrow | Missing validation whether user-submitted transactions were actually submitted to and processed by the blockchain",
+   "uids": "finding:02bdf201b267a9259e0e7ffdb9403d95e5d7db77037f5ff8e4388756bef63cfb;finding:70d48f0860f743bf8ff9aad9eb45c9101f2905752ce076a60114472c506dea88;finding:380a5dc771e2df0169021c8d48c124b5fe070aac570822a798993a7c31f644d0;finding:1bbc4cb80f5ff1c261922ff89cebf7e2d48a33d6973d305ae186dfd205decf30;finding:78d5bc46ee58c679bdd821652ac3621168aa704e5ddbe35f20d27acbbc6210cb;finding:2e2c37efb40057e8049871661591561cdf3d2759fb63b54dd70c84dbb39eefdc",
+   "report_urls": "reports/runtime-verification/2025/trustless-work-stellar-a646d624.md",
+   "evidence_urls": "https://github.com/runtimeverification/publications/blob/c30a9c50b8b2eed9e58fab92d8925800a372fc41/reports/smart-contracts/TrustLess_Work_audit_report.pdf",
+   "known_addresses": "CB5FLCYCMXNRYLUB6XPPK6QWPPGWLTCTNFJNKISLP2GD5XZHVVK4LB5N;CBTQDCRSUSUEUK2GPAWDY3F5CT6WBNT6Z5JW73E7ICYCEL55767WWGJX",
+   "known_address_notes": "Identity: Trustless Work Soroban escrow (factory + single-release instance pattern), repo trustlesswork-smart-contract-stellar branch single-release-develop. Only testnet contract IDs are published (report/evidence-report.md: CB5FLC... main flow, CBTQDC... dispute flow; CDLZFC3S... is the XLM SAC). Both exist on testnet with wasm 71f5c9d2. Third id in .stellar/contract-ids/escrow.json (CBMEZ3FE...) is 404 - testnet reset. docs.trustlesswork.com publishes no mainnet escrow/factory id and stellar.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0018",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "2024-02-althea-liquid-infrastructure",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "0",
+   "high": "2",
+   "titles": "Holders array can be manipulated by transferring or burning with amount 0, stealing rewards or bricking certain functions",
+   "uids": "2024-02-althea-liquid-infrastructure::2024-02-althea-liquid-infrastructure_H-01;finding:7daa67b6ed5818bb887a6992f35385b92277da8b97d386ee777dd687edd91a95",
+   "report_urls": "reports/code4rena/2024/althea-liquid-infrastructure-b32806a6.md",
+   "evidence_urls": "https://github.com/code-423n4/2024-02-althea-liquid-infrastructure-findings/blob/2713f30a1f8774adc52a7657d11aaa8bfc2ef089/report.md",
+   "known_addresses": "0x59ae6Db6e90488D645Cf0796a79C3A47b6B56ef5",
+   "known_address_notes": "Code4rena 2024-02 audited LiquidInfrastructureERC20.sol + LiquidInfrastructureNFT.sol. The repo's xdai-deployer hard-codes LiquidNFTExpectedAddress=0x59ae6Db6e90488D645Cf0796a79C3A47b6B56ef5 on Gnosis next to WXDAI, and that address is the verified LiquidInfrastructureNFT (audited contract, live code). The LiquidInfrastructureMulticlaim 0xbeBbf9AF7B61B6842472e6Bc3bD54f9251c2Be21 is also verified on Gnosis. The audited ERC20 (the H-01 holders-array target) is deployed per community and no instanc",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0022",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "2024-12-02-smart-contract-audit-for-clave-monorepo",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "0",
+   "high": "2",
+   "titles": "Missing slippage protection on SyncSwap swaps | Using aToken.balanceOf() in ClaggAaveAdapter._compoundAccounting() allows for inflation attacks",
+   "uids": "2024-12-02-smart-contract-audit-for-clave-monorepo::syncswap-missing-slippage-protection;2024-12-02-smart-contract-audit-for-clave-monorepo::claggaaveadapter-compoundaccounting-inflation-attack",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0xdd4dD37B22Fc16DBFF3daB6Ecd681798c459f275;0xf5bEDd0304ee359844541262aC349a6016A50bc6",
+   "known_address_notes": "DefiLlama chainTvls confirm Clave=zkSync Era. getclave/clave-contracts subgraph hardcodes the two account implementations (v1 0xdd4d..., v2 0xf5bE...), both live on zkSync Era (code check). deploy/deploy.ts is a placeholder, no address book. Blockscout zksync search for 'Clave'/'Clagg'/'ClaveAccountFactory'/'AaveAdapter' returns only ClaveNameService tokens, so the audited ClaggAaveAdapter/ClaggBaseAdapter instances and SyncSwap router are not pinned -> PARTIAL. Etherscan V2 does not serve chain",
+   "project_addresses": ""
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-011",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0069",
+   "lane": "A_NO_ADDRESS",
+   "project": "Catalysis Coverage Contracts",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "Duplicate Claim Prevention Logic Is Invalid Assets ClaimManager.sol | User Can Call fileClaim() Without Paying Policy Premiums Assets ClaimManager.sol",
+   "uids": "finding:47ea5ccf95c7877596aec29cd51cba5ef4416285cbadf71ff57b8fac81340034;finding:c1d4ad0af3cad3b03443debc5a633525589cab854ae450329c55ae961b1d01b7",
+   "report_urls": "reports/sigma-prime/2026/catalysis-coverage-contracts-5d46d02d.md",
+   "evidence_urls": "https://github.com/sigp/public-audits/blob/7d9046e092e1e93623164e39df8c552a16f2fe5d/reports/catalysis/Sigma_Prime_Catalysis_Coverage_Contracts_Security_Assessment_Report_v2_0.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Sigma Prime v2.0 audited Catalysis Coverage (ClaimManager.sol, fileClaim, policy premiums). No address in the report. Base 'Catalysis Coverage' hit 0x4C6AD0100Fd05B3924419A6496390adc039d4a35 resolves to verified source ContractName DERC20 (an ERC20, 10,143 bytes) \u2014 a token named 'Catalysis Coverage', not ClaimManager. Verified Base ClaimManager contracts checked (0x4860B8cE..., 0x08EbdA4c...) belong to other projects (AstroMiner rewards; no fileClaim/premium/policy strings). No Catalysis ClaimMa",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0096",
+   "lane": "A_NO_ADDRESS",
+   "project": "DoraHacks Quadratic Grant",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "Signatures can be replayed across different chains, networks, and contract addresses | Signatures can be replayed within one hour before expiration",
+   "uids": "finding:a8c09262b0c18b7b90591d8d7af9519428a4b3332cbe87b56a42f548f02e082c;finding:1c57a8e6ced1b3edd4ecc18b4f449adc74a60818a6cbe265b5ae07bfa79b1e50",
+   "report_urls": "reports/oak-security/2024/dorahacks-quadratic-grant-ec2efac6.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/DoraHacks/2024-03-04%20Audit%20Report%20-%20DoraHacks%20Quadratic%20Grant%20Injective%20v1.0.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Report is a CosmWasm review (src/contract.rs, admins vector, withdraw) for a DoraHacks quadratic-funding contract on Injective; no code id, no inj1... contract address is given (regex scan found none). Injective-native QF contract was uploaded/instantiated via governance (proposal discussion exists) but the instantiated bech32 address is not published in any page reachable through search. Chain family confirmed (Injective/CosmWasm), exact instance unpublished -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0103",
+   "lane": "A_NO_ADDRESS",
+   "project": "Farm Program",
+   "chain": "Solana",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "MISSING ACCOUNT VALIDATION LEADS TO MULTIPLE CRITICAL VULNERABILITIES | DELEGATE VALIDATION MISSING",
+   "uids": "finding:87b60c74aabddb0f6eeb324c5d0d89caac8a7f6ddbd6f158aab31a0f2ad832b8;finding:82c29c97a8f338737cd18d434a11a9de28ab5ae1989181a6617c11ed28301beb",
+   "report_urls": "reports/halborn/2021/farm-program-4813ee6b.md",
+   "evidence_urls": "https://github.com/HalbornSecurity/PublicReports/blob/4f3d1c6451ac01ba669a43072dd30b857ef9aa90/Solana%20Program%20Audit/Cropper_Finance_Farm_Solana_Program_Security_Audit_Report_Halborn_Final.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Halborn 2021 audit of the Cropper Finance 'Farm' Solana program (native Rust: state.rs FarmPool/UserInfo, processor.rs). Identity confirmed: Cropper Finance (Solana DEX), farm feature still described in live docs. No program ID anywhere: docs.cropper.finance llms.txt + farm/staking pages publish no addresses; GitHub CropperFinance/cropper_instructions holds only instruction layouts (no declare_id!); DefiLlama's Cropper entry DubwWZNWiNGMMeeQHPnMATNj77YZPZSAz2WVR5WjLJqz is a 112-byte token accoun",
+   "project_addresses": ""
+  }
+ ]
+}

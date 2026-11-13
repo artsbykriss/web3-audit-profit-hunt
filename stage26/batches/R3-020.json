@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-020",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0207",
+   "lane": "A_NO_ADDRESS",
+   "project": "Router Asset Bridge",
+   "chain": "NEAR",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Attackers can register and deregister their accounts for profit",
+   "uids": "finding:7d4a28e14de7371b87d5a29b0ccdbe53ffbb978e76751ba5f866a3137b817310",
+   "report_urls": "reports/oak-security/2024/router-asset-bridge-5009f883.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/Router/2024-04-30%20Audit%20Report%20-%20Router%20Asset%20Bridge%20v1.2.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Oak report pins repo router-protocol/asset-bridge-contracts @4fc1add5 (fixes @6a2f6b3d), scope near/contracts (AssetBridge, gateway, sequencer-staking excluded). That repo is now 404; the surviving router-protocol/router-contracts holds only evm/* (no near/contracts). NEAR RPC view_account probed for asset-bridge.near, router-assetbridge.near, router-gateway.near, gateway.near, assetbridge.near, routerprotocol.near: first two/three/last unknown or implicit accounts with no contract code (code_ha",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0222",
+   "lane": "A_NO_ADDRESS",
+   "project": "Silicon-2",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Stakers can inflate rewards by manipulating stake counts in the current epoch",
+   "uids": "finding:90a8fa41d41798bb37abe20cfa924565a9842e3d6d9eacfefb552a247c181644",
+   "report_urls": "reports/macro/2025/silicon-2-b544f907.md",
+   "evidence_urls": "https://0xmacro.com/library/audits/silicon-2",
+   "known_addresses": "",
+   "known_address_notes": "0xMacro 'Silicon A-2' (2025-09-22) is Berkeley Compute's Silicon NFT-staking epoch pool: scope src/SiliconEpochPool.sol (+ marketplace callbacks), repo berkeleycompute/pooling at commits a10100c/4e299b6. That repo is now private/404 via the GitHub API and the report gives no deployed address and no chain. Lookups tried: Blockscout Ethereum search 'SiliconEpochPool' (0 hits), 'Silicon' (only unrelated tokens), DefiLlama slug/name 'silicon'/'berkeley' (0), www.berkeleycompute.com and docs.berkeley",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0249",
+   "lane": "A_NO_ADDRESS",
+   "project": "Typhoon Mixer",
+   "chain": "Ethereum",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Encrypted notes can be arbitrarily altered and signatures can be re-",
+   "uids": "finding:08ff7f904659774e62c85d517d8b724418130f308b90d48642c8bf9ff7b840ea",
+   "report_urls": "reports/codespect/2025/typhoon-mixer-b181796e.md",
+   "evidence_urls": "https://github.com/CODESPECT-security/audit-reports/blob/2baaba7b9ccfa17f65f4277ae650c14d7fd72839/018_CODESPECT_TYPHOON.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Chain resolved: Starknet (Cairo). CODESPECT 2025-05 scope 'typhoon-contracts' @a148cf0c/3b54a2b1: Typhoon.sol-equivalent factory (class-hash pool factory) + Pool. typhoon-finance.com is live on Starknet mainnet ('Privacy Protocol on Starknet'), app has Mainnet/Sepolia selector. The only address in typhoon_sdk_docs is the STRK token (0x04718f5a...938d); typhoon-contracts repo carries only groth16 verifier constants. Voyager search API returns 403 from here, so the deployed Typhoon contract addres",
+   "project_addresses": ""
+  }
+ ]
+}

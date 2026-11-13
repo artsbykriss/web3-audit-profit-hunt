@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-036",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0088",
+   "lane": "A_NO_ADDRESS",
+   "project": "Dapper Smart Contract Wallet",
+   "chain": "Ethereum",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Replay Attacks on Co-signer Signed Invocations",
+   "uids": "dapper-smart-contract-wallet-solidity-security-review-version-2-0::dap-01-replay-attacks-on-co-signer-signed-invocations",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Repo and review confirm identity: dapperlabs/dapper-contracts implements the Dapper Ethereum smart-contract wallet (FullWallet/CoreWallet + WalletFactory that clones per-user wallets, cosigner/recovery keys). README and repo contain no deployed factory address; each user wallet is a clone so there is no single audited instance. Etherscan name search for WalletFactory is Cloudflare-gated and Blockscout Ethereum name search returned no match. -> PARTIAL (repo/anchor found, deployment unpublished).",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0101",
+   "lane": "A_NO_ADDRESS",
+   "project": "FOMOSolana",
+   "chain": "Solana",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Missing Referrer Validation",
+   "uids": "finding:0c4e2ebc7d635a05f7c11cf74156279bbb91a59d73a558c615daf921722c7bdb",
+   "report_urls": "reports/ottersec/2023/fomosolana-6ba8e2e5.md",
+   "evidence_urls": "https://osec.io/reports/8bc169c5-aa6d-4d89-b266-5b2f2d03ab22",
+   "known_addresses": "",
+   "known_address_notes": "OtterSec PDF (p.4 Scope) names the audited repo github.com/Doge-Capital/FOMO-GAME @d9c7639 and a single Solana program `fomo-game` (key/ticket game with referral codes). Report contains no program ID and no deployment appendix. Repo returns 404 (private/removed) when checked 2026-11-13; no site or docs found. Solana has no explorer name-search, so the program address is not recoverable. Tried: osec PDF text, GitHub repo+raw, GitHub search, DefiLlama protocol list (no FOMO Solana entry).",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0104",
+   "lane": "A_NO_ADDRESS",
+   "project": "Feeder Lending",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Potential Repeated acceptBid() For The Same Offer",
+   "uids": "finding:741e9b1725b252ad5a99f7e5865f87269a11a96482813b93cfc469544decd084",
+   "report_urls": "reports/peckshield/2021/feeder-lending-b7927519.md",
+   "evidence_urls": "https://github.com/peckshield/publications/blob/37558e095a7c82c9f4f8db4a84af313ed5eba67c/audit_reports/PeckShield-Audit-Report-FeederLending-v1.0.pdf",
+   "known_addresses": "",
+   "known_address_notes": "PeckShield report 2021-435: client Feeder Finance, target 'Feeder Lending' (Peer-to-Peer Lending: FeedLoan / DealManager contracts, USDT approve quirks). Identity confirmed as Feeder Finance (BSC/Fantom, FEED token). Audited repo github.com/FeederFinance/lending-contracts is the only code reference and now returns 404 (private); docs peer-to-peer-lending pages contain no contract addresses; no explorer match. Deployed DealManager instance not published.",
+   "project_addresses": ""
+  }
+ ]
+}

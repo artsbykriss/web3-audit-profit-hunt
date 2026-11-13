@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-003",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0263",
+   "lane": "A_NO_ADDRESS",
+   "project": "Watt Protocol",
+   "chain": "Solana",
+   "trace_status": "PARTIAL",
+   "n_findings": "4",
+   "critical": "4",
+   "high": "0",
+   "titles": "Repeated unstake-stake cycle enables unlimited liquidity multiplication | Possibility to use fraudulent Raydium pool to stake worthless LP Tokens and receive staking rewards for legitimate token | Unstake function allows full withdrawal while maintaining staking position | Mismatched LP token and pool state validation leads to inflated rewards",
+   "uids": "finding:9994d1abc2e977b58bf8f9b5cba6767ac7cf3c917f6c02d6ac7f25d297ba34e1;finding:2cfa49a0bb4d238fa44ee5b182593ebb55e69735474a307bac7694e5a89beec6;finding:cffe9c4a08f1e6a7e49b8485b5772ecb58e5494920ec3ce238b353c8a51e0df5;finding:ffb40a0210a60f1da11c0d49e8eeb9b65b27499dd55a08dccfc53c84a72805c5",
+   "report_urls": "reports/ackee-blockchain/2025/watt-protocol-09109ea8.md;reports/ackee-blockchain/2025/watt-protocol-f6ecc516.md",
+   "evidence_urls": "https://3846336298-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FuyGEXzcSijKdoMiaeYqE%2Fuploads%2FJCL1SVUREhoXDV2w5Uwd%2Fackee-blockchain-watt-protocol-report.pdf?alt=media&token=9bf42b95-d9f5-4966-86c4-606ffa650af1;https://github.com/Ackee-Blockchain/public-audit-reports/blob/2033ac4dcd808e9cebdadfbaff40e4e89e33998f/2025/ackee-blockchain-watt-protocol-first-universal-liquid-report.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Confirmed Solana by the Ackee reports (programs/watt/src/..., staking/raydium modules). docs.watt.si now 404 (domain not found); Wayback snapshot 2026-04 is marketing copy with no program IDs; app.watt.si Wayback snapshot 2025-04 is a Next.js shell whose archived JS chunks contain no base58 IDs. github.com/Watt-Protocol/contracts is an unrelated EVM 'WATT metering' project (Base Hardhat, empty deployments/base.json) and was rejected as a lookalike. SolanaCompass page (Cloudflare-blocked) describ",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0175",
+   "lane": "A_NO_ADDRESS",
+   "project": "Omo",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "10",
+   "critical": "3",
+   "high": "7",
+   "titles": "`borrow()` should decrease `totalAssets` value | Users can duple their first deposit in the vault | borrow() should decrease totalAssets value | OmoOracle `getLiquidityAmounts()` uses spot price making it manipulatable | The `transferFrom()` in `OmoRouter.sol` has approval vulnerabilities | OmoOracle wrong use of Uniswap interface to get pool address | `_validateSignature()` does not properly handle `address(0)` | OmoAgent: `getPositionValue()` doesn't consider deposited assets | Anyone can rede",
+   "uids": "finding:c0a16aff9deaf1f90949f95ce9d771d43aa0d773ecfffe6fa686996f4daea242;finding:d1347b89d2f766e7e66819ea2a92ac772f858f0eed2de9e6a629d4037464df32;pashov-team-2025-01-25-omo-security-review::c-06-borrow-should-decrease-totalassets-value;finding:b478232aa962af3ff78b5db5f8bc271f6044c94309d5e628b211eb1c5f51d4e1;finding:cb8999f40e1a07d7c5a3c154f33879515ba833bcad27bcd93afec95606381099;finding:416f80438a7bf2278b7ed097c7e808d04745e5d56c29cec8e4a9e51acb162eee;finding:9760fef8f158b05c8c5cc9780d24a73a994a52779169d0f613687e9e1e5e1d81;finding:ea061c95d8e9ff5c4d0989741dcb3d63f026c07a742e7ad2133f9ac5d4e96052;finding:a1192d7a5ea6a4d535a3065ae2abe977723f83ba133db42343941b25cf2c91d6;finding:d8763b01b5959395f91de4f6968390825169dcd31ec52ab8b85b124400d0fa25",
+   "report_urls": "reports/pashov-audit-group/2025/omo-8b4ce7ea.md",
+   "evidence_urls": "https://github.com/pashov/audits/blob/e615d8a5319647f95e217616d21770b3d8372f50/team/md/Omo-security-review_2025-01-25.md",
+   "known_addresses": "",
+   "known_address_notes": "Pashov review (2025-01-31) of OmoVault/OmoRouter/OmoAgent/OmoOracle/DynamicAccount; the report itself states the protocol targets HyperEVM ('this ENTRYPOINT_ADDRESS has nothing in it on the hyper EVM chain'). Identity: omoprotocol.ai, GitHub org omo-protocol. Docs (mintlify) describe Omo Beacon Vault, factory, agent-setter, Shogun but publish no addresses; hyperevmscan name search for OmoVault returns nothing, and no repo (neko-vault/neko-vault-v2) contains a deployment manifest. No instance ide",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0157",
+   "lane": "A_NO_ADDRESS",
+   "project": "Milky Ice",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "4",
+   "critical": "3",
+   "high": "1",
+   "titles": "Use of spot reserves in DEX pool | Unauthorized mint of staking contract tokens | No access control in withdrawFor function | Theft of rewards and denial of service via unauthorized schedule of staking period",
+   "uids": "finding:3397dd985ebc56ea7cb3406b0b2023c09f1693246d102364dfebec174fb49849;finding:cc077608c8d2e7b216c71b77827ae2b821bbaa6467c48c86334662871799f460;finding:fde391aa2b33d58cf8fec951ccab6c6255800c9e18a3337f078a057cbc43dbb8;finding:92bcc909f40e2c8bf2d8de7a9d88c660043329b8504fecd2026caa931be9bbd2",
+   "report_urls": "reports/composable-security/2023/milky-ice-058ee640.md",
+   "evidence_urls": "https://github.com/ComposableSecurity/.github/blob/144b868957d165fa3f5210ae80928ad2e9df2b60/reports/2023_01_MilkyIce.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Composable Security report 2023_01 covers staking/DEX code for Milky Ice (Polish F&B tokenisation, 700+ investors). codefunded.com case study confirms the project (rebuild of staking, secondary market, token migration) but publishes no chain or contract. No token ticker/address found (Etherscan/Dexscreener name searches return nothing relevant); chain unresolved \u2014 likely an EU-regulated RWA chain deployment, unverified.",
+   "project_addresses": ""
+  }
+ ]
+}

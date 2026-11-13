@@ -3684,3 +3684,134 @@ S3-2476,PumpScience,Solana (devnet),EtZR9gh25YUM6LkL2o2yYV1KzyuDdftHvYk3wsb2Ypkj
 S3-3123,fluid-protocol,Fuel,0x32deed96558e9572abce544aaf256724aee60517eeb1fabe76e86e4790c888b0,USDF token contract (Fuel),False,PARTIAL,1,0,1,0,1,5,High-severity findings — fluid-protocol,High-severity findings — fluid-protocol,,broad,broad:immunefi:348:0,,,,fluid_protocol_0x32deed
 S3-3195,hubble,Solana,HBB111SCo9jkCejsZfz8Ec8nH7T6THF8KEKSnvwT6XK6,HBB token mint (SPL),False,PARTIAL,1,0,1,0,1,5,High-severity findings — 2022-02-hubble-findings,High-severity findings — 2022-02-hubble-findings,,broad,broad:code4rena:55:0,,https://explorer.solana.com/address/HBB111SCo9jkCejsZfz8Ec8nH7T6THF8KEKSnvwT6XK6,,hubble_HBB111SC
 S3-3225,kairos,Ethereum,0xDE75133b77762b056903584a509D722aC7aE352e,Kairos (diamond),True,NOT_DEPLOYED,1,0,1,0,1,5,High-severity findings — 2023-02-kairos-judging,High-severity findings — 2023-02-kairos-judging,,broad,broad:sherlock:230:0,,https://web.archive.org/web/20230329022702/https://app.kairos.loan/,0xDE75133b77762b056903584a509D722aC7aE352e,kairos_0xDE7513
+S3-3686,09-03--PariFi,Arbitrum,0xd979e6d8a05ef11b185d2df3d76175eecae522af,vault,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,09_03_PariFi_0xd979e6
+S3-3687,09-03--PariFi,Arbitrum,0xEA78b6d9BbCE9F9D7CCa7aDeC5149d27f1305450,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,09_03_PariFi_0xEA78b6
+S3-3688,09-03--PariFi,Arbitrum,0x4df30D2B4D595Ca252AEC77e4f8623E545b5021e,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,09_03_PariFi_0x4df30D
+S3-3689,09-03--PariFi,Arbitrum,0xc53cf9162b09392623B559C39ef6B9A9d2dE37c4,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,09_03_PariFi_0xc53cf9
+S3-3690,1Inch Farming,Ethereum,0x0418feb7d0b25c411eb77cd654305d29fcbff685,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,1Inch_Farming_0x0418fe
+S3-3691,2024-02-althea-liquid-infrastructure,Gnosis,0x59ae6Db6e90488D645Cf0796a79C3A47b6B56ef5,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,2024_02_althea_liquid_infrastructure_0x59ae6D
+S3-3692,2024-04-lavarage,Solana,1avaAUcjccXCjSZzwUvB2gS3DzkkieV2Mw8CjdN65uu,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,2024_04_lavarage_1avaAUcj
+S3-3693,"Clave (monorepo, ClaveImplementation / Clagg adapters)",zkSync Era,0xdd4dD37B22Fc16DBFF3daB6Ecd681798c459f275,impl,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Clave_monorepo_ClaveImplementation_Clagg_adapters__0xdd4dD3
+S3-3694,SecondSwap,Ethereum,0xe7a79fAF9F7bafD31fcFC0B74Fe80f417387E4Ed,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,SecondSwap_0xe7a79f
+S3-3695,SecondSwap,Ethereum,0x53d760b5BB8b65b65b26a9E846cE9261Ad56789f,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,SecondSwap_0x53d760
+S3-3696,SecondSwap,Ethereum,0x0366adcEeEC444DD58260F4F72626E15E09BAB2E,vault,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,SecondSwap_0x0366ad
+S3-3697,Gamic (GNG) airdrop/staking,Base,0xe0162b2D9305BC33ca9FEacAc03Fe4949898A8b6,vault,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Gamic_GNG_airdrop_staking_0xe0162b
+S3-3698,Gamic (GNG) airdrop/staking,Base,0xf05215b8753cc5b58345b598445F6bD16Da7a89b,token,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Gamic_GNG_airdrop_staking_0xf05215
+S3-3699,Cueva / Paydece Escrow,Ethereum,0xd4a5Bb96BDE96D2cE624101D40c0ffC1aA2C98E8,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Cueva_Paydece_Escrow_0xd4a5Bb
+S3-3700,Sequence v3 (Ecosystem Wallet),Ethereum,0x00000000000018A77519fcCCa060c2537c9D6d3F,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Sequence_v3_Ecosystem_Wallet__0x000000
+S3-3701,Sequence v3 (Ecosystem Wallet),Ethereum,0x0000000000001f3C39d61698ab21131a12134454,impl,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Sequence_v3_Ecosystem_Wallet__0x000000
+S3-3702,Sequence v3 (Ecosystem Wallet),Ethereum,0xD0ae8eF93b7DA4eabb32Ec4d81b7a501DCa04D4C,impl,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Sequence_v3_Ecosystem_Wallet__0xD0ae8e
+S3-3703,Aftermath Perpetuals Oracle (oracle-aggregator),Sui,0x9237337d846fc90b0a7acbdee4ab91809298691873d28e1d64d91e6303ff6ba4,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Aftermath_Perpetuals_Oracle_oracle_aggregator__0x923733
+S3-3704,Algofi Lend,Algorand,465814065,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Algofi_Lend_46581406
+S3-3705,Algofi Lend,Algorand,818179346,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Algofi_Lend_81817934
+S3-3706,Algofi Lend,Algorand,465814278,vault,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Algofi_Lend_46581427
+S3-3707,Beranames,Berachain,0x5b22280886a2f5e09a49bea7e320eab0e5320e28,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Beranames_0x5b2228
+S3-3708,Beranames,Berachain,0xddfb18888a9466688235887dec2a10c4f5effee9,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Beranames_0xddfb18
+S3-3709,Biconomy PasskeyRegistry and SessionKeyManager,Ethereum,0x000002FbFfedd9B33F4E7156F2DE8D48945E7489,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Biconomy_PasskeyRegistry_and_SessionKeyManager_0x000002
+S3-3710,Biconomy PasskeyRegistry and SessionKeyManager,Ethereum,0x6862117b211F535b04fd262b265e505479f8982f,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Biconomy_PasskeyRegistry_and_SessionKeyManager_0x686211
+S3-3711,Biconomy PasskeyRegistry and SessionKeyManager,Ethereum,0x35465De3Be6caF39499118aA7d16E65B5BD124Fe,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Biconomy_PasskeyRegistry_and_SessionKeyManager_0x35465D
+S3-3712,BiconomyComposability,Ethereum,0x00000000f61636C0CA71d21a004318502283aB2d,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,BiconomyComposability_0x000000
+S3-3713,BiconomyComposability,Ethereum,0x00000004430bB055dB66eBef6Fe5Ee1DA9668B10,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,BiconomyComposability_0x000000
+S3-3714,Bloom,Ethereum,0xC4cafEFBc3dfeA629c589728d648CB6111DB3136,vault,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Bloom_0xC4cafE
+S3-3715,Bloom,Ethereum,0x8dc5BE35672D650bc8A176A4bafBfC33555D80AC,vault,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Bloom_0x8dc5BE
+S3-3716,Bloom,Ethereum,0xF9131141E9f2e89211E87B83Af231a0310922a18,vault,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Bloom_0xF91311
+S3-3717,Bloom,Ethereum,0x1338a5BdAFe2f0C2a847b04fd943A61787F046cD,vault,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Bloom_0x1338a5
+S3-3718,Boba,Ethereum,0x1A26ef6575B7BBB864d984D9255C069F6c361a14,proxy,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Boba_0x1A26ef
+S3-3719,Boba,Ethereum,0xd24484926f1d130778b9ebd7ec594548b2d53cb1,impl,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Boba_0xd24484
+S3-3720,Boba,Ethereum,0x3d95bE575576F813B9b18eE14ba041d3E013eC25,impl,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Boba_0x3d95bE
+S3-3721,Catalyst / IPSeed,Base,0x2c90c963ba480204b96f9158473f1aa29ed9235d,impl,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Catalyst_IPSeed_0x2c90c9
+S3-3722,Catalyst / IPSeed,Base,0x35bce29f52f51f547998717cd598068afa2b29b7,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Catalyst_IPSeed_0x35bce2
+S3-3723,Comet,Stellar,CAS3FL6TLZKDGGSISDBWGGPXT3NRR4DYTZD7YOD3HMYO6LTJUVGRVEAM,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Comet_CAS3FL6T
+S3-3724,Composable Bridge,Solana,8n3FHwYxFgQCQc2FNFkwDUf9mcqupxXcCvgfHbApMLv3,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Composable_Bridge_8n3FHwYx
+S3-3725,Composable Bridge,Solana,2HLLVco5HvwWriNbUhmVwA2pCetRkpgrqwnjcsZdyTKT,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Composable_Bridge_2HLLVco5
+S3-3726,Composable Bridge,Solana,FaX6Aqph9zpER3HQ3LRmp67z6uu1QWH7dK3XgbydAeYV,vault,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Composable_Bridge_FaX6Aqph
+S3-3727,Tenbin Labs - Core Contracts (Zellic 2026),Ethereum,0x5e631388b24ec493619DAEEAef6fc34B33d97Dcd,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Tenbin_Labs_Core_Contracts_Zellic_2026__0x5e6313
+S3-3728,Tenbin Labs - Core Contracts (Zellic 2026),Ethereum,0x0EF47CC8E244dBc8628FdEfFD4EE4DD747d14081,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Tenbin_Labs_Core_Contracts_Zellic_2026__0x0EF47C
+S3-3729,Tenbin Labs - Core Contracts (Zellic 2026),Ethereum,0x8d301801d899dC81fEabBDE69407A53b82bdBF19,vault,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Tenbin_Labs_Core_Contracts_Zellic_2026__0x8d3018
+S3-3730,Tenbin Labs - Core Contracts (Zellic 2026),Ethereum,0xb16dd124dace1ecb0aa28dbddf0a9322c830b4f1,impl,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Tenbin_Labs_Core_Contracts_Zellic_2026__0xb16dd1
+S3-3731,Tenbin Labs - Core Contracts (Zellic 2026),Ethereum,0x42F3F01D45E67294e20cE98AcFDC24dD7EA75dEa,proxy,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Tenbin_Labs_Core_Contracts_Zellic_2026__0x42F3F0
+S3-3732,Tenbin Labs - Core Contracts (Zellic 2026),Ethereum,0x1b1ed1db1038b4d2d2d9b2b3f35d3b0dd82e8438,impl,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Tenbin_Labs_Core_Contracts_Zellic_2026__0x1b1ed1
+S3-3733,Tenbin Labs - Core Contracts (Zellic 2026),Ethereum,0x0977592F86616788Fd809446E094F9Bb91E97A44,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Tenbin_Labs_Core_Contracts_Zellic_2026__0x097759
+S3-3734,Tenbin Labs - Core Contracts (Zellic 2026),Ethereum,0x6a547b25534234bb79CE6961a23Db13DE154b6F4,token,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Tenbin_Labs_Core_Contracts_Zellic_2026__0x6a547b
+S3-3735,CoreDAO ecosystem (Halborn 2024 NLX GMX fork / 2025 BTC-hardfork staking),Base,0xbf668dadb9cb8934468fcba6103fb42bb50f31ec,oracle,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,CoreDAO_ecosystem_Halborn_2024_NLX_GMX_fork_2025_B_0xbf668d
+S3-3736,DeFis Network Swap,EOS,swap.defi,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,DeFis_Network_Swap_swap.def
+S3-3737,DeSyn Iterative (SlowMist 2022),Ethereum,0x38a3b93a4584c2F990329387f18AD04BD877a7ff,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,DeSyn_Iterative_SlowMist_2022__0x38a3b9
+S3-3738,DeSyn Iterative (SlowMist 2022),Ethereum,0x3909be79015e97138D86f648a1fCBE3a9c6Eb18c,vault,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,DeSyn_Iterative_SlowMist_2022__0x3909be
+S3-3739,Ethereum Foundation BLS Wallet (Sigma Prime 2022),Arbitrum Goerli,0xE25229F29BAD62B1198F05F32169B70a9edc84b8,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Ethereum_Foundation_BLS_Wallet_Sigma_Prime_2022__0xE25229
+S3-3740,Ethereum Foundation BLS Wallet (Sigma Prime 2022),Arbitrum Goerli,0x30Ae0d96Ba812F53F69deDefd8b472ce43af23A5,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Ethereum_Foundation_BLS_Wallet_Sigma_Prime_2022__0x30Ae0d
+S3-3741,Ethereum Foundation BLS Wallet (Sigma Prime 2022),Arbitrum Goerli,0x6eb8F8d661eFe36daB11147830A1e690249bB830,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Ethereum_Foundation_BLS_Wallet_Sigma_Prime_2022__0x6eb8F8
+S3-3742,Ethereum Foundation BLS Wallet (Sigma Prime 2022),Arbitrum Goerli,0x4bD2E4e99B50A2a9e6b9dABfA3C8dCD1f885F008,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Ethereum_Foundation_BLS_Wallet_Sigma_Prime_2022__0x4bD2E4
+S3-3743,Haven1 Dec31,Ethereum,0x9e3b5582b22e3835896368017baff6d942a41cd9,token,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Haven1_Dec31_0x9e3b55
+S3-3744,Haven1 Dec31,Ethereum,0x4d8d9f6ced39288a1e8961621bbbc2b698a3b102,token,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Haven1_Dec31_0x4d8d9f
+S3-3745,Honey,Solana,hNEYyRsRBVq2La65V1KjvdbTE39w36gwrdjkmcpvysk,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Honey_hNEYyRsR
+S3-3746,Increment,zkSync Era,0xCbba059D8E8AcC2C69bA94400686106b2396d786,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Increment_0xCbba05
+S3-3747,IxoSwap,Impact Hub,ixo14zpkpwze2cu86mx0gt5zjc8jr2fjrfyv658r6sj9g2kcyavg3ugq08v4p6,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,IxoSwap_ixo14zpk
+S3-3748,IxoSwap,Impact Hub,ixo18zetphyuy0znf73r9vm6qv0542tpuru7c0at7njdpjcx83kv7cesjs3ph3,token,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,IxoSwap_ixo18zet
+S3-3749,Limit Break June12th,Ethereum,0x009a1dC629242961C9E4f089b437aFD394474cc0,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Limit_Break_June12th_0x009a1d
+S3-3750,Limit Break June12th,Ethereum,0x9a1d00bed7cd04bcda516d721a596eb22aac6834,proxy,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Limit_Break_June12th_0x9a1d00
+S3-3751,Lumiterra Community Contracts,Ronin,0xcc451977a4Be9aDeE892F7E610fe3e3b3927b5A1,token,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Lumiterra_Community_Contracts_0xcc4519
+S3-3752,Metalex Borg,Ethereum,0x033012a1eDA6e2E00D12CD37c5b63B9440ef5E01,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Metalex_Borg_0x033012
+S3-3753,Metalex Borg,Ethereum,0x51413048f3Dfc4516e95BC8e249341B1D53B6cB2,proxy,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Metalex_Borg_0x514130
+S3-3754,Metalex Borg,Ethereum,0xBE0D3D13AA07501beAC9b72dE9e9292E66C7A5C4,proxy,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Metalex_Borg_0xBE0D3D
+S3-3755,Metazero I,Ethereum,0x328a268b191ef593b72498a9e8a481c086eb21be,token,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Metazero_I_0x328a26
+S3-3756,"Moonbite GmbH (Phoenix Protocol, Stellar)",Stellar,CB4SVAWJA6TSRNOJZ7W2AWFW46D5VR4ZMFZKDIKXEINZCZEGZCJZCKMI,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Moonbite_GmbH_Phoenix_Protocol_Stellar__CB4SVAWJ
+S3-3757,"Moonbite GmbH (Phoenix Protocol, Stellar)",Stellar,CCLZRD4E72T7JCZCN3P7KNPYNXFYKQCL64ECLX7WP5GNVYPYJGU2IO2G,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Moonbite_GmbH_Phoenix_Protocol_Stellar__CCLZRD4E
+S3-3758,"Moonbite GmbH (Phoenix Protocol, Stellar)",Stellar,CD5XNKK3B6BEF2N7ULNHHGAMOKZ7P6456BFNIHRF4WNTEDKBRWAE7IAA,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Moonbite_GmbH_Phoenix_Protocol_Stellar__CD5XNKK3
+S3-3759,"Moonbite GmbH (Phoenix Protocol, Stellar)",Stellar,CBHCRSVX3ZZ7EGTSYMKPEFGZNWRVCSESQR3UABET4MIW52N4EVU6BIZX,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Moonbite_GmbH_Phoenix_Protocol_Stellar__CBHCRSVX
+S3-3760,NFTR Market,Ethereum,0x0402342Dd3B083C8A928C8BfCe3795124C767BF6,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,NFTR_Market_0x040234
+S3-3761,Nawa Finance,ZIGChain,zig1fqxfjv54zavyr9464vj6n2jgw9fxgdnxucf866spedunntw0skcsq9gz33,vault,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Nawa_Finance_zig1fqxf
+S3-3762,Nawa Finance,ZIGChain,zig1fn4rrr5knlg93nf3wyme9fzmgve3fftxu5l7wv90llp77mwg7ctq2lfwtd,vault,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Nawa_Finance_zig1fn4r
+S3-3763,OpenZeppelin Stack for Zama: Smart Accounts,Sepolia,0xD178927b9B3a6A96F9C67F8f8935723AE77b0b50,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,OpenZeppelin_Stack_for_Zama_Smart_Accounts_0xD17892
+S3-3764,OpenZeppelin Stack for Zama: Smart Accounts,Sepolia,0xDe07475f844664bEca030aAa67C077B683479668,impl,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,OpenZeppelin_Stack_for_Zama_Smart_Accounts_0xDe0747
+S3-3765,OpenZeppelin Stack for Zama: Smart Accounts,Sepolia,0x2940e228e93Fb6841D881Ed80D1832956ed929D6,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,OpenZeppelin_Stack_for_Zama_Smart_Accounts_0x2940e2
+S3-3766,OpenZeppelin Stack for Zama: Smart Accounts,Sepolia,0xAd05109AB2730DB2da308398cB10B6956eE6bd0d,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,OpenZeppelin_Stack_for_Zama_Smart_Accounts_0xAd0510
+S3-3767,PAID Network (Master Ventures),Ethereum,0x1614F18Fc94f47967A3Fbe5FfcD46d4e7Da3D787,token,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,PAID_Network_Master_Ventures__0x1614F1
+S3-3768,PROTOCOL (Monkey Kingdom / MonkeyLegends),Ethereum,0xa8ed317c5a491bbd9127fd2fce6ec7f409b40783,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,PROTOCOL_Monkey_Kingdom_MonkeyLegends__0xa8ed31
+S3-3769,PROTOCOL (Tethys Finance),Metis Andromeda,0x54A8fB8c634dED694D270b78Cb931cA6bF241E21,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,PROTOCOL_Tethys_Finance__0x54A8fB
+S3-3770,PROTOCOL (Tethys Finance),Metis Andromeda,0x716678968fd6E518cb1d56C9720fC8eeEBA6CeAb,vault,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,PROTOCOL_Tethys_Finance__0x716678
+S3-3771,PROTOCOL (Tethys Finance),Metis Andromeda,0x2CdFB20205701FF01689461610C9F321D1d00F80,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,PROTOCOL_Tethys_Finance__0x2CdFB2
+S3-3772,"Pool Fans-1 (0xMacro, clanker revenue shares tokenizer)",Base,0x04cAfd53eCfa6f6a9168dE3d6D2B837D04A51B07,token,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Pool_Fans_1_0xMacro_clanker_revenue_shares_tokeniz_0x04cAfd
+S3-3773,Poop,BNB Chain,0x00000065cBADeAD116136940b302F938284f2BDc,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Poop_0x000000
+S3-3774,Primodium,Testnet chainId 10017,0xcdde8dc29bcb7a7b30e22318746dfd81f0510b43,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Primodium_0xcdde8d
+S3-3775,Public - NF3X Smartcontracts,Polygon,0x98e7301d540d7A67209D149765E43791b17401b9,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Public_NF3X_Smartcontracts_0x98e730
+S3-3776,Public - NF3X Smartcontracts,Polygon,0x043511eCd0e573689723272Fac1966152670695B,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Public_NF3X_Smartcontracts_0x043511
+S3-3777,Public - PandExchange Smartcontracts,Polygon,0xbeF28Aab3e70dFc5C69587eDf85694aD3138c187,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Public_PandExchange_Smartcontracts_0xbeF28A
+S3-3778,Rhinestone+Biconomy Smartsessions External Policies,Base,0x0000006DDA6c463511C4e9B05CFc34C1247fCF1F,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Rhinestone_Biconomy_Smartsessions_External_Policie_0x000000
+S3-3779,Rhinestone+Biconomy Smartsessions External Policies,Ethereum,0x00000088D48cF102A8Cdb0137A9b173f957c6343,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Rhinestone_Biconomy_Smartsessions_External_Policie_0x000000
+S3-3780,Router DexSpan,Ethereum,0x260687eBC6C55DAdd578264260f9f6e968f7B2A5,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Router_DexSpan_0x260687
+S3-3781,Router DexSpan,Ethereum,0x6A0fD5577c540e16A3A49C40b51E0880a2a528ce,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Router_DexSpan_0x6A0fD5
+S3-3782,Seascape Lighthouse,BNB Chain,0x9066b28c2f3F712268D71893877d16Bb52A69c5c,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Seascape_Lighthouse_0x9066b2
+S3-3783,Seascape Lighthouse,BNB Chain,0x5f64BB041D1d2E111406B6d63b0Ca6c4C66F2052,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Seascape_Lighthouse_0x5f64BB
+S3-3784,Shift USDT0 Bridge & Strategies,Ethereum,0x9101f81a129609ad9B2Bbc1624ABFF322314345a,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Shift_USDT0_Bridge_Strategies_0x9101f8
+S3-3785,StationX,Base,0xe2967eff680ce65f4c38e65d3c3647c6f953ca50,impl,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,StationX_0xe2967e
+S3-3786,Substance Exchange Exchange V4,Zeta,0x65fb9385A0b493d27AfF1e653b6a30E47399B826,vault,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Substance_Exchange_Exchange_V4_0x65fb93
+S3-3787,THORChain / Rujira,THORChain (thorchain-1 CosmWasm),thor1ekkt8wfls055t7f7yznj07j0s4mtndkq546swutzv2de7sfcxptq27duyt,core,false,PARTIAL,1,0,0,1,0,5,,,,stage2.5,,,,,THORChain_Rujira_thor1ekk
+S3-3788,THORChain / Rujira,THORChain (thorchain-1 CosmWasm),thor18e6gxcvmqfn06l09gurgwh3urlj9xztqagaslgspl2l74ejuujnqqlzzun,vault,false,PARTIAL,1,0,0,1,0,5,,,,stage2.5,,,,,THORChain_Rujira_thor18e6
+S3-3789,Trufin,Ethereum,0xcfab8530ccf1f9936daede537d6ebbc75289006d,proxy,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Trufin_0xcfab85
+S3-3790,Trufin,Ethereum,0x1608b68d47c8752dbbfe748fdc902e401f96a603,impl,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,Trufin_0x1608b6
+S3-3791,UFarm,Ethereum,0xe92B70d6C805B7a487C387a8e8bec177d991f305,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,UFarm_0xe92B70
+S3-3792,UFarm,Arbitrum,0x46Df84E70deDB8a17eA859F1B07B00FB83b8a81F,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,UFarm_0x46Df84
+S3-3793,Ulysses Protocol,Arbitrum,0xd3e3599517f2036fa314e468d62135714fc03c56,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Ulysses_Protocol_0xd3e359
+S3-3794,Trustless Work Stellar,Stellar Testnet,CB5FLCYCMXNRYLUB6XPPK6QWPPGWLTCTNFJNKISLP2GD5XZHVVK4LB5N,core,false,PARTIAL,1,0,0,1,0,5,,,,stage2.5,,,,,Trustless_Work_Stellar_CB5FLCYC
+S3-3795,Trustless Work Stellar,Stellar Testnet,CBTQDCRSUSUEUK2GPAWDY3F5CT6WBNT6Z5JW73E7ICYCEL55767WWGJX,core,false,PARTIAL,1,0,0,1,0,5,,,,stage2.5,,,,,Trustless_Work_Stellar_CBTQDCRS
+S3-3796,XION and Burnt Contracts,XION,xion1eazhnhk9f8w04yg0s7z57kvcu2aeqkr42tw54cyujg5z92cctjcsd7jpck,core,false,PARTIAL,1,0,0,1,0,5,,,,stage2.5,,,,,XION_and_Burnt_Contracts_xion1eaz
+S3-3797,XION and Burnt Contracts,XION,xion1euxqypuag7tpvqe99zx4l7ug8w0lt4286jw088pcl29q4mzv965qhn5gc4,token,false,PARTIAL,1,0,0,1,0,5,,,,stage2.5,,,,,XION_and_Burnt_Contracts_xion1eux
+S3-3798,afiVault,Ethereum,0xFEE3FBe137cDDcBc479D946EC09596e65e2F29D3,vault,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,afiVault_0xFEE3FB
+S3-3799,afiVault,Ethereum,0x10b3E8015b4BbF3A5ec359314DdafE399FEc1B24,impl,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,afiVault_0x10b3E8
+S3-3800,afiVault,Ethereum,0x7ddb808b451890cd6bddcb06b3c80bf355a644ae,proxy,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,afiVault_0x7ddb80
+S3-3801,afiVault,Ethereum,0xfffEcaebd2d9f8D377CEA77959d2d9Ca66F40FE2,impl,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,afiVault_0xfffEca
+S3-3802,for Logarithm,Base,0x7a63e8FC1d0A5E9BE52f05817E8C49D9e2d6efAe,vault,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,for_Logarithm_0x7a63e8
+S3-3803,for Logarithm,Base,0x9FDfd9c1e23D687F7a154610816de6E47Fb4FC64,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,for_Logarithm_0x9FDfd9
+S3-3804,for Logarithm,Base,0x1c117e6cC629C414377Fdbb427db329fD0821F9a,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,for_Logarithm_0x1c117e
+S3-3805,for Logarithm,Base,0x9B12700FFd44088930c9409522A77e0D81Ce81fC,core,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,for_Logarithm_0x9B1270
+S3-3806,"Foil (Guardian 'mell Stable Gas Pricing', 2024-09-30)",Base,0xd732917866d0cdc7e9ed8ef719c9f122ef71a61e,impl,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Foil_Guardian_mell_Stable_Gas_Pricing_2024_09_30__0xd73291
+S3-3807,Nolus Money Market (Oak Security 2023-01),Nolus,nolus1gurgpv8savnfw66lckwzn4zk7fp394lpe667dhu7aw48u40lj6jsqxf8nd,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Nolus_Money_Market_Oak_Security_2023_01__nolus1gu
+S3-3808,Nolus Money Market (Oak Security 2023-01),Nolus,nolus1f0pqlmj609l8cy74g65737usspn38sfqyf7pprdef5knv8mm50ss06qlfw,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Nolus_Money_Market_Oak_Security_2023_01__nolus1f0
+S3-3809,Nolus Money Market (Oak Security 2023-01),Nolus,nolus123v3560y4r5es0w85crkrflx36vprfesw7yst2xqzgpxjpfnfdzqx6dh4h,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Nolus_Money_Market_Oak_Security_2023_01__nolus123
+S3-3810,NinjaYielder (Pashov solo 2023-11-17),Polygon,0x03db92aff4974b645183505a8300c80e228890b7,vault,true,FOUND,1,0,0,1,0,4,,,,stage2.5,,,,,NinjaYielder_Pashov_solo_2023_11_17__0x03db92
+S3-3811,"TapiocaDAO (Pashov 2024-02, tapioca-periph)",Arbitrum,0x7A3B760AcFaB78f6bc6a1AD80F7743f5bA0513Dc,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,TapiocaDAO_Pashov_2024_02_tapioca_periph__0x7A3B76
+S3-3812,"TapiocaDAO (Pashov 2024-02, tapioca-periph)",Arbitrum,0xA805E1b42590be85D2c74E09c0e1c1B6063Ea1A7,token,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,TapiocaDAO_Pashov_2024_02_tapioca_periph__0xA805E1
+S3-3813,Sanctum: Sols (Cantina 2026-03),Solana,5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx,core,false,FOUND,1,0,0,1,0,5,,,,stage2.5,,,,,Sanctum_Sols_Cantina_2026_03__5ocnV1qi
+S3-3814,TokenSoft Distributor contracts update (Sherlock 2024-05),Ethereum,0x70E0E5a16c981eFF0720f226A2E8ff418B5f3954,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,TokenSoft_Distributor_contracts_update_Sherlock_20_0x70E0E5
+S3-3815,TokenSoft Distributor contracts update (Sherlock 2024-05),Ethereum,0x57c08f6827DC9A88b253830D73E0d8314b32E8D1,core,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,TokenSoft_Distributor_contracts_update_Sherlock_20_0x57c08f
+S3-3816,Velar Artha PerpDex (Sherlock 2024-08),Ethereum,0x033BbDe722EA3Cdcec73CFFEA6581DF9F9C257de,token,true,PARTIAL,1,0,0,1,0,4,,,,stage2.5,,,,,Velar_Artha_PerpDex_Sherlock_2024_08__0x033BbD

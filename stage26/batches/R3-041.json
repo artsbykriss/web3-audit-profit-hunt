@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-041",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0225",
+   "lane": "A_NO_ADDRESS",
+   "project": "SnagMarketHybridV2",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Inadequate Validation of fromAddress in purchaseItems Function",
+   "uids": "smart-contract-code-review-and-security-analysis-report-for-snag-solutions::inadequate-validation-of-fromaddress-in-purchaseitems-function",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "uid 'smart-contract-code-review-and-security-analysis-report-for-snag-solutions::inadequate-validation-of-fromaddress-in-purchaseitems-function' identifies Snag Solutions (Hive NFT marketplace infra; GitHub org Snag-Solutions, repos hybrid-erc20 / agg-venue-connectors / node-sdk). The audited contract 'SnagMarketHybridV2' is not in any public Snag repo (GitHub code search 'SnagMarketHybridV2' 0 hits, 'SnagMarket' only unrelated), Blockscout Ethereum name search 0 hits, and the Polygon/Base Block",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0226",
+   "lane": "A_NO_ADDRESS",
+   "project": "Solana EDDSA Token Distributor",
+   "chain": "Solana",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Missing fee_collector check in the Claim instruction",
+   "uids": "finding:979d175d0b14b58fcdd3393c26b60eeeeaa97ca43039819350f5148278152ca8",
+   "report_urls": "reports/codespect/2025/solana-eddsa-token-distributor-bbe9cd22.md",
+   "evidence_urls": "https://github.com/CODESPECT-security/audit-reports/blob/2baaba7b9ccfa17f65f4277ae650c14d7fd72839/019_CODESPECT_TOKENTABLE_SOLANA_EDDSA.pdf",
+   "known_addresses": "",
+   "known_address_notes": "CODESPECT 2025-05 report: repo 'tokentable-unlocker-solana' @87b79fe (final 54c916f), files eddsa-token-with-fees-distributor-solana/src/{traits,state/eddsa_distributor_data,state/airdrop...}; finding is the missing fee_collector check in Claim. TokenTable is live (now under sign.global/tokentable) but its official contract-address page states 'Program and contract addresses for Solana, TON and Starknet are not listed here yet' and only lists EVM deployments (unlocker/airdrop/fee-collector), whi",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0227",
+   "lane": "A_NO_ADDRESS",
+   "project": "Souls Club Wheel",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Stake Manipulation During Cooldown Period Allows Probability Gaming",
+   "uids": "finding:5e14e11bb90139e38faa291e251de75a533dc2c18fbea17283d86edcc6e5c956",
+   "report_urls": "reports/shieldify/2025/souls-club-wheel-cc046287.md",
+   "evidence_urls": "https://github.com/shieldify-security/audits-portfolio-md/blob/f2c051af4ffb67e1133343a00b3de2ba29db2024/SoulsClub-Wheel-Security-Review.md",
+   "known_addresses": "",
+   "known_address_notes": "Shieldify 2025-11 review of contracts/Wheel.sol (UUPS upgradeable lottery: joinGame, cooldown stake manipulation, setMinStake/setMaxStake, _disableInitializers) at xgrisha666x/revolver-contract @cae64f26. That repo is now deleted (GitHub API 404) and the report gives no deployed address and no chain. Blockscout Ethereum name search 'Wheel'/'SoulsClub' found nothing attributable; Auditware protocol stub for Soulsclub has no address. Core code identified via report links only -> PARTIAL.",
+   "project_addresses": ""
+  }
+ ]
+}

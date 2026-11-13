@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-060",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0127",
+   "lane": "C_FOUND",
+   "project": "Infinity Swap",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "4",
+   "critical": "4",
+   "high": "0",
+   "titles": "NFTs Treated As Fungible Tokens During Withdrawal | Incorrect Calculation For Exponential Curves | Incorrect Calculation For Linear Curves | Lack Of Check Between Collection And Swap Pool",
+   "uids": "finding:c0a3389cf0126545dcd75e3ed7bfdeae9a403be69b29467a363f93859f85527f;finding:d9185a3a2d9dd687e97d6c3ede1e37eefb3e50424271d291737c843d8afa58e7;finding:785c4a26312b5e2564f87fe2f5b977baa8279ed2067bd76b0922aa92252fe882;finding:25ea6d76177ae3ba2588e4989b3900e94e2b27a7aeae94d8339c73e800807c3f",
+   "report_urls": "reports/ottersec/2023/infinity-swap-fbbca695.md",
+   "evidence_urls": "https://osec.io/reports/cff181d8-2ba4-4c02-8c00-5ce9cff84551",
+   "known_addresses": "stars12vu7w5xyg3hd327tv866cn2m5rlgshk2jl4gdwfpnxyv7n7nd2psuvak6c",
+   "known_address_notes": "OtterSec PDF: program 'infinity', repo github.com/public-awesome/infinity @2f1afb3 (2023-04). Repo moved to public-awesome/infinity-swap-contracts (old name 404). Chain = Stargaze: official mainnet scripts pin CHAIN_ID stargaze-1 and the deployed Global contract INFINITY_GLOBAL=stars12vu7w5xyg3hd327tv866cn2m5rlgshk2jl4gdwfpnxyv7n7nd2psuvak6c, with v2 code IDs factory=169 global=170 pair=171 router=172 and pair v1 code ID=110. Audited 'infinity' pool logic = pair contract (instantiated per-pool f",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0002",
+   "lane": "C_FOUND",
+   "project": "09-03--PariFi",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "4",
+   "critical": "3",
+   "high": "1",
+   "titles": "Users Can Modify Any Position | Decreasing Position Size Does Not Account For PnL | Insolvent Closes Steal Collateral From Other Positions | Price Updated In Wrong Direction",
+   "uids": "finding:6b8b8afab550ec5cb97163a84f75db064283513ef38d64283f0efe9b04cb7773;finding:c46ff68ccf4ada13a4387e5b0bcad21117af0a2947ab5237b1b288e9089ee273;finding:46eac89b69beeed54ea3512cfa7844f3f117a7f55d26bc8e52934471769ac1d5;finding:52344ced39a0c4ae473a0f9723891fa6f94a01a488d3103130d416e120d8caf7",
+   "report_urls": "reports/guardianaudits/2023/09-03-parifi-b5ffa41a.md",
+   "evidence_urls": "https://github.com/GuardianAudits/Audits/blob/36fcc39d51fd84a6ec2c72b9c9fda8f8b6ac169d/PariFi/09-03-2023-PariFi.pdf",
+   "known_addresses": "0x9Ce25A972e0b55cd33de54a670F48a39820ea704;0xbf11ac635fe97430b5333018778d0d746f67c989;0xd979e6d8a05ef11b185d2df3d76175eecae522af;0xEA78b6d9BbCE9F9D7CCa7aDeC5149d27f1305450;0x4df30D2B4D595Ca252AEC77e4f8623E545b5021e;0x57206c5b0cc7aDf30B9AdE22f0C2E526e3DD68E6;0xc53cf9162b09392623B559C39ef6B9A9d2dE37c4",
+   "known_address_notes": "parifi.org is now an unrelated casino spam domain and docs.parifi.org does not resolve, but the Parifi GitHub org keeps its official address book (Parifi/references src/constants/contracts.ts) for ARBITRUM_MAINNET. Every listed address was checked on-chain: OrderManager, both ParifiVault liquidity pools, PriceFeed, DataFabric, FeeManager, RBAC all have verified source with matching contract names. These are the Guardian-audited perp engine components (order manager + pools).",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0077",
+   "lane": "C_FOUND",
+   "project": "Composable Bridge",
+   "chain": "Solana",
+   "trace_status": "FOUND",
+   "n_findings": "4",
+   "critical": "3",
+   "high": "1",
+   "titles": "Unauthorized Withdrawals Of Staked Tokens | Unbacked Deposits In Stake Pool | Account Inconsistencies In Bridge Tokens Instruction | Unverified Marginfi Account Indices",
+   "uids": "finding:1c45251bcc4c70b632ea9f997a616dfbb90dab06048db0be0dc96d31596046b4;finding:02de913cbf20f96b97769c603adc3f9a0787813c665dfe217ce83c82d5414f75;finding:b4c562d83b088bccabcb25708686fcd810846ee20a0992d01195612e588bfaaa;finding:7e8073f63b288aac97f80f31d5bd3a6a89352ff990724e51d4e9b428124af826",
+   "report_urls": "reports/ottersec/2024/composable-bridge-08d69cf8.md",
+   "evidence_urls": "https://osec.io/reports/12f9b811-241f-4cdd-80c6-7e67cab071aa",
+   "known_addresses": "8n3FHwYxFgQCQc2FNFkwDUf9mcqupxXcCvgfHbApMLv3;2HLLVco5HvwWriNbUhmVwA2pCetRkpgrqwnjcsZdyTKT;FaX6Aqph9zpER3HQ3LRmp67z6uu1QWH7dK3XgbydAeYV",
+   "known_address_notes": "OtterSec 2024-08 (OS-CBG) audited the Composable Solana bridge: marginfi-backed stake pool, bridge_tokens in solana-ibc, staker signer checks. The code maps to ComposableFi/mantis-staking-program (restaking + solana-ibc + staking Anchor programs, declare_id! literals). All three program IDs are live executable programs on Solana mainnet. FOUND.",
+   "project_addresses": ""
+  }
+ ]
+}

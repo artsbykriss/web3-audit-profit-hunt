@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-013",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0211",
+   "lane": "A_NO_ADDRESS",
+   "project": "Rumi Finance",
+   "chain": "Arbitrum",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "C02. Invalid Calculations | H04. Front Running Attack",
+   "uids": "2023-03-22-rumi-finance-sca-quantum-dao-blue-pte-erc20-yield-farming-mar2023-sca-quantum-dao-blue-pte-erc20-yield-farming-mar2023::c02-invalid-calculations;2023-03-22-rumi-finance-sca-quantum-dao-blue-pte-erc20-yield-farming-mar2023-sca-quantum-dao-blue-pte-erc20-yield-farming-mar2023::h04-front-running-attack",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Chain confirmed Arbitrum (DefiLlama chainTvls = Arbitrum only); docs describe the Vault/Controller/Strategy yield-farming stack that matches the 2023-03 review of 'erc20 yield farming'. The docs architecture page lists no addresses, DefiLlama exposes no address for the protocol, and arbitrum.blockscout.com is Cloudflare-gated, so no vault/strategy address could be read. Sanctuary matches Rumi.sol / RumiPresale.sol were rejected as a different token-presale project. Core anchor only.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0236",
+   "lane": "A_NO_ADDRESS",
+   "project": "TENET - veTENET Smart Contract Security",
+   "chain": "Tenet",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "OVER-DISTRIBUTION ON KILLED GAUGES | POTENTIAL DUPLICATE REWARD TOKEN ENTRIES",
+   "uids": "finding:31dd559c4e29d052943215d24921728008c3805cdb2823475f7ecd95d09bc4a5;finding:dc44fb0ada34a232c3e9a2a766e1c209c8dedfd90ca35f7c4950dc599734f29c",
+   "report_urls": "reports/halborn/2023/tenet-vetenet-smart-contract-security-52f7b32f.md",
+   "evidence_urls": "https://github.com/HalbornSecurity/PublicReports/blob/4f3d1c6451ac01ba669a43072dd30b857ef9aa90/Solidity%20Smart%20Contract%20Audits/TENET_veTENET_Smart_Contract_Security_Assessment_Report_Halborn_Final.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Halborn 2023-08..10 assessment of tenet-org/veTenet-contract (veTENET voting-escrow + gauge reward distribution; findings over-distribution on killed gauges, duplicate reward-token entries), commit 434bcc0a. Report contains no address and no chain id. Repo is 404 via GitHub API; docs.tenet.org fails TLS (SSL UNEXPECTED_EOF) and Jina 422, tenetscan.io returns 525/Cloudflare and explorer.tenet.org fails TLS, so neither the veTENET address nor a code check was obtainable. Core code identified, depl",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0270",
+   "lane": "A_NO_ADDRESS",
+   "project": "Zodiac Protocol Periphery",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "First depositor can be front-run for unfair profit causing direct losses | User\u2019s voting power remains after removing channels",
+   "uids": "finding:17649cce81e286fc7bc4650a3c3005d03feb8beb9a4c4d9ee3425a875581835d;finding:e92fc2b325c14e68f41c94f316779520f7f4a39d81f45fa821c9959a49d15dae",
+   "report_urls": "reports/oak-security/2024/zodiac-protocol-periphery-cbe825c5.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/Zodiac%20Protocol/2024-03-18%20Audit%20Report%20-%20Zodiac%20Protocol%20Periphery%20v1.0.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Same project as P25-0269 (Codezen/Oak, CosmWasm on Osmosis), periphery/vault router + voting-power modules. No address book, no public repo, app bundles carry no addresses. Nothing on-chain to seed a lookup -> PARTIAL.",
+   "project_addresses": ""
+  }
+ ]
+}

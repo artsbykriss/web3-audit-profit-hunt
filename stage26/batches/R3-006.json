@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-006",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0067",
+   "lane": "A_NO_ADDRESS",
+   "project": "Capricorn Exchange pAMM",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "3",
+   "critical": "2",
+   "high": "1",
+   "titles": "Allowing c < 1 makes _backOutX invert the wrong curve, enabling round-trip arbitrage | _balancing solves quadratic unstably, handing out negative-spread fills | Rebalancing allows draining the reserves",
+   "uids": "finding:ab93b928f423bde7f26e8705263bfe18fd5d34f850d79c88b7d1c681f2dbacb2;finding:3deb237cebafa64633c3dc504465b18e65b58ba9f34b17245f740cf0b2437569;finding:f06092db740eababc25daba5d364f0cc34804e01c6cf1a2dbfbb74f0493d99ca",
+   "report_urls": "reports/cantina/2025/capricorn-exchange-pamm-b499dc86.md",
+   "evidence_urls": "https://cdn.cantina.xyz/reports/cantina_capricorn_oct2025.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Cantina Oct-2025 reviewed Capricorn's pAMM (Solidity, TransferHelper.sol, _backOutX/_balancing). Identity confirmed: capricorn.exchange, Monad, DefiLlama TVL on Monad. Logs/GraphQL here do not expose pool addresses and the docs (GitBook) publish none; the SPA's served HTML contains no 0x address (script bundles not address-bearing at top level). A prior trace pass reported a candidate 0x4C02af995BB1f574c9bf31F43ddc112414aE0Ac7 seen in the app bundle (24,384 bytes of unverified code on Monad, con",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0208",
+   "lane": "A_NO_ADDRESS",
+   "project": "Router Asset Bridge",
+   "chain": "Router Chain",
+   "trace_status": "PARTIAL",
+   "n_findings": "3",
+   "critical": "2",
+   "high": "1",
+   "titles": "Attackers can profit by depositing different tokens and withdrawing as native tokens | Attackers can front-run transactions to steal user funds after approving allowances | The amount of minted gas tokens can exceed the actual charged fee amount",
+   "uids": "finding:4e8ee54947d4e3fd122995c213a1adb9b461477d848670bb0c5b5493f7a5e422;finding:a5b5f310e6d6438928258bac7b682fd505817a7399ba4072487d69238897cb50;finding:04a166c27482d444ab77f944dc93193decdc5c1671e49f61337294a72c91af1c",
+   "report_urls": "reports/oak-security/2024/router-asset-bridge-5009f883.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/Router/2024-04-30%20Audit%20Report%20-%20Router%20Asset%20Bridge%20v1.2.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Same audited repo/commit as P25-0207; Router Chain deployment would be a CosmWasm code-id + contract address. Router chain endpoints (sentry.lcd.routerprotocol.com, lcd.routerprotocol.com, sentry.evm.rpc.routerprotocol.com, router-evm-rpc.routerprotocol.com, api.routerprotocol.com) do not resolve from this environment, so no code id / contract address could be read or checked.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0244",
+   "lane": "A_NO_ADDRESS",
+   "project": "Tornado Launcher",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "3",
+   "critical": "2",
+   "high": "1",
+   "titles": "Assigning `s.wethReserve` a value from the balance could possibly cause DoS and/or initial price manipulation | User can steal funds of other token depositors | Inconsistent price between Bonding curve and external DEX at transition time",
+   "uids": "finding:766f03e7bb347759981a3d67b9e661286acd2fc020101cdf135c693b70ca8421;finding:8b41672482887327aaff6b74550d33bfc9a1d194d155604a35aa713660741a63;finding:115fe57e16a2f0c4582e952da29c16273e5a4cec67c59c11a1c24ed01988fd65",
+   "report_urls": "reports/code4rena-zenith/2024/tornado-launcher-c1212ced.md",
+   "evidence_urls": "https://github.com/zenith-security/reports/blob/bf794d06dd31f476a65fe0f27d5221d90cd25077/reports/Zenith%20Audit%20Report%20-%20Tornado%20Launcher.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Chain resolved from the report itself: Blast (12 'Blast'/'blast' mentions, blast-geth references, Thruster DEX integration). Scope repo github.com/kairos-loan/launcher-contracts-for-audit @47fd00a0 - now 404 (private/deleted), no fork found. The two blastscan links in the PDF are NOT the target: 0x44889b52b71e60de6ed7de82e2939fcc52fb2b4e resolves to ThrusterRouter (verified via routescan Etherscan-compatible API), and 0x83acb050aa232f97810f32afacde003303465ca5 is Blast WETH; both are cited only ",
+   "project_addresses": ""
+  }
+ ]
+}

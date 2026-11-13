@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-059",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0306",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "tally",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "High-severity findings \u2014 2024-11-tally-judging",
+   "uids": "broad:sherlock:310:0",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+   "known_address_notes": "Audited code is withtally/staker (now served as ScopeLift/staker): Staker + EarningPowerCalculator + notifiers, derived from UniStaker. Audit README lists only the hardcoded ARB token and the Arbitrum DAO Treasury Timelock 0xbFc1FECa8B09A5c5D3EFfE7429eBE24b9c09EF58 as admin, with '_earningPowerCalculator - TBD after deployment' and '_admin ... TBD', i.e. the Staker address did not exist at audit time. The repo has src/script/Deploy*.sol only (no address book/broadcast). docs.tally.xyz publishes ",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0311",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "tokensoft distributor contracts update",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "High-severity findings \u2014 2024-05-tokensoft-distributor-contracts-update-judging",
+   "uids": "broad:sherlock:271:0",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0x70E0E5a16c981eFF0720f226A2E8ff418B5f3954;0x57c08f6827DC9A88b253830D73E0d8314b32E8D1",
+   "known_address_notes": "Audited change is 'Per Address' distributor functionality added to TokenSoft's existing distribution contracts (contest 285: 'Adding Per Address functionality to existing distribution contracts on Tokensoft's platform'). The repo's scaffold-eth artifact deployedContracts.ts is the only address book: the audited PerAddressContinuousVestingMerkleDistributor(+Factory) and PerAddressTrancheVestingMerkleDistributor(+Factory) exist only under chain 5 (Goerli) and 31337 (local) - e.g. PerAddressContinu",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0315",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "velar artha",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "High-severity findings \u2014 2024-08-velar-artha-judging",
+   "uids": "broad:sherlock:293:0",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0x033BbDe722EA3Cdcec73CFFEA6581DF9F9C257de",
+   "known_address_notes": "Chain confirmed BOB: docs.velar.com 'Velar Artha' (second version, L2-agnostic, perpetual swaps on BOB) and DefiLlama 'Velar Perps' lists BOB. Sherlock repo 2024-08-velar-artha contains only gl-sherlock/README.md + package.json (37 blobs, no deploy config, no addresses); gl-sherlock is a GenLayer-branded folder, the Solidity sources are not in the public repo. Velar's official contract-addresses page publishes only the VELAR token (Stacks SP1Y5YSTAHZ88XYK1VPDH24GY0HPX5J4JECTMY4A1.velar-token, Et",
+   "project_addresses": ""
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-033",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0036",
+   "lane": "A_NO_ADDRESS",
+   "project": "Aegis",
+   "chain": "Berachain",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Potential issues that can arise from BGT being reward token",
+   "uids": "group:52:1",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Corpus uid group:52:1 maps to Pashov 'Aegis Vault Security Review' (Sep 2024). PDF text gives repo github.com/labs-solo/aegis-vault, commit b88e9915b8, scope AegisVault/AegisVaultERC20/AegisVaultFactory/AegisVaultCore, and BGT (Berachain governance token) rewards. Repo is now 404; Berascan name search for 'AegisVault' returns no verified contract. Instance unpublished -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0061",
+   "lane": "A_NO_ADDRESS",
+   "project": "Bool Network",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Possible Signature Verification Bypass in Messenger",
+   "uids": "finding:50ec7df3ca5b4b79054346b8308dca77e538a0cdd94af28422a73cc4248ceb35",
+   "report_urls": "reports/peckshield/2024/bool-network-748e3a2d.md",
+   "evidence_urls": "https://github.com/peckshield/publications/blob/37558e095a7c82c9f4f8db4a84af313ed5eba67c/audit_reports/PeckShield-Audit-Report-BOOL-v1.0.pdf",
+   "known_addresses": "",
+   "known_address_notes": "PeckShield BOOL v1.0 (2024-03-10) audited github.com/boolnetwork/bool-contracts-v1 (repo now private/404). Docs sitemap crawled in full: Messenger/AnchorFactory pages publish interfaces and structs only, no deployed address. AMT-bridge network config documents testnet chain 47 only; beta mainnet is chain 11100 (rpc-node-http.bool.network). GitHub org search for Messenger/AnchorFactory returns only tutorial contracts (boolnetwork/advanced-solidity-tutorials); bool-vrn-contracts contract-address.j",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0064",
+   "lane": "A_NO_ADDRESS",
+   "project": "CBI/JUKU",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Incorrect Spend Allowance Management in CBI/JUKU",
+   "uids": "finding:c13ef2e282807b7d8e32a64e10af8d353108db07f333c51dfcb2f39143fbdf7c",
+   "report_urls": "reports/peckshield/2023/cbi-juku-2f565b64.md",
+   "evidence_urls": "https://github.com/peckshield/publications/blob/37558e095a7c82c9f4f8db4a84af313ed5eba67c/audit_reports/PeckShield-Audit-Report-JUKU-v1.0.pdf",
+   "known_addresses": "",
+   "known_address_notes": "PeckShield JUKU v1.0 (2023) is the only public artifact; audited repos deleted (cbiglobal/cbi-smart-contracts 404). Report PDF text (via Jina) carries no chain or deployment section. Ethereum Blockscout 'JUKU' returns tokens (e.g. 0x58047d2E 'Shinjuku', compiler 0.8.23, ERC20 only) with no link to the audited spend-allowance module, so they are rejected. No address asserted.",
+   "project_addresses": ""
+  }
+ ]
+}

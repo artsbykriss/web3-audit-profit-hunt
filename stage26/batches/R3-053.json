@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-053",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0055",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "Beranames",
+   "chain": "Berachain",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "Incomplete payload validation in whitelist register | Incorrect assignment of reverse record ownership",
+   "uids": "finding:765795221a25b99b392392c3cfe53738c5ae3fe71aa115d2be32098515d8c253;finding:e6fa42187aa0df274655276bc03f8d5e57f0b45cc8699ddba40c65400f094fb3",
+   "report_urls": "reports/halborn/2024/beranames-adabea30.md",
+   "evidence_urls": "https://www.halborn.com/audits/beranames/beranames---beranames-name-service-bns-contracts-v2-691431",
+   "known_addresses": "0x5b22280886a2f5e09a49bea7e320eab0e5320e28;0xddfb18888a9466688235887dec2a10c4f5effee9",
+   "known_address_notes": "Anchor found from Beranames' own MetaMask snap bundle: chain 'berachain' with ensRegistry=0x5b22... (blockCreated 877007) and ensUniversalResolver=0xddfb... (blockCreated 877008), both verified on Berachain as BeraNamesRegistry / UniversalResolver. The two findings live in the whitelist registrar and the reverse registrar; the reverse-node owner returned a GnosisSafeProxy (0xdeB1E0Fce7BaC8a558fFc477Cc04423DA332E2b7), not a registrar, so the exact audited registrar instances stay unpublished; con",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0155",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "Metalex Borg",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "Modi\ufb01er conditionCheck doesn't revert if no conditions passed | Reentrancy in optimisticGrantImplant",
+   "uids": "finding:0b28636f3c7cbf657ca03a2113f477f6bc81e6eb3bf75983e895e4b0bd752330;finding:a59f187aceddbd24308ba0c68d536113d0cb79c3a0096fdcca0ee254a9d9f864",
+   "report_urls": "reports/mixbytes/2025/metalex-borg-501ef361.md",
+   "evidence_urls": "https://github.com/mixbytes/audits_public/blob/3bbdea1996b26961a75a063badec305b26d39391/MetaLeX/Borg/Metalex%20Borg%20Security%20Audit%20Report.pdf",
+   "known_addresses": "0x033012a1eDA6e2E00D12CD37c5b63B9440ef5E01;0x51413048f3Dfc4516e95BC8e249341B1D53B6cB2;0xBE0D3D13AA07501beAC9b72dE9e9292E66C7A5C4",
+   "known_address_notes": "MixBytes report 'Borg-core' (commits 9074503\u2026/b9d4338\u2026) scopes borgCore.sol, auth.sol, implants (optimisticGrantImplant, eject/sudo/daoVote/daoVeto) and conditions; repo MetaLex-Tech/borg-core is public but has no deployments manifest. Its 'Deployments' table gives only truncated mainnet addresses: borgCore 0x0c05BF\u202665BEA40C, ejectImplant 0xb368BD\u202657D8FE3e, sudoImplant 0x957774\u2026b4554804, snapShotExecutor 0xE050BD\u2026Dd4e1bA2, auth 0x306897\u20261aBdeB3d / 0xE7cF64\u2026b69bc45D / 0x2Ff67d\u2026983Ef23B \u2014 not reco",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0300",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "sigmaprime synthetix unipool",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "Wrong Order of Operations Leads to Exponentiation of rewardPerTokenStored | Staking Before Initial notifyRewardAmount Can Lead to Disproportionate Rewards",
+   "uids": "2024-04-29-sigmaprime-synthetix-unipool-review::wrong-order-of-operations-leads-to-exponentiation-of-rewardpertokenstored;2024-04-29-sigmaprime-synthetix-unipool-review::staking-before-initial-notifyrewardamount-can-lead-to-disproportionate-rewards",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F",
+   "known_address_notes": "Scope is the single file Unipool.sol (SIP-31-style liquidity-provider incentivisation replacing an off-chain spreadsheet), review held in sigp/public-audits. The published review.pdf in that folder is the sETH/ETH Unipool review and states only commit hashes (4cb9b50 / 4feb1cb / 53df522) - no address. No Synthetix deployment manifest lists a 'Unipool' instance, and Etherscan/Blockscout name searches are captcha-blocked; only the Synthetix core anchor (SNX token) could be verified. Exact Unipool ",
+   "project_addresses": ""
+  }
+ ]
+}

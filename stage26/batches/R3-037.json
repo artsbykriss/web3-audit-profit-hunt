@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-037",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0106",
+   "lane": "A_NO_ADDRESS",
+   "project": "Flux Protocol",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Possible front-running and manipulation the final median of answers",
+   "uids": "finding:dd63dff4fd87f8cea005ba54821e501fa90215f01012a359dc0a4ab276a0e5f1",
+   "report_urls": "reports/sherlock/2022/flux-protocol-401cca64.md",
+   "evidence_urls": "https://github.com/sherlock-protocol/sherlock-reports/blob/10e76f5bd13701970c995924f310258290043230/audits/2022.06.06%20-%20Final%20-%20Flux%20Audit%20Report.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Sherlock 2022 audit of Flux first-party price feeds; audited code = fluxprotocol/fpo-evm (FluxPriceFeed, FluxPriceFeedFactory, FeedsRegistry, AccessControl multisig). Repo deploy tasks contain only Kovan-testnet addresses (FeedsRegistry 0x01be1fCd83D8468B34c79e0d08B9f81A4749baD4, FluxPriceFeed 0x44AAaD7Ab25eA77692586c6227d6Df67b7E7d85e); both return 0x on Ethereum mainnet. docs.fluxprotocol.org now serves SEDA docs (Flux folded into SEDA) and the 'FPO live networks and pairs' page is gone; the 2",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0107",
+   "lane": "A_NO_ADDRESS",
+   "project": "Foil Vault",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "tradeRatio Rounded In Wrong Direction",
+   "uids": "finding:8708a4beb94b1ddd4e4e6b77a541c45e58b45c00077a8f433d35cd42d175e997",
+   "report_urls": "reports/guardianaudits/2025/foil-vault-817f5fe7.md",
+   "evidence_urls": "https://github.com/GuardianAudits/Audits/blob/36fcc39d51fd84a6ec2c72b9c9fda8f8b6ac169d/Foil/2025-01-13_Foil_Vault.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Guardian review 2025-01-13 of Foil's Vault (epochs, tradeRatio, Uniswap v3 pool creation via Epoch.createValid, ConfigurationModule.updateMarket); report states 'Blockchain network: Ethereum' and links client repo github.com/foilxyz/foil. That repo today is a 2026 prediction-market frontend whose src/lib/sdk/contracts/addresses.ts maps contracts on Arbitrum (42161), 'Ethereal' (5064014) and 13374202 - all post-audit deployments of later contracts (PredictionMarketEscrow/Vault), with no address f",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0108",
+   "lane": "A_NO_ADDRESS",
+   "project": "Foresight",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Attackers can arbitrage through splitPosition()",
+   "uids": "finding:0e8a20054635ebab87c97fa6a22371e307f3701e8d74c389047211725f875f26",
+   "report_urls": "reports/cantina/2025/foresight-7cbd50d3.md",
+   "evidence_urls": "https://cdn.cantina.xyz/reports/cantina_foresight_sep2025.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Cantina Managed review, Aug 24-Sep 2 2025, of 'foresight-contracts' @2e875adc: ConditionalTokens.sol, LSLMSR market maker, RewardsManager, referral codes (a CTF-based LMSR prediction market). Report gives no chain, no repo URL and no addresses. Public search found no foresight-contracts repo; foresight-arena/contracts is an unrelated Polygon 'AI agent competition' product (RoundManager/PredictionArena). Audit-time repo/chain unpublished -> no address.",
+   "project_addresses": ""
+  }
+ ]
+}

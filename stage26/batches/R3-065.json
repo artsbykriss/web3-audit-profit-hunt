@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-065",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0232",
+   "lane": "C_FOUND",
+   "project": "StationX",
+   "chain": "Base",
+   "trace_status": "FOUND",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "Native tokens can be drained from the Factory contract | Bypassing maxTokensPerUser limits for ERC721 DAO",
+   "uids": "finding:5f8cd8bd9a44999fd8b05ea0dcff5364442de4f4ead1d955e1b95debb2e8dd7f;finding:ee5153eea47e6af8a3ed532a7cc353c66d9a30167a62dacad02014a4b7e096fb",
+   "report_urls": "reports/pashov-audit-group/2024/stationx-c9c2fb7b.md",
+   "evidence_urls": "https://github.com/pashov/audits/blob/e615d8a5319647f95e217616d21770b3d8372f50/team/pdf/StationX-security-review.pdf",
+   "known_addresses": "0xeb6FE72d1Df22D9936D4FA317D7948E643aF92CB;0xe2967eff680ce65f4c38e65d3c3647c6f953ca50",
+   "known_address_notes": "Pashov review of StationX-Network/smartcontract (repo now private/404) - scope: Station Factory, Station/DAO creation, cross-chain (LayerZero) buys, ERC721 DAO maxTokensPerUser. StationX app bundle ships its per-chain config; Base entry = factoryContractAddress 0xeb6FE72d.., claimFactoryAddress 0x50702Fd9.., buyDaoToken 0x696eEE78..; the same bundle also lists Ethereum 0x3b0496Dd.., Arbitrum 0x7213172e.., Polygon 0x726D3e4f.., BSC 0x8a1D0Be1.., all returning 2,112-byte proxy code. Base was used ",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0278",
+   "lane": "C_FOUND",
+   "project": "for Logarithm",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "Incorrect totalAssets Calculation Due to Claimed-but-Unremoved WithdrawKeys | MetaVault Improperly Handles Last Redeem Claim Shortfalls",
+   "uids": "finding:fccaa9f4405d74ec23dec7be151754e7e46de938d9d0084d48947421164526c8;finding:f9e73fa0a70d3da697598bc0ee844d8edb80ef5bed1c85333adb57e7011160e9",
+   "report_urls": "reports/hexens/2025/for-logarithm-26935231.md",
+   "evidence_urls": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/84e78849628ca0d9114b66bf886ae11d9e0f8a50/logarithm-labs-metavault-jul-25%28Final%29.pdf",
+   "known_addresses": "0x7a63e8FC1d0A5E9BE52f05817E8C49D9e2d6efAe;0x9FDfd9c1e23D687F7a154610816de6E47Fb4FC64;0x1c117e6cC629C414377Fdbb427db329fD0821F9a;0x9B12700FFd44088930c9409522A77e0D81Ce81fC",
+   "known_address_notes": "Logarithm Labs MetaVault (ERC-7540 async vault) audited by Hexens Jul-2025; the project ships as maxAPY. Its official deployed-addresses page lists MetaVault USD 0x7a63e8... plus Engine, EngineReader, EngineSignatures, AssetManager, Gateways on Base (a matching MetaVault ETH set is also listed). All checked on Base with non-empty code; MetaVault/Engine names confirmed via Etherscan V2. Same addresses have no code on Ethereum, confirming Base-only.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0028",
+   "lane": "C_FOUND",
+   "project": "2025-08-13-cueva-sca-cueva-escrow-jul2025-sca-cuev",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Missing Status Check Allows Repeated Payouts in releaseEscrow",
+   "uids": "2025-08-13-cueva-sca-cueva-escrow-jul2025-sca-cueva-escrow-jul2025::missing-status-check-allows-repeated-payouts-in-releaseescrow",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0xd4a5Bb96BDE96D2cE624101D40c0ffC1aA2C98E8",
+   "known_address_notes": "Hacken page identifies Cueva as PaydeceEscrow, repo PayDece/paydece-contracts, platforms BNB Chain/Polygon/Base. Repo only ships .openzeppelin/rinkeby.json (testnet) addresses. Verified PaydeceEscrow deployments were located by Blockscout Ethereum name search (0xd4a5, 0x540f, 0x6795, 0x1Bfc, 0xa4F4, 0x2790, 0xF49D); 0xd4a5 chosen as the verified anchor. BSC/Polygon/Base instances not pinned because those explorers are Cloudflare-gated.",
+   "project_addresses": ""
+  }
+ ]
+}

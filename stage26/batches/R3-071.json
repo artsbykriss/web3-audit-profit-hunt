@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-071",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0059",
+   "lane": "C_FOUND",
+   "project": "Bloom",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "2",
+   "critical": "0",
+   "high": "2",
+   "titles": "The protocol does not implement slippage checks on swaps | Sale creator can possibly steal bidders' claimable tokens",
+   "uids": "finding:16169dbd085c74b3ba1a390f2ffa5df39fe66c734442e4d953a1dd4b17fb7348;finding:0a034a5aaad04dbb850b2bd50d45d53871cf4401f23c397fda105c1b660fd93a",
+   "report_urls": "reports/pashov-audit-group/2023/a-time-boxed-bed00ae0.md;reports/pashov-audit-group/2023/a-time-boxed-e796b9e7.md",
+   "evidence_urls": "https://github.com/pashov/audits/blob/e615d8a5319647f95e217616d21770b3d8372f50/solo/md/Bloom-security-review.md;https://github.com/pashov/audits/blob/e615d8a5319647f95e217616d21770b3d8372f50/solo/md/IPNFT-security-review.md",
+   "known_addresses": "0xBbBe37FE58e9859b6943AC53bDf4d0827f7F0034;0xC4cafEFBc3dfeA629c589728d648CB6111DB3136;0x8dc5BE35672D650bc8A176A4bafBfC33555D80AC;0xF9131141E9f2e89211E87B83Af231a0310922a18;0x1338a5BdAFe2f0C2a847b04fd943A61787F046cD",
+   "known_address_notes": "Project identified from the audited code: pashov review covers BloomPool.sol / SwapFacility.sol, which is Blueberryfi/Bloom-protocol (tokenized-treasury pools, TBY lender shares). DefiLlama's Bloom adapter names the registry 0xBbBe37FE... (ExchangeRateRegistry, verified) and the treasury token 0xCA30c93B...; registry.getActiveTokens() enumerates the live BloomPool instances, all verified as BloomPool with non-empty code. The second finding in the unit comes from the companion IPNFT review (same ",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0060",
+   "lane": "C_FOUND",
+   "project": "Boba",
+   "chain": "Ethereum",
+   "trace_status": "FOUND",
+   "n_findings": "2",
+   "critical": "0",
+   "high": "2",
+   "titles": "Native tokens from the L1 liquidity pools could be drained depending on the compiler version used | DiscretionaryExitFee can be drained",
+   "uids": "boba-lp-erc721-bridges-and-erc1155-bridges-security-assessment::BOB1-3;boba-lp-erc721-bridges-and-erc1155-bridges-security-assessment::BOB1-4",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0x1A26ef6575B7BBB864d984D9255C069F6c361a14;0xd24484926f1d130778b9ebd7ec594548b2d53cb1;0x3d95bE575576F813B9b18eE14ba041d3E013eC25",
+   "known_address_notes": "Audit scope is Boba's L1LiquidityPool.sol / L1LiquidityPoolAltL1.sol. Boba's own mainnet address book lists L1LiquidityPool=0x3d95bE... and Proxy__L1LiquidityPool=0x1A26ef..., both verified on Ethereum as L1LiquidityPool; the live proxy implementation() is 0xd244... (solc 0.8.9). AltL1 variant is not in the Ethereum address book (deployed on other chains), so only the Ethereum L1 pool is asserted.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0299",
+   "lane": "C_FOUND",
+   "project": "sanctum sols",
+   "chain": "Solana",
+   "trace_status": "FOUND",
+   "n_findings": "2",
+   "critical": "0",
+   "high": "2",
+   "titles": "Lack of PDA check on TWTM leads to user wallet account draining | Same pool holding swaps allow unbacked SOLS minting",
+   "uids": "2026-02-16-sanctum-sols::lack-of-pda-check-on-twtm-leads-to-user-wallet-account-draining;2026-02-16-sanctum-sols::same-pool-holding-swaps-allow-unbacked-sols-minting",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx",
+   "known_address_notes": "Corpus-supplied program id confirmed live and executable. Sanctum's own 'Deployed programs' page lists 5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx as 'S Controller', the program that mints/burns SOLS and holds the pool/holding logic described in the report (EndRebal, SVC program, holding accounts). Program is upgradeable (BPFLoaderUpgradeab1e), so the deployed build may post-date the audited commit -> address is the exact live instance of the audited program.",
+   "project_addresses": "5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx"
+  }
+ ]
+}

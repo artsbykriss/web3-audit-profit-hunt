@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-018",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0176",
+   "lane": "A_NO_ADDRESS",
+   "project": "One Planet Smart Contracts",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Whitelisting in queuing contract can be bypassed by directly queuering the storage contract",
+   "uids": "finding:db119be285fde8afc6be773d1802fadb8d929ce611c06a01970a0959de51d53b",
+   "report_urls": "reports/oak-security/2022/one-planet-smart-contracts-fda552e3.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/OnePlanet/Audit%20Report%20-%20One%20Planet.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Oak Security audit (2022-02-08) of OnePlanet NFT marketplace: repo scope https://github.com/ProjectOnePlanet/{auction-contracts,contract-queuing,contract-token} \u2014 all now 404. OnePlanet ran on Polygon (later Terra migration noted in press). Wayback has no snapshot of the repos or docs.oneplanet.io; Polygon Blockscout search API returns 403 and Etherscan V2 has no contract-name search, so the queuing/storage contract pair named in the finding could not be located.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0177",
+   "lane": "A_NO_ADDRESS",
+   "project": "Onrail",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Self-Transfer Enables LP Minting",
+   "uids": "finding:f9da0c1b2c2eb4fd9a4f229226c6941fd5bc436a8790fbb15fbc18066220d99a",
+   "report_urls": "reports/ottersec/2026/onrail-b5fcc496.md",
+   "evidence_urls": "https://osec.io/reports/37384d4e-4146-8071-8722-c22c14839ccb",
+   "known_addresses": "",
+   "known_address_notes": "OtterSec report (2026-04-27) on Onrail's Solana private-credit programs (RTL/loan state, PoolMgmtOps, Vault, NFT collateral). Identity confirmed: onrail.xyz, GitHub org 'Onrail'. The org publishes only ts-sdk (generic amount/binary-layout/svm utilities, no IDL or program IDs) and no docs site; the audited programs are private. No program address published anywhere.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0179",
+   "lane": "A_NO_ADDRESS",
+   "project": "Out",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "The contract can be drained completely, and attackers can pay in esoteric currencies",
+   "uids": "finding:b72e78f00b9f17717d31899d16013e53cd569aeaa5833aff985442230cb05c7d",
+   "report_urls": "reports/oak-security/2024/out-252c3ca6.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/Out/Audit%20Report%20-%20Out.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Oak Security audit (2024-01-27) of an Anchor/Solana program; scope repo https://github.com/stephanOUT/rust-contract at commit 0e2cc8f239669493189f5fbdabe7c78f4b40d7f3 (finding 'toggle_trading ...'). Both repo and org (stephanOUT) are 404 now; the report contains no program ID and the front-end/project site is unknown, so no on-chain program could be verified.",
+   "project_addresses": ""
+  }
+ ]
+}

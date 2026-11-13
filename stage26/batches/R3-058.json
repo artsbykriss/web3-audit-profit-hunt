@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-058",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0117",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "Haven1 Dec31",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Payable Vulnerability in Multicall Implementation Resulting In The Bypassing Of Checks Imposed By _msgValue",
+   "uids": "finding:762ba7715bba7613d5ab67b761b2f39c9455bf5d00b44e590f9279f0f20323f2",
+   "report_urls": "reports/zokyo/2024/haven1-dec31-b943f7a3.md",
+   "evidence_urls": "https://github.com/zokyo-sec/audit-reports/blob/39b9e51ac1b68a42ac03b222167760f7035bf16e/Haven1/Haven1_Zokyo_audit_report_Dec31_2024.pdf",
+   "known_addresses": "0x9e3b5582b22e3835896368017baff6d942a41cd9;0x4d8d9f6ced39288a1e8961621bbbc2b698a3b102",
+   "known_address_notes": "Zokyo Dec-2024 review of Haven1 system contracts; the high finding is the payable Multicall `_msgValue` bypass. Haven1 is its own EVM L1 (chainid 8811, rpc.haven1.org). Docs publish only token addresses (ProofOfIdentity NFT, WH1, ESH1, hUSDC/hUSDT/hETH/hcbETH/hsETH, cbBTC) plus the Ethereum H1/hsETH tokens; the audited Multicall/protocol contract is not listed. On-chain check on chain 8811 failed from this host: rpc.haven1.org returns Cloudflare 'error code 1016' and explorer.haven1.org HTTP 530",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0124",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "Increment",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "`StakedToken` is vulnerable to share inflation attack via donation",
+   "uids": "finding:536dccba557f27d5f5cff78597d4d245f628006ecf4993ca4cb13ca5cc58f379",
+   "report_urls": "reports/pashov-audit-group/2024/increment-92b60164.md",
+   "evidence_urls": "https://github.com/pashov/audits/blob/e615d8a5319647f95e217616d21770b3d8372f50/team/md/Increment-security-review.md",
+   "known_addresses": "0x9200536A28b0Bf5d02b7d8966cd441EDc173dE61;0xCbba059D8E8AcC2C69bA94400686106b2396d786",
+   "known_address_notes": "Chain resolved from increment-protocol hardhat.config.ts (mainnet.era.zksync.io, chainId 324). Audited finding is in peripheral-contracts StakedToken (SafetyModule suite: SafetyModule/StakedToken/SMRewardDistributor/AuctionModule). That repo publishes no deployment addresses and zkScan/Etherscan 324 lookups are unavailable, so the exact StakedToken instance is unpublished -> PARTIAL. Protocol core (ClearingHouse / PerpMarketFactory) confirmed live on zkSync Era with non-empty code.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0193",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "Pool Fans-1",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Incorrect baselineBalance update allows revenue distribution to be manipulated",
+   "uids": "finding:0452b760373f47c69add9dc8e993365d7d30e7c9b4e055d6ea6414d0b13ba81b",
+   "report_urls": "reports/macro/2025/pool-fans-1-161799c2.md",
+   "evidence_urls": "https://0xmacro.com/library/audits/poolfans-1",
+   "known_addresses": "0x04cAfd53eCfa6f6a9168dE3d6D2B837D04A51B07",
+   "known_address_notes": "Macro Oct-2025 review of contracts/access/AccessControlled.sol, interfaces/IClankerTokenizerV3_1_0.sol and tokenizers/* for repo pool-fans/clanker-revenue-shares-tokenizer @23696f1e\u21929bd282f9. Repo is now 404/private. Project token FANS on Base (verified ClankerToken) is the only on-chain anchor; the audited RevenueSharesTokenizer instance itself has no published address and Base Blockscout API returns 403 from this environment.",
+   "project_addresses": ""
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-005",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0139",
+   "lane": "A_NO_ADDRESS",
+   "project": "Levana Perpetual Swaps",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "4",
+   "critical": "2",
+   "high": "2",
+   "titles": "Anyone can whitelist a new vAMM or overwrite an existing one | saveSwapInstruction can be executed by anyone with arbitrary values | Prices collected from oracle are inverted | Risk fund can be drained completely due to unpriced vega risk, if highly volatile assets are listed or volatility conditions change",
+   "uids": "finding:eb43beb72c040f41f63d5d8ee2697172082b90c2b5c4b9e62a680645640db7c5;finding:caa13948d64278432a40b391da963705c0ba0f4ee2c39b5561c81e31dc2c5a04;finding:b79690b5095f89375325b0026cdc09be79a5812d40263240027eb939b765431b;finding:e6d034f3f483b6a6939ba32dee85121fca7cee44d16e0ec00d7eaf3350b7e922",
+   "report_urls": "reports/oak-security/2022/levana-perpetual-swaps-716f9259.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/Levana/2022-05-03%20Audit%20Report%20-%20Levana%20Perpetual%20Swaps%20v1.0.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Oak report (2022-05-03) audits CosmWasm market/factory/liquidity-token crates pre-launch. Current Levana Perps docs publish only the OSMOSIS TESTNET factory osmo1ymuvx9nydujjghgxxug28w48ptzcu9ysvnynqdw78qgteafj0syq247w5u plus testnet market/position/LP token addresses; mainnet per-market instances (Osmosis/Sei/Injective/Neutron) are not listed, and every Osmosis REST endpoint tried returned 'Not Implemented' or 501 for cosmwasm queries, so no mainnet contract could be code-checked. PARTIAL: prot",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0180",
+   "lane": "A_NO_ADDRESS",
+   "project": "Out GCC",
+   "chain": "Solana",
+   "trace_status": "PARTIAL",
+   "n_findings": "4",
+   "critical": "2",
+   "high": "2",
+   "titles": "Incorrect math leads to underpriced tokens when buying an offer | Attackers providing incorrect or malicious price feed can buy tokens at an arbitrary price | Assuming negative sign of Pyth price feed exponent can lead to incorrect token pricing | Token holders can create an infinite number of unbacked offers",
+   "uids": "finding:ca46b8ffcb40037e4239cc0b0eef56035baff3ada1c17fa2587ea73f61fc2553;finding:7e177d0749a11051efb7d3d8672167417b011de884a8a46c8a45fca731dba2d9;finding:3b346c951f2e222c213929d28c3e25e5520173e28f12ce15bbf2b2665accedc8;finding:7ce1c7f9b2972d0a9820f709f1ca91efe9b15801111e74715637a038b21b1b24",
+   "report_urls": "reports/oak-security/2024/out-gcc-7b139037.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/Out/2024-09-24%20Audit%20Report%20-%20Out%20GCC.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Oak Security audit (2024-09-23) of the 'gcx' Solana program (programs/gcx: create_token, create_offer, buy_offer, initial_buy, Pyth feed handling) in repo https://github.com/stephanOUT/gcc/ \u2014 now 404, no commit hash or program ID in the report. No address to verify.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0269",
+   "lane": "A_NO_ADDRESS",
+   "project": "Zodiac Protocol Core",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "4",
+   "critical": "2",
+   "high": "2",
+   "titles": "Incorrect vault expiration condition allows arbitrary closure of legitimate holders | Replaying CloseHolder message allows attackers to steal funds | Large slippage tolerance allows for swap arbitraging | Non-callback arbitrary messages accepted by the flash_loan_v function",
+   "uids": "finding:172d475ebd39c51348c6c09872d5cf8c972c9deb06ecff90ddd5fdc7ba2733b0;finding:bf3d428fdddd69141ffe4a4c929eaae70c0fe96ad71b4379775cb3a39ed80f6a;finding:74953f8fb4ce029f745d84a5ffcaac0db1ab1ef03e83187cbeb4d7282dab75a6;finding:0a2c00b63ae7f378efa2a29aa5bfdfcc98dbc27e24917f53ab6e1ebaf85f29c1",
+   "report_urls": "reports/oak-security/2024/zodiac-protocol-core-ee29071e.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/Zodiac%20Protocol/2024-01-02%20Audit%20Report%20-%20Zodiac%20Protocol%20Core%20v1.0.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Identity confirmed: Zodiac Protocol on Osmosis, LP principal/yield token deconstruction. Oak/Codezen report scope is contracts/osmosis/zodiac_osmo_bal_lockup_vault, zodiac_fee_collector, flash-loan contract (Rust/CosmWasm); repo is private (zodiac-protocol GitHub org only has an Osmosis fork and Rust libs). app.zodiacprotocol.xyz is live but its bundles contain no hardcoded osmo1... addresses (generic cosmwasm front end). Osmosis LCD cannot enumerate by label without a code/contract seed, so the",
+   "project_addresses": ""
+  }
+ ]
+}

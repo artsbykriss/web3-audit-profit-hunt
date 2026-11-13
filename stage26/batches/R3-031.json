@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-031",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0017",
+   "lane": "A_NO_ADDRESS",
+   "project": "2024-02-13-final-100x-audit-report",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Issue H-1: executeWithdrawal can be called by user after withdrawal timeout to withdraw full balance regardless of unrealized loss creating large bad debt",
+   "uids": "2024-02-13-final-100x-audit-report::executewithdrawal-withdrawal-timeout-allows-full-balance-without-health-check",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Same protocol as P25-0003 (100x = Rysk Ciao, Arbitrum/Blast-era options AMM). Finding H-1 concerns Ciao.executeWithdrawal. The Ciao repo (rysk-finance/ciao-protocol) publishes no deployments/broadcast and no AddressManifest values; 100x.gitbook.io publishes only index slots. Blast RPC/explorer hosts no longer resolve and public Blast RPC returns 403, so the deployment cannot be read on-chain. PARTIAL: code identified, instance unpublished/unreachable.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0020",
+   "lane": "A_NO_ADDRESS",
+   "project": "2024-09-25-final-thanos-l2-native-token-bridge-audit-report",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "L1 contract can evade aliasing, spoofing unowned L2 address",
+   "uids": "2024-09-25-final-thanos-l2-native-token-bridge-audit-report::l1-contract-can-evade-aliasing-spoofing-unowned-l2-address",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Sherlock contest 481 audited Tokamak's Thanos L2 native-token bridge (OP-Stack v1.7.x fork) as deployed on L1 Ethereum for Thanos rollups. Repo enumeration found only testnet deployment artifacts (packages/tokamak/contracts-bedrock/deployments/111551143645-addresses.json, Sepolia) and no mainnet address book; docs.tokamak.network pages fetched contain no L1 bridge address. Titan (chain 55004) RPC rpc.titan.tokamak.network and explorer.titan.tokamak.network fail DNS today; an Etherscan-verified L",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0025",
+   "lane": "A_NO_ADDRESS",
+   "project": "2025-02-25-liquidity-management",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Subtracting position fee in position net value will lead to incorrect share allocation",
+   "uids": "2025-02-25-liquidity-management::subtracting-position-fee-in-net-value-leads-to-incorrect-shares",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Corpus body matches Guardian Audits 'Gamma GMX Vault' (PerpetualVault, VaultReader, KeeperProxy; Chainlink L2 sequencer check implies Arbitrum). GammaStrategies org has hypervisor/xGamma repos but no gmx-vault repo or address book (org repo list checked); GitHub code search for 'gamma-gmx-vault' returns nothing; DefiLlama has no Gamma-GMX slug. Audited PerpetualVault instance unpublished -> PARTIAL.",
+   "project_addresses": ""
+  }
+ ]
+}

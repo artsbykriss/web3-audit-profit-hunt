@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-022",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0295",
+   "lane": "A_NO_ADDRESS",
+   "project": "pashov-team-2025-10-25-enclave-security-review",
+   "chain": "Solana",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "[C-02] Wrong\u2011Offset Ed25519 instruction introspection enables forged approvals",
+   "uids": "pashov-team-2025-10-25-enclave-security-review::c-02-wrong-offset-ed25519-instruction-introspection-enables-forged-approvals",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Report: repository Enclave-Money/solver-fund-pool-anchor @668adb2e (Anchor program, 'Enclave is a Solana program that provides a fund pool allowing users to borrow tokens instantly with off-chain authorization'). GitHub API: repo = 404, so the Anchor.toml declare_id / program keypair is not readable. enclave.money resolves but renders no content (no docs, no program id). No program id was published in the report -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0297",
+   "lane": "A_NO_ADDRESS",
+   "project": "riskiit protocol security assessment",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Incorrect Native Token Handling in Deposit Function",
+   "uids": "2025-02-15-riskiit-protocol-security-assessment::incorrect-native-token-handling-in-deposit-function",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Cantina PDF identifies the product as Ludex ('Ludex simplifies blockchain integration for game developers... Challenge protocol'), using Pyth Entropy for randomness and referral registration. ludex.gg / dashboard.ludex.gg / ludexlabs.com publish no contract addresses; the public ludexdev/ludex-contract repo is an unrelated EtherVista DEX fork (EtherVistaFactory/Pair/Router), not the Challenge contracts. No audited address located -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0312",
+   "lane": "A_NO_ADDRESS",
+   "project": "unknown (hf: pashov-team-2024-05-22-curio-security-review)",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "[C-02] Winner's payout is incorrectly calculated",
+   "uids": "pashov-team-2024-05-22-curio-security-review::c-02-winner-s-payout-is-incorrectly-calculated",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Report: repo curio-research/flagship-contracts @25a268fd (Game creation/settlement contract, 'winner's payout' C-02), no address and no chain stated. GitHub API: curio-research/flagship-contracts = 404 (deleted/private); the remaining org repos (demo-contracts, gevm, keystone, keystone-starter-kit, treaty-contracts, treaty-vault) are engine/keystone code with no deployment manifest; curio.gg publishes no contract addresses and the studio runs games on its own game server with no public explorer.",
+   "project_addresses": ""
+  }
+ ]
+}

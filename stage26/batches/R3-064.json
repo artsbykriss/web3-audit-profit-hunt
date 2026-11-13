@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-064",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0090",
+   "lane": "C_FOUND",
+   "project": "DeSyn Iterative",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "kols_list duplicate push issue | Oracle price decimal issue",
+   "uids": "finding:ae8b257f14d06797554326135825fdef140116dd5bdedab42ebbf824b74b0e45;finding:b80c95a38255d5118567019a22bdf9eebeddc7086a203adb6722d9c252aa6075",
+   "report_urls": "reports/slowmist/2022/desyn-iterative-b875008e.md",
+   "evidence_urls": "https://github.com/slowmist/Knowledge-Base/blob/ca4ff9fe9f633c174c09fd189658902d9e3619d0/open-report-V2/smart-contract/DeSyn%20Iterative%20Audit%20-%20SlowMist%20Audit%20Report.pdf",
+   "known_addresses": "0x38a3b93a4584c2F990329387f18AD04BD877a7ff;0x3909be79015e97138D86f648a1fCBE3a9c6Eb18c",
+   "known_address_notes": "Report body references contracts/deploy/Vault.sol, CRPFactory.isCrp(pool) and CRPPool.getController(), i.e. a Balancer-v1 fork. The project's own deployed-contracts registry lists exactly the two Balancer-v1 artefacts (ConfigurableRightsPool, LiquidityPool) on Ethereum; both verified with matching compiler version. Repo contains no CRPFactory address, so the factory itself is the one gap.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0205",
+   "lane": "C_FOUND",
+   "project": "Rhinestone+Biconomy Smartsessions External Policies",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "UniActionPolicy does not persist usages | ERC20SpendingLimitPolicy doesn't clear previous data",
+   "uids": "finding:d00b00c547fed4914c450e3b28bc3cda21b204ad7b7e9b4cbc5ee4bbd4d34eed;finding:659c9343ec33a7e6e07c8319cace0a107b3ef814faac43996aed9d35b62ca0a0",
+   "report_urls": "reports/cantina/2024/rhinestone-biconomy-smartsessions-external-policies-228d593b.md",
+   "evidence_urls": "https://cdn.cantina.xyz/reports/cantina_rhinestone_smartsessions_external_policies_aug2024.pdf",
+   "known_addresses": "0x0000006DDA6c463511C4e9B05CFc34C1247fCF1F;0x00000088D48cF102A8Cdb0137A9b173f957c6343;0x00000000008bDABA73cD9815d79069c247Eb4bDA",
+   "known_address_notes": "Cantina Aug-2024 review covers the SmartSessions external-policy package (UniActionPolicy / ERC20SpendingLimitPolicy, both found via initializeWithMultiplexer). Both are ERC-7579 modules deployed at counterfactual addresses through the Rhinestone module registry, so the same address+code exists on every supported chain; verified UniActionPolicy on Base and bytecode on 1/8453/42161/10/137. Caveat: the live bytecode is the post-fix revision (audit findings were marked fixed).",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0209",
+   "lane": "C_FOUND",
+   "project": "Router DexSpan",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "Missing transaction revert could lead to loss of funds | Maximum approval on third-party components may lead to drain of funds",
+   "uids": "finding:d4d64f94f2b8ebe184aa4ec6b6af3eb79142c355bd1079683c0b827c6a9a0a0b;finding:fb5c2c63eb8e539b9b4c0a27ff9ee8842709100b1efbeeb81e208c2c27a24248",
+   "report_urls": "reports/oak-security/2024/router-dexspan-2e6acd06.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/Router/2024-05-10%20Audit%20Report%20-%20Router%20DexSpan%20v1.0.pdf",
+   "known_addresses": "0x260687eBC6C55DAdd578264260f9f6e968f7B2A5;0x6A0fD5577c540e16A3A49C40b51E0880a2a528ce;0xC21e4ebD1d92036Cb467b53fE3258F219d909Eb9",
+   "known_address_notes": "Oak 2024-05-10 scope = evm/src/dexspan of router-protocol/asset-forwarder-contracts @93dcff08 (fixes @144f3522). Repo now 404 but the code lives on in router-protocol/router-contracts/asset-forwarder/evm/contracts/dexspan (DexSpanRoot, DexSpanView). Three verified DexSpan deployments on Ethereum (all deployed by 0xb1b64005...), the audited SkimAddress logic present in source -> FOUND.",
+   "project_addresses": ""
+  }
+ ]
+}

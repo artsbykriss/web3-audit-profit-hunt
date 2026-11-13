@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-043",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0239",
+   "lane": "A_NO_ADDRESS",
+   "project": "Tally contest",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Arbitrary contract call allows attackers to steal ERC20 from users' wallets",
+   "uids": "finding:e4ce9faa7b9dc839a42487e7fb1de2befc455d17efec971a9013f33b2a471ea6",
+   "report_urls": "reports/code4rena/2021/tally-contest-22d8a2e0.md",
+   "evidence_urls": "https://github.com/code-423n4/2021-10-tally-findings/blob/7169ea58d7d55118e3f78b68e82e889ed423615e/report.md",
+   "known_addresses": "",
+   "known_address_notes": "Same engagement as P25-0238 (Code4rena 2021-10-tally, Tally Swap / Swap.sol; this finding is the arbitrary-call -> ERC20 theft issue). Same evidence ceiling: audited source is public in code-423n4/2021-10-tally but no deployment address, deploy script or address book exists in the repo, and Taho (ex-Tally) no longer ships a Tally-owned swap contract. PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0242",
+   "lane": "A_NO_ADDRESS",
+   "project": "Terrace Fi",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Fees can be bypassed by 99.99% by setting the last hop's ratioBps to 1",
+   "uids": "finding:12ee13790af86cf8ae32eb63f711d14a07c6b39bf34c05b33c3ed1e5c0c15ad8",
+   "report_urls": "reports/sherlock/2024/terrace-fi-ff1482af.md",
+   "evidence_urls": "https://github.com/sherlock-protocol/sherlock-reports/blob/10e76f5bd13701970c995924f310258290043230/audits/2024.06.01%20-%20Final%20-%20Terrace%20Audit%20Report.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Same engagement as P25-0241 (finding 'ratioBps=1 last hop' is issue H-x of the same PDF, scope subdialia/smart-contracts-audit-v1 @1d4d3052). No address in report and no address book at docs.terrace.fi; app host terrace.fi is DNS-dead. PARTIAL - project and audited repo identified, deployed router instance not published.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0243",
+   "lane": "A_NO_ADDRESS",
+   "project": "ThreeS",
+   "chain": "Chromia",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Missing access control in admin_withdraw_all_swap_fee operation",
+   "uids": "finding:2ebbcbeb93b735dade34b533e3d48a1c7d5a7d421c35c9537905d24bfafaa70f",
+   "report_urls": "reports/cantina/2025/threes-c011ad56.md",
+   "evidence_urls": "https://cdn.cantina.xyz/reports/cantina_competition_super_sushi_samurai_march2025.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Identity fixed: ThreeS = Chromia DEX (Cantina competition 'colorpool-chromia'), scope repo cantina-competitions/chromia-dex-sc (Rell/Cairo-style Chromia dapp, 175 files). Repo README only documents deployment to testnet (node0.testnet-asgard.chromia.com) with placeholders <YOUR_RID>; chromia.yml carries local/test blockchain RIDs only. Chromia mainnet explorer (explorer.chromia.com) is a JS SPA with no address/contract search reachable from here, so no mainnet dapp blockchain RID or contract nam",
+   "project_addresses": ""
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-017",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0166",
+   "lane": "A_NO_ADDRESS",
+   "project": "Name of the company",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "In contract AMMUtility, there is a dangerous external call to a user-inputted address with a user input calldata, in internal function _swap at line 86, a malicious user could carefully craft an attack here where the _swapTarget variable will have the address of a token that an user would have previously allowed the AMMUtility to spend his balance and the calldata would",
+   "uids": "finding:ecff8a5e8a9850a289099318bbb89673d1cb1a6bf9540a848469ba2ede24dea0",
+   "report_urls": "reports/zokyo/2022/name-of-the-company-ea59b482.md",
+   "evidence_urls": "https://github.com/zokyo-sec/audit-reports/blob/39b9e51ac1b68a42ac03b222167760f7035bf16e/UniFarm/UniFarm_Zokyo%20audit%20report.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Zokyo audit (2022-06-16) of Unifarm AMM, repo https://github.com/themohitmadan/unifarm_amm (Uniswap-V2 fork with an added AMMUtility contract). The repo's network config only populates testnets (chain 3 Ropsten: timelock 0xf960Bb67.., chain 4 Rinkeby: timelock 0xFcd4e3D9..); the '1' (mainnet) block has empty weth/ufarm/timelock and placeholder feeTo 0x...0001/0x...0002. No AMMUtility/UnifarmFactory mainnet address is published in the repo, docs or DefiLlama (UniFarm entry only tracks the UFARM t",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0168",
+   "lane": "A_NO_ADDRESS",
+   "project": "NilFoundation BlockchainVerifier v 2 0",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Second constraint is not used here.",
+   "uids": "finding:7279ef8e0da01b1373cec72bd5c8a073d1d5c1bfce778f13f3cdd9d7da722ad4",
+   "report_urls": "reports/abdk-consulting/2024/nilfoundation-blockchainverifier-v-2-0-f54e7f3f.md",
+   "evidence_urls": "https://github.com/abdk-consulting/audits/blob/57af593b14bb3701cf659937b1b7b6483009a0cc/nil_foundation/ABDK_NilFoundation_BlockchainVerifier_v_2_0.pdf",
+   "known_addresses": "",
+   "known_address_notes": "ABDK report (2024) reviews a Solidity 'BlockchainVerifier' for =nil; Foundation, a verifier-library component used by nil's zkSharding/EVM contracts, not a standalone deployed protocol. No deployment address is published in the report, nil docs (docs.nil.foundation) or the NilFoundation org; GitHub code search for 'BlockchainVerifier' returns no NilFoundation repo. Endpoint chain is =nil;'s own L2, which is not in the traceable explorer set.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0172",
+   "lane": "A_NO_ADDRESS",
+   "project": "OT",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "User\u2019s fund can be transferred out without consent",
+   "uids": "finding:8f87f74861a78796482dbc68e56e422da9f5f80d4538e95f42eec4a28d73dd4c",
+   "report_urls": "reports/zokyo/2023/ot-0eea55a5.md",
+   "evidence_urls": "https://github.com/zokyo-sec/audit-reports/blob/39b9e51ac1b68a42ac03b222167760f7035bf16e/OT/OT_Zokyo%20audit%20report.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Zokyo audit (2023-01-02) of 'OT' contracts FlashLoan.sol, VariableBorrow.sol, Curve.sol, Liquidity.sol, Osd.sol, Swap.sol from repo https://github.dev/1kxexchange/1kx-v1 at commit 54f4b95f372ab4176eea16cdb7e51571ff7c393. The GitHub repo 1kxexchange/1kx-v1 is 404 (deleted/private) and the report names no deployment network or address; the 'OT' label is an abbreviation only, so identity of the live protocol could not be tied to an on-chain instance.",
+   "project_addresses": ""
+  }
+ ]
+}

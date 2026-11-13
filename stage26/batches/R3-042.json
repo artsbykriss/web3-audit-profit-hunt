@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-042",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0228",
+   "lane": "A_NO_ADDRESS",
+   "project": "Source Code - Soroban Tricorn Bridge v240725",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Insufficient authorization validation allows adversaries to steal bridge out funds",
+   "uids": "finding:239f044f02b13ba2d9690c7a227b6f97aa5d55e23834c38041f93cb35a531af9",
+   "report_urls": "reports/coinspect/2024/source-code-soroban-tricorn-bridge-v240725-5043e73e.md",
+   "evidence_urls": "https://github.com/coinspect/publications/blob/01b04f1f4a2e2c4d7e228b967fedb8991ab63627/Coinspect%20-%20Source%20Code%20Audit%20-%20Soroban%20Tricorn%20Bridge%20v240725.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Coinspect 2024 report: Soroban (Stellar) bridge in BoostyLabs/tricorn-smart-contracts (fix commits 7d5c488, 9cbe4fd); finding is missing authorization on the bridge-out path. No contract ID (C...) anywhere in the PDF. Repo is 404 via GitHub API, tricorn.xyz serves an invalid TLS certificate (curl CERTIFICATE_VERIFY_FAILED) and Jina 422, Wayback holds only a 2024 redirect plus a 8.8 KB JS chunk with no C-address, StellarExpert search API 404 / explorer search page returns no contract. Deployed So",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0231",
+   "lane": "A_NO_ADDRESS",
+   "project": "StakeUp Protocol",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Missing Access Restrictions",
+   "uids": "finding:f4983297a4c438ee5201d98cff3df76bea543970eaad51d0ef8d3b75f1db0957",
+   "report_urls": "reports/ottersec/2024/stakeup-protocol-9c11488b.md",
+   "evidence_urls": "https://osec.io/reports/0903fe48-7dd0-4bfe-b5d7-6275090b5901",
+   "known_addresses": "",
+   "known_address_notes": "OtterSec 2024 review ('Missing Access Restrictions') of StakeUp's stUSDC suite; the public repo stakeup-protocol/stakeup-contracts matches scope exactly (src/staking/StakeUpStaking.sol, src/token/{StTBY,WstTBY,StakeUpToken}.sol, src/messaging/{WstTBYBridge,BridgeOperator}.sol, RedemptionNFT, RewardManager, LayerZero OApp wiring in script/WireOApps.s.sol). No deployments/ or broadcast/ address book; script/DeployFull.s.sol is fully commented out and only carries Arbitrum-Sepolia testnet constants",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0238",
+   "lane": "A_NO_ADDRESS",
+   "project": "Tally",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "High-severity findings \u2014 2021-10-tally-findings",
+   "uids": "broad:code4rena:23:0",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Code4rena contest 44 (2021-10-20..22) for Tally (tally.cash, the community-owned wallet later renamed Taho): scope is 'Tally Swap', the 0x-based DEX aggregator - contracts/swap/Swap.sol, utils/Math.sol, governance/{EmergencyGovernable,EmergencyPausable}.sol. The contest repo has no deploy script, address book or .env with a deployed instance, and the modern tahowallet/extension routes swaps through the 0x API (background/lib/0x-swap.ts, .env.defaults) rather than a Tally-owned contract. No verif",
+   "project_addresses": ""
+  }
+ ]
+}

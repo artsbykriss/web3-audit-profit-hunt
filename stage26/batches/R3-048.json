@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-048",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0298",
+   "lane": "A_NO_ADDRESS",
+   "project": "rova",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "High-severity findings \u2014 2025-02-rova-judging",
+   "uids": "broad:sherlock:320:0",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Identity: Rova, an on-chain token-sale launchpad with a hybrid off-chain-validation + on-chain (EVM and Movement) architecture. sherlock-audit/2025-02-rova contains sources only; rova.xyz did not resolve via r.jina.ai and app.rova.xyz does not resolve (DNS); no docs address book, DefiLlama entry or explorer match found. No deployment address -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0301",
+   "lane": "A_NO_ADDRESS",
+   "project": "sigmaprime-satori-sports-satori-sports-token-royalties-review",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Abritrary Users Can Manipulate Profit Calculations",
+   "uids": "2024-04-29-sigmaprime-satori-sports-satori-sports-token-royalties-review::arbitrary-users-can-manipulate-profit-calculations",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Report (37,636 chars, v2.0, retest commit 6581910) is a Solidity review of Satori Sports royalty/token contracts (RoyaltiesConfig, tokenIdTracker, SAT-01..SAT-11) and contains no contract address and no chain name; the audited repo is referred to only as 'the Satori Sports repository'. Identity resolved from the project's own FAQ PDF: 'Sports Tokens are minted and recorded on the Polygon blockchain' -> chain corrected to Polygon. No deployment page or public repo: GitHub repo/code search for Roy",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0305",
+   "lane": "A_NO_ADDRESS",
+   "project": "symmetrical update 2",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "High-severity findings \u2014 2024-06-symmetrical-update-2-judging",
+   "uids": "broad:sherlock:279:0",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Contest repo is the protocol-core monorepo: EIP-2535 Diamond perp protocol with Muon oracle; hardhat.config.ts lists fantom/bnb/opbnb/base/polygon/zkevm RPCs; scripts/deploy/{diamond,partyB,multicall,stablecoin}.ts and tasks/deploy/constants.ts contain no recorded addresses, and there is no deployment manifest or broadcast dir. sherlock-audit repo README states only 'All EVM compatible chains'. Not recorded as an address: a verified Ethereum contract literally named 'Symmetrical' (0xa950a76319d6",
+   "project_addresses": ""
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-039",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0158",
+   "lane": "A_NO_ADDRESS",
+   "project": "Mintify",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Insufficient verification of staking account in Unstake struct",
+   "uids": "finding:05a5ea4eecd2d5c16cad576f4687798bc51cf371a543fb46cf8d3b2fe62a62c8",
+   "report_urls": "reports/hexens/2025/mintify-staking-mar-25-73d3bffc.md",
+   "evidence_urls": "https://github.com/Hexens/Smart-Contract-Review-Public-Reports/blob/84e78849628ca0d9114b66bf886ae11d9e0f8a50/mintify-staking-mar-25%28Final%29%20.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Hexens (Mar 2025) reviewed the Mintify Staking Solana program (unstake.rs, staking.rs, mint_controller, off-chain co-signed orders). No program id, deployment or repo is given; docs.mintify.xyz is broken (Cloudflare error 1014) and mintify.xyz exposes no address. No Solana program id resolved; the 'MINT' tokens on Solana are unrelated pump.fun issues.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0169",
+   "lane": "A_NO_ADDRESS",
+   "project": "Ninja",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Price threshold for price invalidity is prone to manipulation and might lead to full loss of users funds in case of a breakdown of a market or an asset",
+   "uids": "finding:9cd39cb06e274b2b8031ab21db209a1b235e8b6012fd23afee531c7d64a97f92",
+   "report_urls": "reports/oak-security/2023/ninja-bd99747b.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/Injective/2023-01-20%20Audit%20Report%20-%20Ninja%20v1.0.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Oak Security audit (2023-01-20) of Ninja v1.0, a CosmWasm perp/volatility protocol on Injective; scope repo https://github.com/ninja-finance/ninja-contracts (contract.rs/config.rs/vault/subscriptions) is now 404/private. No code_id or inj1... contract address is published in the report or retainable docs, so no instance could be verified on Injective.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0174",
+   "lane": "A_NO_ADDRESS",
+   "project": "Odx Contracts",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "_mint() can mint more than the limit",
+   "uids": "finding:7b0f374e7cc096216af61c6eecdfb18658a1cc34d3313a13719f2cd3cefed2b0",
+   "report_urls": "reports/cantina/2025/odx-contracts-a27a5976.md",
+   "evidence_urls": "https://cdn.cantina.xyz/reports/cantina_odx_april2025.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Cantina review (May 2025) of Odx: ODXOracle (Chainlink latestRoundData + L2 sequencer uptime), Controller, NFT mint/request flow, merchant front-running. Report describes ODX as 'the first permissionless perpetual protocol with custom zkEVM App-chain'; no repo, no chain id, no addresses. ODX chain is not covered by Etherscan V2/DefiLlama listings; no deployment could be traced.",
+   "project_addresses": ""
+  }
+ ]
+}

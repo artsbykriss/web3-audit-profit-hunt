@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-030",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0009",
+   "lane": "A_NO_ADDRESS",
+   "project": "2022-08-02-irocket-sca-irocket-erc721-aug2022-sca-irocket-erc721-aug2022",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Requirements violation: Free minting does not verify freelisted users",
+   "uids": "2022-08-02-irocket-sca-irocket-erc721-aug2022-sca-irocket-erc721-aug2022::requirements-violation-freemint-not-verified",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "iRocket AR / 'The NeoGen' ERC-721, Hacken audit Aug-2022, repo iRocket-io/NEOGEN-contract (now deleted). irocket.io is dead, the Hacken page is Cloudflare-gated with no address in the mirrored PDF, and the moon.ly collection page (43 KB JS shell) exposes no contract address. No Etherscan name search exists and the NFT-marketplace APIs available here (OpenSea) reject the stored key with 401. PARTIAL: project identity resolved, deployment unpublished.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0013",
+   "lane": "A_NO_ADDRESS",
+   "project": "2023-08-29-sparkn",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "H-01. The same signature can be used in different distribution implementation allowing unauthorized distributions",
+   "uids": "2023-08-29-sparkn::the-same-signature-can-be-used-in-different-distribution-implementation-causing-that-the-caller-who-owns-the-signature-can-distribute-on-unauthorized-implementations",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Sparkn (CodeFox Inc), Cyfrin contest Aug-2023, scope ProxyFactory/Distributor/Proxy. Both repos were enumerated: they contain src + script only, no broadcast/, deployments/ or address constants; HelperConfig defines token addresses for Polygon (137) and Avalanche (43114) but no factory address, and DeployContracts reads the factory admin/tokens from env vars. sparkn.io is dead and its archived frontend fetched addresses from a backend. PARTIAL: audited code and chains known, factory/distributor ",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0016",
+   "lane": "A_NO_ADDRESS",
+   "project": "2023-11-07-metatime-sca-metatime-layer-2-oct2023-sca-metatime-layer-2-oct2023",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Unpaid validators can getting paid and deny unsubscribe() right of paid validators",
+   "uids": "2023-11-07-metatime-sca-metatime-layer-2-oct2023-sca-metatime-layer-2-oct2023::F-2023-0929",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Same project/target as P25-0015 (Metatime Genesis Contracts on MetaChain, chain 571); this unit's finding F-2023-0929 is in the same MinerPool/validator payout code. No address is published: the repo's only committed address is the BSC MTC token, and MetaChain's RPC (rpc.metatime.com) answers Cloudflare 403 while explorer.metatime.com is offline. PARTIAL, duplicated evidence recorded per unit.",
+   "project_addresses": ""
+  }
+ ]
+}

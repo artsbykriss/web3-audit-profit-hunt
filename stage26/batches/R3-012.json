@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-012",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0112",
+   "lane": "A_NO_ADDRESS",
+   "project": "Gamma GMX Vault",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "Users Avoid Losses From GMX | Disproportional Share Allocation",
+   "uids": "finding:2740494411259d7e8ea7c78c6726d3e34568ac3d0c6b46f75841710baf5f4a15;finding:907442670bd718ee87b730ff4b914ae7b14d3b1d20093cec0e7fd68f45df85dd",
+   "report_urls": "reports/guardianaudits/2024/gamma-gmx-vault-165294a2.md",
+   "evidence_urls": "https://github.com/GuardianAudits/Audits/blob/36fcc39d51fd84a6ec2c72b9c9fda8f8b6ac169d/GammaStrategies/2024-09-23_Gamma_GMX_Vault.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Guardian 2024-09-23 review of Gamma's GMX V2 perpetual vault; scope repo github.com/GammaStrategies/PerpetualVault, initial commit 14cc80741a2754df310ace87fcd7801865391064, final b6cd6dcce7d3dc8e61853120a824cdfda3ed5121 (Arbitrum). Repo now 404 (private). Gamma's docs perp-vault section now documents Hyperliquid vaults only; Gamma hypervisor API (api.gamma.xyz/hypervisors/allData, 91 entries) contains no GMX strategy. No deployed GMX-vault address recovered.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0192",
+   "lane": "A_NO_ADDRESS",
+   "project": "PoodlTech Dividend Paying Token",
+   "chain": "BNB Chain",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "withdrawnDividends are not properly updated for a user | Slippage tolerance is very high",
+   "uids": "finding:341b2478bb2eb760ae70c9d05d12ab52bd3954150a41da2a1598ed7155b22d5c;finding:940a65c212943bf18b5f65b124767809d762405f2b4e104eae810dd48a805aac",
+   "report_urls": "reports/guardianaudits/2023/poodltech-dividend-paying-token-71949f04.md",
+   "evidence_urls": "https://github.com/GuardianAudits/DefenderAudits/blob/b2a2ccb9b6e07d82a6c4497fee459c46b0c79349/poodl/PoodlAuditTeam3.md",
+   "known_addresses": "",
+   "known_address_notes": "Guardian/Solidity Lab review of contracts/Token.sol, DividendPayingToken.sol, Presale.sol, Airdropper.sol at commit eebe267b (repo still live, exact files verified locally via raw fetch). No deployment section, no script with an address. Chain conflict is real: the report's M-02 says the client would deploy on Polygon while Token.sol hardcodes the PancakeSwap BSC router 0x10ED43C718714eb63d5aA57B78B54704E256024E. Candidate BSC 'POODL' 0x4a68C250486a116DC8D6A0C5B0677dE07cc09C5D was checked and re",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0210",
+   "lane": "A_NO_ADDRESS",
+   "project": "Router EVM and NEAR Gateway",
+   "chain": "Ethereum",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "Incorrect isReadCall implementation allows infinite token mints | ASM contract state is committed when token mint fails",
+   "uids": "finding:a19cd42f382940866f7174d6093411eb0f4100bd7e8a86492a27c251e67af8e1;finding:e5eb7a1abedfe32a7c9283c05eda045709e5b4a6075ba2d749b49d72cbe66b85",
+   "report_urls": "reports/oak-security/2024/router-evm-and-near-gateway-0665f46f.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/Router/2024-05-29%20Audit%20Report%20-%20Router%20EVM%20and%20NEAR%20Gateway%20Contracts%20and%20WASM%20Bindings%20v1.0.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Oak report pins router-protocol/router-gateway-contracts @e863130d (scope evm/* + near/gateway-upgradeable/*, fixes @6ecfda2f) and router-protocol/router-wasm-bindings @103ef1b7 (fixes @c48ccfcf). Both repos are 404 now; router-protocol/router-contracts/gateway/evm is the surviving EVM copy. No verified contract named RouterGateway/ASM on Ethereum (Blockscout search 'RouterGateway' empty); Router Chain RPC dead; NEAR gateway account id never published. Exact instance unresolved.",
+   "project_addresses": ""
+  }
+ ]
+}

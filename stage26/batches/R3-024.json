@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-024",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0173",
+   "lane": "A_NO_ADDRESS",
+   "project": "Octopus",
+   "chain": "NEAR",
+   "trace_status": "PARTIAL",
+   "n_findings": "4",
+   "critical": "0",
+   "high": "4",
+   "titles": "Lack of Check in Function handle_anchor_deposit_reward_msg() | Incorrect Caller Verification in Function ft_on_transfer() | Unlimited Withdrawn with Reused UnstakeBatchId | Lack of Check in Function slash_request()",
+   "uids": "finding:f855887359fae1ce2da243f9ca5879e7f860d5ba51226d590c9a3465519b6007;finding:d1cd0e6c858cc59264829d2056467b4c2f694e19db6444ae91e5ac861c5200fd;finding:c00fc94e1939f7d5c534583631145cb434ffe3febdc535ca7d6611cb35aa10e7;finding:c0bf5d0902f53ecdcdfbf0ea92b56f2f4473657dcd5702e025eb4f8dabd14d47",
+   "report_urls": "reports/blocksec/2024/octopus-c9162795.md",
+   "evidence_urls": "https://github.com/blocksecteam/audit-reports/blob/9da368848d5a3b2a4e0f76a4e6dd04091de5d623/rust/blocksec_octopus_network_restaking_v1.0_signed.pdf",
+   "known_addresses": "",
+   "known_address_notes": "BlockSec audit (2024-02-02) of Octopus Network's NEAR restaking contracts. The audited code is public as https://github.com/octopus-network/restaking-base (contracts/restaking-base: stake/unstake/slash_request/anchor-deposit logic matching the findings). The repo's README, build.sh and tree contain no deployed *.near account id, and the report publishes none, so no NEAR account could be attributed and verified (NEAR RPC cannot be searched by contract name).",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0241",
+   "lane": "A_NO_ADDRESS",
+   "project": "Terrace",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "4",
+   "critical": "0",
+   "high": "4",
+   "titles": "mustUseContractFunds restrictions can be skipped | Fees can be charged on a worthless token by setting up a pool on UniV2/UniV3/Balancer and appending the worthless token as the trade output | Multihop trade allows bypassing fees by setting different output tokens for the same input token | ERC20-only trades can be done on Maradona by setting a fake dust ETH trade at the beginning (while also bypassing fees)",
+   "uids": "sherlock-security-review-for-terrace-fi::mustusecontractfunds-restrictions-can-be-skipped;sherlock-security-review-for-terrace-fi::fees-can-be-charged-on-worthless-token-via-permissionless-pool;sherlock-security-review-for-terrace-fi::multihop-trade-bypasses-fees-by-using-different-outputs-for-same-input;sherlock-security-review-for-terrace-fi::erc20-only-trades-possible-via-dust-eth-first-op-bypassing-fees",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Sherlock 2024-06 report scope: repo subdialia/smart-contracts-audit-v1 @1d4d3052 (fork public as sherlock-audit/2024-05-terrace); audited router is contracts/Paymaster/Maradona*.sol; project is a trading terminal/broker aggregating 60+ venues on 13 chains, Arbitrum integration announced 2024. terrace.fi has no DNS record (dead app host) but docs.terrace.fi is live and publishes no contract addresses; the docs sitemap (51 pages incl. /features/settlement) was crawled - no address book. Sherlock r",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0190",
+   "lane": "A_NO_ADDRESS",
+   "project": "Polynomial Power Perp Contracts Audit",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "3",
+   "critical": "0",
+   "high": "3",
+   "titles": "The mark price is susceptible to manipulation | LiquidityPool LP token price might be incorrect | The validity of the index price, the funding rate and the mark price is not always checked by the caller",
+   "uids": "finding:ee88fc3d66fc2d1736ec0c7331864875634f79d2b2e198ab6437186360542c2e;finding:517c6dec62d1aa8ded06c57295b6a90c67dc09aabb167b612a62d62d147d8710;finding:f213fb217acd6aa6f985842f7550b4e3fcf435b04e74ab0e78583a7ed476b8fb",
+   "report_urls": "reports/dedaub/2023/polynomial-power-perp-contracts-audit-81d1b8e4.md",
+   "evidence_urls": "https://github.com/Dedaub/audits/blob/431ec937802fd7118f9c6d533a530aaaf33a2c3a/Polynomial/Polynomial%20Power%20Perp%20Contracts%20Audit%20-%20Apr%20%2723.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Dedaub Apr-2023 review of Polynomial's PowerPerp / LiquidityPool / KangarooVault stack on Optimism (report references Synthetix PerpsV2 and optimistic.etherscan.io). Report contains no deployment addresses. Repo Deployments: Polynomial-Protocol org's public address book (polynomial-earn-contracts/deployments.json) covers only the separate Earn covered-call vaults on Optimism (0x331Cf6E3\u2026, 0xFa923AA6\u2026), not the audited perp stack; fx-deployments covers the 2025 Polynomial L2. Exact audited instan",
+   "project_addresses": ""
+  }
+ ]
+}

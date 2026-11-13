@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-068",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0182",
+   "lane": "C_FOUND",
+   "project": "PROTOCOL",
+   "chain": "Solana",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Insecure usage of abi.encodePacked for the signature verification",
+   "uids": "finding:e78010f403706fce9c122a917814e130369b7306ac8c6fb29be79c4904a0c159",
+   "report_urls": "reports/decurity/2022/protocol-8cd1d5f9.md",
+   "evidence_urls": "https://github.com/Decurity/audits/blob/736e3b80199dca77f5e3ee727c1d5853a9247f76/MonkeyKingdom/monkeykingdom-security-audit-report-1.0.pdf",
+   "known_addresses": "0xa8ed317c5a491bbd9127fd2fce6ec7f409b40783",
+   "known_address_notes": "Corpus chain label 'Solana' is wrong: the report covers MKLockRegistry.sol + MonkeyLegends.sol (Solidity, ERC721A) and links the deployed, Etherscan-verified contract. Address was wrapped across lines in the PDF ('\u2026b407' + '83#code'); reassembled to 40 hex chars and confirmed by getCode + getsourcecode. Source repo 0xBURP/MonkeyKingdom-MonkeyLegends is now 404.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0194",
+   "lane": "C_FOUND",
+   "project": "Poop",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Arbitrary Setting of User Referral",
+   "uids": "finding:fe398e4a0e18ad073aca6a82716a71c774004b38787eb3057116bbb841f2d2c5",
+   "report_urls": "reports/peckshield/2023/poop-b2d8b0fd.md",
+   "evidence_urls": "https://github.com/peckshield/publications/blob/37558e095a7c82c9f4f8db4a84af313ed5eba67c/audit_reports/PeckShield-Audit-Report-POOP-v1.0.pdf",
+   "known_addresses": "0x00000065cBADeAD116136940b302F938284f2BDc",
+   "known_address_notes": "PeckShield 2023-128 (repo poop-finance/poop-contract, now 404). Project had no address in the corpus. BSC contract 'Poop' located via Dexscreener, then matched against the audit: audited referral logic lives in the token itself (buy/sell take an arbitrary referral parameter, PoopFeeSplitter splitter), which this verified contract implements. Single Poop token with meaningful liquidity on BSC; treated as the audited instance.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0199",
+   "lane": "C_FOUND",
+   "project": "Public - NF3X Smartcontracts",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Seller can set wrong type in _reserveInfo.remaining to stop buyer from payRemains and steal the collateral",
+   "uids": "finding:ff0b73f8877eff1bc66f847465d656139b8d9c5b0885afbf059118962232682e",
+   "report_urls": "reports/verichains/2022/public-nf3x-smartcontracts-380ad10d.md",
+   "evidence_urls": "https://github.com/verichains/public-audit-reports/blob/3ff2d281a466ba67b65be54725d01e029efb5687/Verichains%20Public%20Audit%20Report%20-%20NF3X%20Smartcontracts%20-%20v1.2.pdf",
+   "known_addresses": "0x98e7301d540d7A67209D149765E43791b17401b9;0x043511eCd0e573689723272Fac1966152670695B",
+   "known_address_notes": "Verichains Oct-2022 (v1.2) review of the NF3Market marketplace (commit 1d7849d1\u2026, repo NF3Labs/contracts-V2 \u2014 now 404). Report has no address/chain. Both mainnet NF3Market deployments were located by matching the audited payRemains/_reserveInfo code in the Polygon verified-source sanctuary; the older 0x98e7\u2026 build is the primary match for the audited version, 0x0435\u2026 is a later deployment of the same contract. Polygon Mumbai deployments also exist (testnet, not recorded).",
+   "project_addresses": ""
+  }
+ ]
+}

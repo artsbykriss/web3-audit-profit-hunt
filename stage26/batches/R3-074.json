@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-074",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0271",
+   "lane": "C_FOUND",
+   "project": "afiVault",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Oracle Updates Are Vulnerable to Sandwich Attacks",
+   "uids": "2025-12-01-afi-vault-dc8a68ae::afi-1-oracle-updates-are-vulnerable-to-sandwich-attacks",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0xFEE3FBe137cDDcBc479D946EC09596e65e2F29D3;0x10b3E8015b4BbF3A5ec359314DdafE399FEc1B24;0x7ddb808b451890cd6bddcb06b3c80bf355a644ae;0xfffEcaebd2d9f8D377CEA77959d2d9Ca66F40FE2;0xA39986F96B80d04e8d7AeAaF47175F47C23FD0f4",
+   "known_address_notes": "Quantstamp cert (2025-11-12..14) describes afiVault as an ERC4626 vault with custodyWallet, capped-change Oracle and rwaUSD-style underlying; no address in the report. Located the live instance via Blockscout token search for 'afi-rwaUSDi': proxy 0xFEE3... (afiProxy) -> afiRwaVault impl 0x10b3... with oracle() pointing at afiProxy 0x7ddb... -> Oracle impl 0xfffE... (MAX_RATE_CHANGE_BPS). Underlying rwaUSDi 0xA39986... (Multipli). Rejected 22 name-squatting 'afiVault' contracts on Ethereum (Solid",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0290",
+   "lane": "C_FOUND",
+   "project": "pashov-solo-2023-11-17-ninjayielder-security-review",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Incorrect user accounting in withdraw method",
+   "uids": "pashov-solo-2023-11-17-ninjayielder-security-review::incorrect-user-accounting-in-withdraw-method",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0x03db92aff4974b645183505a8300c80e228890b7",
+   "known_address_notes": "Audited contracts are NYProfitTakingVaultBaseV1 / NYProfitTakingVault (repo 'Ninja Yield protocol', review commit 9e936712). A verified deployment of that exact vault family exists on Polygon: NyPtvPolygonWmaticQiMaiFarmV3VaultToUsdc (solc 0.8.7, Sourcify full match). Chain corrected to Polygon. Only one instance was located by name; other NyPtv vaults of the same implementation may exist without an enumerable index -> FOUND.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0302",
+   "lane": "C_FOUND",
+   "project": "solo 2023 11 17 ninjayielder",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "First vault depositor can steal subsequent depositors\u2019 tokens",
+   "uids": "pashov-solo-2023-11-17-ninjayielder-security-review::first-vault-depositor-can-steal-subsequent-depositors-tokens",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0x03db92aff4974b645183505a8300c80e228890b7",
+   "known_address_notes": "H-02 'First vault depositor can steal subsequent depositors' tokens' is the second finding of the Pashov solo NinjaYielder review (repo renamed NyPtv, commit 9e936712), scope NYProfitTakingVaultBaseV1/NYProfitTakingVault. A live instance of that exact contract family is verified on Polygon: the deployed bytecode is NYProfitTakingVaultBaseV2 (subclass NyPtvPolygonWmaticQiMaiFarmV3VaultToUsdc) and its deposit() uses the same first-depositor-inflation-prone formula quoted in the finding. Chain corr",
+   "project_addresses": ""
+  }
+ ]
+}

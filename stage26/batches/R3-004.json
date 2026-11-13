@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-004",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0007",
+   "lane": "A_NO_ADDRESS",
+   "project": "2022-05-10-codex-cdex-codex-on-althash-llc-sca-cod",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "3",
+   "critical": "3",
+   "high": "0",
+   "titles": "Depositing logic is corrupted (loyalty bonus not decremented) | Depositing logic is corrupted | Depositing logic is corrupted (pending rewards reused)",
+   "uids": "2022-05-10-codex-cdex-codex-on-althash-llc-sca-codex-staking-may2022-sca-codex-staking-may2022::depositing-logic-is-corrupted-loyalty-bonus-not-decremented;2022-05-10-codex-cdex-codex-on-althash-llc-sca-codex-staking-may2022-sca-codex-staking-may2022::depositing-logic-is-corrupted;2022-05-10-codex-cdex-codex-on-althash-llc-sca-codex-staking-may2022-sca-codex-staking-may2022::depositing-logic-is-corrupted-pending-rewards",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Codex (CDEX) is a staking token on Althash (the HTMLCoin/Qtum-derived chain, no EVM public RPC: rpc.althash.io does not resolve). The 'Codex Staking May2022' audit covers a Solidity staking contract with loyalty-bonus accounting, so the target is deployable, but the report row carries no report URL, the publisher (SCA) publishes no address, and Althash has no reachable explorer API or address book. PARTIAL: identity resolved, deployment unpublished/unreadable.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0027",
+   "lane": "A_NO_ADDRESS",
+   "project": "2025-06-18-sigmaprime-botanix-sigma-prime-botanix-",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "3",
+   "critical": "3",
+   "high": "0",
+   "titles": "Invalid Peg-in Proofs May Drain The Minting Contract | transaction.value Is Used To Refund Invalid Burns | Peg-In Proofs Are Only Verified For Top-level Calls",
+   "uids": "2025-06-18-sigmaprime-botanix-sigma-prime-botanix-macbeth-security-assessment-report-v2-1::invalid-peg-in-proofs-may-drain-the-minting-contract;2025-06-18-sigmaprime-botanix-sigma-prime-botanix-macbeth-security-assessment-report-v2-1::transaction-value-is-used-to-refund-invalid-burns;2025-06-18-sigmaprime-botanix-sigma-prime-botanix-macbeth-security-assessment-report-v2-1::peg-in-proofs-are-only-verified-for-top-level-calls",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Sigma Prime audit targets BotanixBridge.sol / peg-in verifier on Botanix EVM. Chain confirmed Botanix Mainnet chainId 3637, RPC https://rpc.botanixlabs.com, explorer botanixscan.io. RPC now times out and explorer.blockscout/botanixscan endpoints return nothing - Botanix announced shutdown of the L2 (assets withdrawal deadline), so eth_getCode could not be run. Bridge/minting address not published in docs.botanixlabs.com sitemap; Wayback unavailable (archive.org offline). PARTIAL: chain+code fami",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0105",
+   "lane": "A_NO_ADDRESS",
+   "project": "Fluid",
+   "chain": "Fuel",
+   "trace_status": "PARTIAL",
+   "n_findings": "3",
+   "critical": "3",
+   "high": "0",
+   "titles": "Price calculation overflow can cause asset underpricing | Attackers can use arbitrary TokenReserve accounts to undermine the protocol | tick_id_data_after_operate account is missing a vault_id check",
+   "uids": "finding:42f1f8dd3be5317cdcb86f16e8b588d71e5e3b600d253c9a1fcbd588a3ec016b;finding:5694eb765bd5a8000af8a26e9b020310af504d5ffc7c1fa848675547f33e9b1a;finding:e8ad27fa21686493a1516978e589c9f0aeac859bd2ed0fed1d875308cd64c978",
+   "report_urls": "reports/code4rena-zenith/2025/fluid-da4e50d0.md",
+   "evidence_urls": "https://github.com/zenith-security/reports/blob/bf794d06dd31f476a65fe0f27d5221d90cd25077/reports/Fluid%20-%20Zenith%20Audit%20Report.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Zenith 2025 report scope is Rust/Anchor: vaults/src/state/context.rs, BranchData/TickData/UserPosition accounts with #[account(init, payer=signer, seeds=...)] and vault_id/branch_id - i.e. Solana programs ('vaults', 'lending'), NOT Fuel Sway. The corpus chain 'Fuel' traces to DefiLlama 'Fluid Protocol' (fluid-protocol, Fuel, borrowing). Identity conflict unresolved; report has no repo, program ID or deployment table, and no Fluid repo/site with program IDs was found via GitHub org/search or Defi",
+   "project_addresses": ""
+  }
+ ]
+}

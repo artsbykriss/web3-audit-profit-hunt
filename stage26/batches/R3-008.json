@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-008",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0154",
+   "lane": "A_NO_ADDRESS",
+   "project": "Merkle Token Distributor",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "2",
+   "high": "0",
+   "titles": "Unrestricted Signer Access | Failure to Abort on Incorrect Merkle Proof",
+   "uids": "finding:9c64f0463699680843b0b7f1d466b6bedc985129230e1b669427c8c7471a8751;finding:4d79fccd40cdd1bcb70394525fbff2a9769f58fc2e2333d236d5a1233cf791ae",
+   "report_urls": "reports/ottersec/2025/merkle-token-distributor-bab4f973.md",
+   "evidence_urls": "https://osec.io/reports/20e84d4e-4146-806d-9c0d-c631cdcb3866",
+   "known_addresses": "",
+   "known_address_notes": "OtterSec (Apr 2025) reviewed EthSign's 'merkle-token-distributor' program (u64 amounts/fees, deployment per project id, signer PDA) \u2014 chain inferred Solana from the program/u64 model and the TokenTable Merkle Air\u2026/Movement companion audit. No program id or deployment address in either report; EthSign/tokentable-contracts raw paths 404, TokenTable docs domain now redirects. Program address unpublished.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0159",
+   "lane": "A_NO_ADDRESS",
+   "project": "MoarCandy",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "2",
+   "high": "0",
+   "titles": "Creating a pair while the token is in the initial sale phase | Creating a token with a poisoned router",
+   "uids": "finding:5fd82f126518ab4808eb7f121c18f0ee64ffa3e885a8d1705638b3fefb0ed101;finding:340e48b024ae8b1a7c608ab87a7ad7186bf34a94adb5eba697473465dd1bad00",
+   "report_urls": "reports/pashov-audit-group/2024/moarcandy-9c336b91.md",
+   "evidence_urls": "https://github.com/pashov/audits/blob/e615d8a5319647f95e217616d21770b3d8372f50/team/md/MoarCandy-security-review.md",
+   "known_addresses": "",
+   "known_address_notes": "Pashov review of MoarCandy/contracts: ContinuousBondingERC20Token launchpad with custom bonding curves, fees, auto-pair creation on Uniswap/TraderJoe (suggesting Avalanche or a Uniswap chain). Repo has no deployments file and the review names no address; uni/traderjoe pair searches and Dexscreener show no MoarCandy token. No deployment evidence; likely pre-launch.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0187",
+   "lane": "A_NO_ADDRESS",
+   "project": "Pino",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "2",
+   "high": "0",
+   "titles": "Calling `Curve::withdraw` will likely result in users losing ETH | The fee mechanism is not enforced",
+   "uids": "group:58:0;group:58:1",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Identity resolved: Pino proxy-router by nitolabs; original repo nitolabs/pino-contract is private/404, audited tree survives as matinkaboli/pino-contract-v1 @ master (README, contracts/protocols/v2/Curve.sol; Pashov 2023-09-01 review, commit e11214c8\u2026). Repo only contains hardhat deploy/verify scripts (NETWORK=mainnet|arbitrum) and a commonAddresses map of *external* protocol addresses (WETH, Permit2, NFPM) \u2014 no router deployment address. Crypto.training says the routers are 'Etherscan-verified ",
+   "project_addresses": ""
+  }
+ ]
+}

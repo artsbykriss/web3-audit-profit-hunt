@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-034",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0065",
+   "lane": "A_NO_ADDRESS",
+   "project": "CW20 Blocklist",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Users can evade having blocked funds destroyed by using uppercase addresses",
+   "uids": "finding:f3c6d1e40955e417f264c5cd58af28ab6c6135f3259576d705756e3f8ed7de67",
+   "report_urls": "reports/oak-security/2022/cw20-blocklist-8acd495a.md",
+   "evidence_urls": "https://github.com/oak-security/audit-reports/blob/00ad9f3fb9d9e62c711414777741dc588685fb56/CW20%20Blocklist/2022-05-25%20Audit%20Report%20-%20CW20%20Blocklist%20v1.0.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Oak Security 2022-05-25 audited the Terraform Labs CW20 Blocklist CosmWasm module (octalmage/terra-blocklist, repo live). It is a module instantiated per integrator token, not a single protocol deployment; no canonical instance address is published in the report or repo. Terra chain otherwise unaffected. PARTIAL: code identified, exact instance unpublished by design.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0066",
+   "lane": "A_NO_ADDRESS",
+   "project": "Canopy program",
+   "chain": "Solana",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "InsufficientTokenAccountvalidation in thedeposit(...)instruction",
+   "uids": "finding:d4d4019002f54a0ac2015d505ab2b578b7778cb08ddf98650231b87e9be51b86",
+   "report_urls": "reports/codespect/2026/canopy-program-431a8b85.md",
+   "evidence_urls": "https://github.com/CODESPECT-security/audit-reports/blob/2baaba7b9ccfa17f65f4277ae650c14d7fd72839/045_CODESPECT_CANOPY.pdf",
+   "known_addresses": "",
+   "known_address_notes": "CODESPECT 2026-01 audited the Canopy Anchor program (setup_tge_distribution, start_airdrop_handler, groves/plots accounts). Audited repo canopyfi/canopy is 404; the only public canopyfi repo is canopy-mobile. The report gives no program ID and no app URL. Canopy's live deployment documented elsewhere is the Movement/Aptos Move package (b10bd32b... per DefiLlama/docs), not the audited Solana program. Solana program ID unpublished, so PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0072",
+   "lane": "A_NO_ADDRESS",
+   "project": "Citadel-1",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Advanced users can influence which ship traits they receive from auctions",
+   "uids": "finding:88a86672edeff53d5d9c99b057fe70854473ec2558510686c45ac800bbd7a517",
+   "report_urls": "reports/macro/2022/citadel-1-6a822c3f.md",
+   "evidence_urls": "https://0xmacro.com/library/audits/citadel-1",
+   "known_addresses": "",
+   "known_address_notes": "0xMacro Citadel-1 (2022-11) audited Pixel/Stark-style ZK ship-game contracts (Reveal circuit, DutchAuctionShips, ConstructionBay, ShipTraits) for thecitadelgame. Repo github.com/thecitadelgame/contracts is private/404; the 0xMacro audit repo is also private. Polygon Blockscout searches for ConstructionBay/DutchAuctionShips/ShipTraits return nothing (contracts unverified or named differently), and 'Citadel' returns unrelated tokens. Core game existed on Polygon, address book unpublished.",
+   "project_addresses": ""
+  }
+ ]
+}

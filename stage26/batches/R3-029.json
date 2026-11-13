@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-029",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0003",
+   "lane": "A_NO_ADDRESS",
+   "project": "100x Audit Report",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "OrderDispatch._matchOrder incorrectly reduces order.taker.quantity by filled quantity for each matched maker order instead of just once",
+   "uids": "finding:c351fd70ce9aaca12ca73a7fb56b0ace6a0d3c93179ae5928c57f82828c5b2c7",
+   "report_urls": "reports/sherlock/2024/100x-audit-report-088bcd3b.md",
+   "evidence_urls": "https://github.com/sherlock-protocol/sherlock-reports/blob/10e76f5bd13701970c995924f310258290043230/audits/2024.02.13%20-%20Final%20-%20100x%20Audit%20Report.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Identity resolved: 100x is the Ciao protocol (Rysk Finance codebase, docs 100x.gitbook.io, repo rysk-finance/ciao-protocol with OrderDispatch/Ciao/Crucibles/AddressManifest). Docs 'Notes for auditors' say 'the protocol will go on an L2'; repo main branch has no broadcast/deployments/address book, and the AddressManifest page only describes index slots, publishing no address. Blast mainnet (chain 81457) is unreachable from here: Alchemy blast-mainnet host does not resolve, rpc.blast.io does not r",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0004",
+   "lane": "A_NO_ADDRESS",
+   "project": "12 02 dcSpark Sidechain Bridge-FV",
+   "chain": "Milkomeda",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Insolvency Rules checkRewards Broken: In the withdrawRewards() function there is a calculation of the \"share\" of the rewards for each validator (which is rewardsPot /",
+   "uids": "finding:16f9af2127e76e22ea464df7a75df1e7a719dfb3f4387e93052992ca44007909",
+   "report_urls": "reports/certora/2022/12-02-dcspark-sidechain-bridge-fv-c6bc881a.md",
+   "evidence_urls": "https://github.com/Certora/SecurityReports/blob/646989b731edde67fd42904336c5242e8a61230d/Reports/2022/12_02_2022_dcSpark_Sidechain_Bridge-FV.pdf",
+   "known_addresses": "",
+   "known_address_notes": "dcSpark Sidechain Bridge is the Milkomeda EVM bridge (proxy + implementation) on the Milkomeda C1 Cardano sidechain (chain 2001). Certora's report and Milkomeda docs publish no contract address; the bridge v5 mainnet deployment was announced in 2023 but no address book exists. Today the C1 RPC host rpc-mainnet-cardano-evm.c1.milkomeda.com and explorer-mainnet-cardano-evm.c1.milkomeda.com fail DNS resolution, so the deployed instance cannot be read. PARTIAL (documented deployment, unpublished add",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0008",
+   "lane": "A_NO_ADDRESS",
+   "project": "2022-06-19-alt-sca-alt-platform-erc1155-jun2022-sca-alt-platform-erc1155-jun2022",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Predictable randomness",
+   "uids": "2022-06-19-alt-sca-alt-platform-erc1155-jun2022-sca-alt-platform-erc1155-jun2022::predictable-randomness",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "",
+   "known_address_notes": "Alt (alt.xyz / onlyalt.com), Hacken '[SCA] Alt Platform | ERC-1155 | Jun2022' with repo onlyalt/alt-smart-contracts at commit 3e49353. The repository is deleted (404), the Hacken page is Cloudflare-gated and the mirrored PDF publishes no addresses. alt.xyz serves a 10 KB shell whose only bundle (main.189b1f77.js, 86 KB) contains no 0x contract constants; the marketplace reads addresses from its backend. PARTIAL: identity certain, deployment address unpublished.",
+   "project_addresses": ""
+  }
+ ]
+}

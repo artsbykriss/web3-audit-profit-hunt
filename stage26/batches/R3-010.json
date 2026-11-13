@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-010",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0206",
+   "lane": "A_NO_ADDRESS",
+   "project": "Rip It",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "4",
+   "critical": "1",
+   "high": "3",
+   "titles": "Reentrancy attack in `authorizedOpenPacket()` allows duplicates | Funds in subscription may be drained | Prize locking mechanism inconsistency with weight proportions | Currency validation missing in listing and offer requests",
+   "uids": "finding:a2fab10c73d04b605d8a2460bc1dc65260f9970d1d1ac1be1cd0cc91a2f3176a;finding:21afb47d291202c235604aee12b0254a276ab022d85898e72df7f06885b39a66;finding:7dd8e9e925a9e84cc06504b5f09448322dd353f9b42a9843295650605a7d7163;finding:1682a71f0da7e7ed3194be4237028862305e44990326b2c963528a7356f6d624",
+   "report_urls": "reports/pashov-audit-group/2025/rip-it-346c58ce.md;reports/pashov-audit-group/2025/rip-it-be50778d.md",
+   "evidence_urls": "https://github.com/pashov/audits/blob/e615d8a5319647f95e217616d21770b3d8372f50/team/md/RipIt-security-review_2025-04-25.md;https://github.com/pashov/audits/blob/e615d8a5319647f95e217616d21770b3d8372f50/team/md/RipIt-security-review_2025-05-10.md",
+   "known_addresses": "",
+   "known_address_notes": "Pashov reviews (2025-04-25, 2025-05-10) name repo ripdotfun/rip-it-core at commits a8f2ee25 (review) and 2c22ac3f (fixes); contracts RoleBasedAccessControl(Consumer), CardAllocationPool, SpinLottery, marketplace with Chainlink VRF. github.com/ripdotfun/rip-it-core now returns 404 (deleted/private) and no fork was found; rip.fun is alive (HTTP 429 to bots) but publishes no address book; no chain id in the report. Audited instance unpublished.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0267",
+   "lane": "A_NO_ADDRESS",
+   "project": "ZKCross",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "4",
+   "critical": "1",
+   "high": "3",
+   "titles": "First depositor can gain withdraw rights | Bridge Initialization Endpoint Accessible Without Authentication | Nonce auth message is weak and volatile | Alt-RPC verification fails open when secondary is unset",
+   "uids": "finding:1cc87d649427f62a72bd08e5bc66442838b37da3f149e80cfb057163395ced69;finding:00e119aa4cd339cc6fb51ce54c981042c8052bcefc4eb6e3433d024c3bcbd601;finding:787c021c4871eebbfe6bce6cc5bd5210469f51e631aa9aec46d50d1c7ed23a7c;finding:adefff08f560ef31ba5ed6f52509cc9979f45087fb1dc9438369abdc71dbe93e",
+   "report_urls": "reports/halborn/2025/zkcross-8775bd2c.md",
+   "evidence_urls": "https://www.halborn.com/audits/zkcross/zkcross---penetration-test-fe0782",
+   "known_addresses": "",
+   "known_address_notes": "Halborn engagement is a penetration test of zkCross' cross-chain execution stack (EVM contracts, Soroban on Stellar, bridge/MPC services). zkcross.network/security documents the model: per-user vault contracts created per user, Guardian allow-list, MPC signing, bridge recipient pinned to the vault. docs.zkcross.network (llms.txt) has no contract-address page; no repo or address book found. Factory/implementation addresses unpublished, so the audited instance cannot be named -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0068",
+   "lane": "A_NO_ADDRESS",
+   "project": "Catalysis Core Smart Contracts",
+   "chain": "Base",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "1",
+   "high": "1",
+   "titles": "Raw Token Amounts Aggregated In Module-Level Reward Split | Replay Protection Failure Allows Duplicate Operations",
+   "uids": "finding:bf5d8547f79c0b9ee17c2a0f2101d731071849c7f0596b06d64265280a824f50;finding:991b0d346e22cff29fd6e29be65f9a06d0af022f86b36aa96d4200962a258fcb",
+   "report_urls": "reports/sigma-prime/2026/catalysis-core-smart-contracts-d890f1a1.md",
+   "evidence_urls": "https://github.com/sigp/public-audits/blob/7d9046e092e1e93623164e39df8c552a16f2fe5d/reports/catalysis/Sigma_Prime_Catalysis_Core_Smart_Contracts_Security_Assessment_Report_v2_0.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Sigma Prime v2.0 audited Catalysis Core (Solidity, ChainlinkPriceFeed/registerPriceFeed/USD valuation). Report carries no deployment section; the only 0x in the PDF is the eth+/USD Chainlink feed 0x66Ab900341C98de949EC31d11b3C4180743844F1 used as an example. Base Blockscout 'Catalysis' returns only token names (Catalysis 5am, Catalysis Coverage token), not verified protocol contracts. No address asserted.",
+   "project_addresses": ""
+  }
+ ]
+}

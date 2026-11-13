@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-057",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0082",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "Coredao",
+   "chain": "Core",
+   "trace_status": "PARTIAL",
+   "n_findings": "2",
+   "critical": "0",
+   "high": "2",
+   "titles": "Unaccounted funds in rewards distribution logic | Multiple price fetches leading to arbitrage in oracle implementation",
+   "uids": "finding:d64f44816fc6216eca03c9ef5b2417a3c5443de0f5d52d90ab59b1ef5c81af84;finding:7d7c06701d8f964a9c747c339072543168c954623ba2652c7475faee4f95c7aa",
+   "report_urls": "reports/halborn/2024/coredao-67d6c628.md;reports/halborn/2025/coredao-fcaac180.md",
+   "evidence_urls": "https://www.halborn.com/audits/coredao/coredao---btc-hardfork---enhancement--update-7089ae;https://www.halborn.com/audits/coredao/coredao---ecosystem---nlx-dex-gmx-fork-0ae476",
+   "known_addresses": "0xbf668dadb9cb8934468fcba6103fb42bb50f31ec",
+   "known_address_notes": "Two audits. (a) 2024 NLX DEX (GMX fork: ReaderUtils.sol, _setPricesFromPriceFeeds/Pyth) - PoC tx in the report is on Base and contains a log emitted by 0xbf668dad..., the only audited-adjacent on-chain address recoverable; Base contract is unverified so the exact contract name is not confirmable. (b) 2025 BTC-hardfork staking (PledgeAgent, getDelegator) - PledgeAgent is a Core genesis system contract; scan.coredao.org/api/v2/search?q=PledgeAgent returns 401 for unauthenticated name search and th",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0005",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "1Inch Farming",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Actual transferred amount may differ than expected",
+   "uids": "finding:7c8cdefb9ce71e26211a60de0d8170381004b92ef15f6f4cb7e966af4eb7f00e",
+   "report_urls": "reports/mixbytes/2022/1inch-farming-be46cc48.md",
+   "evidence_urls": "https://github.com/mixbytes/audits_public/blob/3bbdea1996b26961a75a063badec305b26d39391/1inch/Farming/1Inch%20Farming%20Security%20Audit%20Report.pdf",
+   "known_addresses": "0x0418feb7d0b25c411eb77cd654305d29fcbff685",
+   "known_address_notes": "Scope resolved: MixBytes (June 2022) reviewed github.com/1inch/farming Farm.sol/FarmingPool.sol; the report text contains no addresses (checked the PDF text) and the repo has no deployment scripts or address book. 0x0418... is a verified 1inch FarmingPool of the same contract family but a later (Dec-2023) factory deployment, not the audited 2022 revision; the 2022 instance is unpublished. PARTIAL: project/core anchor found, exact audited instance not evidenced.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0011",
+   "lane": "B_PARTIAL_ANCHOR",
+   "project": "2023-05-26-skies-verse-sca-skies-verse-staking-erc",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Arbitrary \u201cFrom\u201d",
+   "uids": "2023-05-26-skies-verse-sca-skies-verse-staking-erc20-jul2023-sca-skies-verse-staking-erc20-jul2023::arbitrary-from-in-deposittoken",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0xB0ebE069eb6e2b9789818B8B1eFDB6FD16B93E4F",
+   "known_address_notes": "Hacken scope is 'Staking + ERC20' for Skies Verse (Galaxy4Games). The ERC-20 half is deployed on Immutable zkEVM at 0xB0eb... (verified 'Skies', live code). The staking contract that contains depositToken/'arbitrary from' is not published: the whitepaper still marks staking TBD, Hacken publishes no addresses, and the Immutable explorer API is Cloudflare-gated (403) so a name search was not possible. PARTIAL: audited ERC-20 found, audited staking instance missing.",
+   "project_addresses": ""
+  }
+ ]
+}

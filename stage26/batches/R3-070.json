@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-070",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0247",
+   "lane": "C_FOUND",
+   "project": "Trufin June7",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "ERC4626 inflation attack is possible in the old ERC4626 version.",
+   "uids": "finding:df779bc88bd0096968e603f7b4ec156d2e481d4934f2b2a3069b95f4279c5ca6",
+   "report_urls": "reports/zokyo/2023/trufin-june7-b1afe62d.md",
+   "evidence_urls": "https://github.com/zokyo-sec/audit-reports/blob/39b9e51ac1b68a42ac03b222167760f7035bf16e/Trufin/Trufin_Zokyo_audit_report_June7_2023.pdf",
+   "known_addresses": "0xcfab8530ccf1f9936daede537d6ebbc75289006d;0x1608b68d47c8752dbbfe748fdc902e401f96a603",
+   "known_address_notes": "Zokyo 2023-06-07 report scopes the TruFin 'Staker' contract (repo github.com/TruFin-io/staker-audit @71e300d3, MATIC staking vault with totalShares/sharePrice). DefiLlama's TruFin adapter names TRUSTAKE_CONTRACT_ADDR=0xcfab...006d on Ethereum; Etherscan V2 shows it is a TransparentUpgradeableProxy whose implementation is verified as ContractName=Staker. Both proxy and impl return bytecode. FOUND (proxy = live instance, impl = audited Staker code).",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0019",
+   "lane": "C_FOUND",
+   "project": "2024-04-lavarage",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "2",
+   "critical": "0",
+   "high": "2",
+   "titles": "Malicious borrowers will never repay loans with high interest | A borrower can borrow SOL without backing it by a collateral",
+   "uids": "2024-04-lavarage::2024-04-lavarage_H-03;2024-04-lavarage::2024-04-lavarage_H-02",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "1avaAUcjccXCjSZzwUvB2gS3DzkkieV2Mw8CjdN65uu;CRSeeBqjDnm3UPefJ9gxrtngTsnQRhEJiTA345Q83X3v",
+   "known_address_notes": "Lavarage is a Solana spot-margin/lending Anchor program (Code4rena 2024-04). The deployed app bundle carries the program registry: programId '1avaAUcjccXCjSZzwUvB2gS3DzkkieV2Mw8CjdN65uu' (vanity prefix '1ava') with nodeWalletAddress 0x-style fee accounts, plus 'CRSeeBqjDnm3UPefJ9gxrtngTsnQRhEJiTA345Q83X3v'; both accounts are executable BPF upgradeable programs on Solana mainnet (verified via Alchemy solana-mainnet getAccountInfo). The SDK (pinedefi/lavarage-sdk) corroborates the idl/lavaragev2.t",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0023",
+   "lane": "C_FOUND",
+   "project": "2024-12-secondswap",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "2",
+   "critical": "0",
+   "high": "2",
+   "titles": "In transferVesting, the grantorVesting.releaseRate is calculated incorrectly, which leads to the sender being able to unlock more tokens than were initially locked. | transferVesting creates an incorrect vesting for new users when they purchase a vesting, because stepsClaimed is the same for all sales, allowing an attacker to prematurely unlock too many tokens",
+   "uids": "2024-12-secondswap::2024-12-secondswap_H-03;2024-12-secondswap::2024-12-secondswap_H-02",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0xe7a79fAF9F7bafD31fcFC0B74Fe80f417387E4Ed;0x53d760b5BB8b65b65b26a9E846cE9261Ad56789f;0x0366adcEeEC444DD58260F4F72626E15E09BAB2E",
+   "known_address_notes": "Audited contract names (SecondSwap_Marketplace/_MarketplaceSetting/_StepVesting/_VestingDeployer) match verified Ethereum deployments found via Blockscout name search; several per-issuer Marketplace instances exist (0xe7a7, 0x65bF, 0x5d0C, 0xA020, 0x6a8c) - 0xe7a7 chosen as anchor. DefiLlama lists Ethereum/Avalanche/Solana TVL chains. C4 repo hardhat config only wires Sepolia testnet, so mainnet addresses came from on-chain lookup.",
+   "project_addresses": ""
+  }
+ ]
+}

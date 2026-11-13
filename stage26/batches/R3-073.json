@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-073",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0075",
+   "lane": "C_FOUND",
+   "project": "Comet",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Pool Drainage Due To Rounding Error",
+   "uids": "finding:0c386c198fb70e81cb90f613d8e772312e58cd8a85090f1f6770a6b96927ec8f",
+   "report_urls": "reports/ottersec/2024/comet-1ec28f19.md",
+   "evidence_urls": "https://osec.io/reports/f18adf37-44e4-4ac1-a9f6-d51a17dd0c15",
+   "known_addresses": "CAS3FL6TLZKDGGSISDBWGGPXT3NRR4DYTZD7YOD3HMYO6LTJUVGRVEAM",
+   "known_address_notes": "OtterSec 2024-01 audited CometDEX/comet-contracts-v1 (Soroban Rust); OS-CMT-ADV-00 is the same-token swap / rounding drain in execute_swap_exact_amount_out. The Aug-2026 exploit post-mortem names the victim pool 'Comet BLND-USDC' CAS3FL6TLZKDGGSISDBWGGPXT3NRR4DYTZD7YOD3HMYO6LTJUVGRVEAM, and StellarExpert attributes that contract to CometDEX/comet-contracts-v1 \u2014 the exact audited code. FOUND on Stellar mainnet.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0089",
+   "lane": "C_FOUND",
+   "project": "DeFis-Network Swap cn 1 0",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "\u5b58\u5728\u65e0\u4ea4\u6613\u8d39\u6316\u77ff\u6f0f\u6d1e",
+   "uids": "finding:cf6e6bfdaeee77edf5f4d1dcb7c37b0b0e1fd35307de55101b8ac1191a4884be",
+   "report_urls": "reports/peckshield/2020/defis-network-swap-cn-1-0-71859fc0.md",
+   "evidence_urls": "https://github.com/peckshield/publications/blob/37558e095a7c82c9f4f8db4a84af313ed5eba67c/audit_reports/DeFis-Network_Swap_audit_report_2020_20_cn_1_0.pdf",
+   "known_addresses": "swap.defi",
+   "known_address_notes": "Peckshield PDF text is not extractable (report body marked 'Text unavailable'), so identity was resolved from the project itself: DeFis Network's swap is an EOSIO contract, and the EOS account swap.defi is the deployed swap contract (created 2020-07-21, i.e. the same period as the 2020 audit). Chain is EOS, so there is no EVM address; audit must use the EOS ABI/WASM at this account.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0183",
+   "lane": "C_FOUND",
+   "project": "PROTOCOL",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Possible funds drain via the deflationary tokens in MasterChef",
+   "uids": "finding:e2a9e312583aaf733fc3be009162dcb70769d48e56a1f9cc7a3390a1f769c9f0",
+   "report_urls": "reports/decurity/2021/protocol-61289342.md",
+   "evidence_urls": "https://github.com/Decurity/audits/blob/736e3b80199dca77f5e3ee727c1d5853a9247f76/TethysFinance/tethys-finance-security-audit-report-1.0.pdf",
+   "known_addresses": "0x54A8fB8c634dED694D270b78Cb931cA6bF241E21;0x716678968fd6E518cb1d56C9720fC8eeEBA6CeAb;0x2CdFB20205701FF01689461610C9F321D1d00F80",
+   "known_address_notes": "Chain was 'unknown' in corpus. Decurity report scope links point at andromeda-explorer.metis.io (Metis Andromeda, chain id 1088); DefiLlama lists Tethys AMM on Metis. All three audited contracts are verified on Metis and return non-empty code. The finding is the MasterChef deflationary-token drain.",
+   "project_addresses": ""
+  }
+ ]
+}

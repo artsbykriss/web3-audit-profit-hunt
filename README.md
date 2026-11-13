@@ -2,6 +2,9 @@
 
 **Stage 1 — critical/high triage for external, unprivileged profit.** Complete: 24,966 clusters triaged.
 **Stage 2 + re-trace — deployment address trace.** Complete: 6,254 of 7,479 fund-draining C/H findings mapped to a deployment address; `NOT_FOUND` reduced to 168 findings / 101 projects.
+**Stage 2.5 — exact-contract tracing for no-address findings.** Complete: 317 units (45 `FOUND` / 177 `PARTIAL` / 7 `NOT_DEPLOYED` / 88 `NOT_FOUND`), 131 new audit targets.
+**Stage 3 — live audit.** In progress: 1,452 of 3,816 targets audited, 14 unique extractables, ~$560,050.
+**Stage 2.6 — independent deployment reconstruction.** Queued: 222 units in 74 batches, closing the 148 units with no deployment at all and re-deriving the deployments for every `FOUND`/anchored unit.
 
 ## Scope
 
@@ -69,10 +72,16 @@ stage25/
   index/stage25_master.csv            # tracing results
   index/stage25_summary.json          # 45 FOUND / 177 PARTIAL / 7 NOT_DEPLOYED / 88 NOT_FOUND
 stage3/
-  STAGE3.md                           # live-audit protocol
-  MASTER_LOG.csv                      # 588 priority-1 targets audited
-  results.tar.gz                      # 196 batch outputs
-  index/stage3_targets.csv            # all 3,685 targets
+  STAGE3.md                           # live-audit protocol (Step 0 address re-derivation)
+  QA_CHECKLIST.md                     # per-target acceptance, incl. deployment identity
+  MASTER_LOG.csv                      # 1,452 targets audited
+  results.tar.gz                      # 489 batch outputs
+  index/stage3_targets.csv            # all 3,816 targets
+stage26/
+  RECON.md                            # independent deployment reconstruction protocol
+  batches/R3-*.json                   # 74 batches, 222 units
+  index/recon_units.csv               # 148 no-address + 29 anchored + 45 FOUND units
+  merge_recon.py                      # accepted deployments -> new Stage 3 targets
 extractables/
   01..06 dossiers                     # live fund-draining findings with PoCs
 final/
@@ -97,6 +106,7 @@ legacy/
 ## Method notes and limits
 
 - `FOUND` = the named vulnerable contract matched a deployed address; `PARTIAL` = project/core found, exact audited contract unpublished or indistinguishable; `NOT_FOUND` = no live deployment established from public evidence.
+- **Address independence (Stage 2.6 onward):** a traced address is a lead, not proof. Every audit target must be re-derived (repo deployment artifacts, frontend bundle, explorer creation data, deployer pivot, other chains), version-tested against the audited commit, and checked for sibling instances before any negative verdict is accepted. See `stage26/RECON.md` and `stage3/STAGE3.md` Step 0.
 - Multi-instance protocols (per-pool, per-market, per-DAO) are recorded at the factory/core or a representative instance.
 - `NOT_FOUND` is not proof of absence: several explorer APIs were Cloudflare/key-gated during the pass, and some projects publish no address.
 - No transactions, private keys, audits, or patch judgments were made. All work was read-only public research.

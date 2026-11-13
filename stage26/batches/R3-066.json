@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-066",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0037",
+   "lane": "C_FOUND",
+   "project": "Aftermath Market Making",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "Lack of Access Control",
+   "uids": "finding:835c1ce911b0cac244c528e173bce5fe46d92b55cd9386397f3d66d69042a2f7",
+   "report_urls": "reports/ottersec/2025/aftermath-market-making-70a78cc5.md",
+   "evidence_urls": "https://osec.io/reports/1e084d4e-4146-80f3-9cea-ebdca78120ee",
+   "known_addresses": "0xbab1b714c5533a46ee27a9c124d6f9281ca54831fc288d4d0c133dae3a57254a",
+   "known_address_notes": "OtterSec scope is market-making-vault/sources/vault.move (public(package) process_clearing_house_for_force_withdraw, split_user_lp_coin). Aftermath's official package table lists iperps-vaults 0xbab1b7... with a 'vault' module; package existence/module list confirmed via Sui mainnet GraphQL. Related perps packages: iperps 0x3ec740df..., perps-position 0x9196fffe..., oracle 0x9237337d...",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0062",
+   "lane": "C_FOUND",
+   "project": "Burve (SimplexDiamond)",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "[C-03] Unrestricted `diamondCut` allows unauthorized facet modifications",
+   "uids": "pashov-team-2025-01-29-burve-security-review::unrestricted-diamondcut-allows-unauthorized-facet-modifications",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0xa1beD164c12CD9479A1049f97BDe5b3D6EC21089",
+   "known_address_notes": "Pashov 2025-01-29 reviewed itos-finance/Burve, a multi-pool stableswap diamond (SimplexDiamond). DefiLlama's Burve adapter targets 0xa1beD164... as the Berachain closure/vault diamond; the on-chain verified contract name is SimplexDiamond and its source contains Burve strings, so this is the audited diamond. Burve's own repo publishes no deployment (deployed_addrs.json empty). FOUND on Berachain.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0070",
+   "lane": "C_FOUND",
+   "project": "Catalyst / IPSeed",
+   "chain": "unknown",
+   "trace_status": "FOUND",
+   "n_findings": "1",
+   "critical": "1",
+   "high": "0",
+   "titles": "[C-02] Attacker can drain all ETH from IPSeed due to malicious `IIPSeedCurve` implementation",
+   "uids": "pashov-team-2025-06-28-catalyst-security-review::c-02-attacker-can-drain-all-eth-from-ipseed-due-to-malicious-iipseedcurve-implementation",
+   "report_urls": "",
+   "evidence_urls": "",
+   "known_addresses": "0x20893fdd12e5f968b2231821fc65dd0e4eab797c;0x2c90c963ba480204b96f9158473f1aa29ed9235d;0x35bce29f52f51f547998717cd598068afa2b29b7;0xcad88677ca87a7815728c72d74b4ff4982d54fc1;0xC09E1d91d2b4058854E2332Ac254DbE58E266936",
+   "known_address_notes": "Identity corrected to Molecule Catalyst / desci-ecosystem (IPSeed launchpad). Pashov scoped IPSeed, IPSeedTrust, SafeIPSeedTrust, LinearCurve and the IIPSeedCurve plug-in; C-02 is the malicious-curve ETH drain. Verified Base contracts named IPSeed contain IPSeedCurve/IPSeedTrust, and the ERC1967 proxy's implementation slot points at the IPSeed implementation, so the audited contract family is on-chain. FOUND (Base).",
+   "project_addresses": ""
+  }
+ ]
+}

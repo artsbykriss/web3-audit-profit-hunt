@@ -1,0 +1,57 @@
+{
+ "batch_id": "R3-044",
+ "count": 3,
+ "units": [
+  {
+   "unit": "P25-0245",
+   "lane": "A_NO_ADDRESS",
+   "project": "Torque Labs",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Absence of Mint Address Validation",
+   "uids": "finding:13c41ab7749aa4d3505f3349d313e24388250f6468b65d71406ab12a1e3f0120",
+   "report_urls": "reports/ottersec/2025/torque-labs-51fa30f3.md",
+   "evidence_urls": "https://osec.io/reports/21484d4e-4146-804a-a7d6-d612c992bedd",
+   "known_addresses": "",
+   "known_address_notes": "Identity: Torque (torque.so), Solana incentive/growth infrastructure; OtterSec review of a mint-validation issue. Looked for the program id in torque-labs/torque-utils (only CLICKY_ADDRESS = CAvc2Mr9WcH6HiYQeLYcXG3H9G2rg1sV2EEksMd6gyGS, a clicky.id PDA helper, not the Torque program), platform.torque.so/docs (short page, no ids), app.torque.so (does not resolve), solanacompass /projects/torque (Cloudflare 403). No program id published -> PARTIAL.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0246",
+   "lane": "A_NO_ADDRESS",
+   "project": "Treasures",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "autoSwap can lead to losses for liquidity providers",
+   "uids": "finding:669c4848c7199ce186bae8acfdea7d66eb9e8e1ee4513fd42fe6662171bf0d19",
+   "report_urls": "reports/code4rena-zenith/2025/treasures-0b4a75a4.md",
+   "evidence_urls": "https://github.com/zenith-security/reports/blob/bf794d06dd31f476a65fe0f27d5221d90cd25077/reports/Treasures%20-%20Zenith%20Audit%20Report.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Zenith scope: repo github.com/treasures-io/contracts @c7e9633b (files genesis/Genesis.sol, ... autoSwap). Repo is now 404 (private). treasures.io = Treasures Finance (tokenized-stock brokerage; app.treasures.io, swap.treasures.io) - same org handle, but its public docs contain no deployment addresses and no chain is named in the report. PARTIAL: identity + audited repo known, deployed instance unpublished.",
+   "project_addresses": ""
+  },
+  {
+   "unit": "P25-0258",
+   "lane": "A_NO_ADDRESS",
+   "project": "Vanir",
+   "chain": "unknown",
+   "trace_status": "PARTIAL",
+   "n_findings": "1",
+   "critical": "0",
+   "high": "1",
+   "titles": "Liquidation Calls Can Be Sandwiched",
+   "uids": "finding:04484720db197aefd7dbaeca1d0a4c6f295b01772b686a270744ef93c1754c48",
+   "report_urls": "reports/guardianaudits/2025/vanir-cb11bcda.md",
+   "evidence_urls": "https://github.com/GuardianAudits/Audits/blob/36fcc39d51fd84a6ec2c72b9c9fda8f8b6ac169d/Vanir/2025-02-27_Vanir_Review.pdf",
+   "known_addresses": "",
+   "known_address_notes": "Chain resolved: Ethereum. Guardian 2025-02-27 review of Vanir.sol (Spark-Lend fork: flash, poolAddressProvider, liquidate) with repo github.com/MEWB-AS/vanir-contracts; every audit address is an external Spark dependency, not Vanir: 0x02C3eA4e...93eE (Spark PoolAddressesProvider), 0xC13e21B6...E987 (Spark LendingPool), 0x5ae32920...0e1b (Spark pool withdraw() reference), 0xc7453Ea3...77Dc (Spark price oracle). Repo tarball fetch returns 4 KB (repo deleted/private) and MEWB-AS publishes no deploy",
+   "project_addresses": ""
+  }
+ ]
+}
