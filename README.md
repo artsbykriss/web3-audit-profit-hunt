@@ -63,6 +63,11 @@ stage2/
   index/stage2_targets.csv            # target -> finding_uid list
   index/stage2_addresses.csv          # project -> address list with evidence URL
   index/stage2_summary.json           # counts
+stage25/
+  STAGE25.md                          # exact-contract tracing protocol
+  index/stage25_units.csv             # 317 no-address units
+  index/stage25_master.csv            # tracing results
+  index/stage25_summary.json          # 45 FOUND / 177 PARTIAL / 7 NOT_DEPLOYED / 88 NOT_FOUND
 stage3/
   STAGE3.md                           # live-audit protocol
   MASTER_LOG.csv                      # 588 priority-1 targets audited

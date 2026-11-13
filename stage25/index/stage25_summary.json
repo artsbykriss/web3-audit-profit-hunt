@@ -1,0 +1,14 @@
+{
+ "units": 317,
+ "status": {
+  "NOT_DEPLOYED": 7,
+  "FOUND": 45,
+  "PARTIAL": 177,
+  "NOT_FOUND": 88
+ },
+ "address_rows": 160,
+ "new_targets": 131,
+ "new_priority4": 102,
+ "new_priority5": 29,
+ "new_batches": "S3-1231..S3-1274"
+}
