@@ -29,9 +29,9 @@ The campaign has three layers:
 | Stage 3 targets total | 3,816 |
 | Targets audited | **1,452** |
 | `NOT_EXTRACTABLE` | 1,435 |
-| Unique extractables | **14** |
-| Extractable target rows | 17 (3 duplicates) |
-| Unique extractable value | **~$560,050** |
+| Unique extractables | **15** |
+| Extractable target rows | 18 (3 duplicates) |
+| Unique extractable value | **~$574,387** |
 
 ### Coverage by priority
 
@@ -100,6 +100,7 @@ All dossiers are in `/workspaces/CA/extractables/`. Each contains contracts, liv
 | EX-12 | Harmonix Finance — stale-NAV deposit | HyperEVM | $16.31/cycle | MEDIUM | capital + 60s window | `04-harmonix-stale-nav-16.md` |
 | EX-13 | Marginswap — stale SUSHI oracle | Ethereum | $11.31 | HIGH | none | `13-marginswap-stale-oracle-11.md` |
 | EX-14 | Doefin — expired orders / raw target | Arbitrum | $6.78 | HIGH | none | `14-doefin-stale-orders-6.md` |
+| EX-15 | Inverse sDOLA — timed liquidation harvest | Ethereum | ~$14,337 (peak batch) | MEDIUM | time + Aave crvUSD flash capacity | `15-inverse-sdola-liquidation-timing.md` |
 
 **Duplicates:** Prospective World, Reserve and MANTRA each have two target rows for the same live bug. The master log marks them with `economic_id` and dedupe. Do not add them twice.
 
@@ -288,7 +289,7 @@ After each wave, rebuild `/workspaces/CA/stage3/MASTER_LOG.csv` from **all** `st
 - Unique extractable value = sum of the **first** row per `economic_id`.
 - Write columns: `batch_id,target_id,project,chain,address,headline_status,verdict,economic_id,extractability_usd,confidence,gate,new_bugs,poc,folder_removed,notes`.
 
-Current unique total: **$560,050.07** (17 extractable rows, 14 unique).
+Current unique total: **$574,387.07** (18 extractable rows, 15 unique). EX-15 is a timing-gated keeper opportunity, not a code bug - see `extractables/15-inverse-sdola-liquidation-timing.md`.
 
 ---
 
@@ -401,7 +402,7 @@ GH_TOKEN="$CHRIS_GITHUB_API_KEY_2" git push origin main
 ## 12. First actions for the successor
 
 1. Read `/workspaces/CA/stage3/STAGE3.md`, `/workspaces/CA/stage3/QA_CHECKLIST.md`, `/workspaces/CA/stage26/RECON.md` and this brief.
-2. Rebuild `MASTER_LOG.csv` and confirm 1,452 targets / 14 unique extractables.
+2. Rebuild `MASTER_LOG.csv` and confirm 1,452 targets / 15 unique extractables.
 3. Ask the user how many agents per wave (3 targets/agent constant); compute waves as `ceil(2,364 / (3 × N))`.
 4. Continue priority 2 from **S3-337**; when exhausted, use the already-built priority 4 batches **S3-870..S3-1230** plus the Stage 2.5 batches **S3-1231..S3-1274**.
 5. Run the Stage 2.6 recon lane **R3-001..R3-074** (3 units/agent, `stage26/RECON.md`) in parallel or between audit waves; `merge_recon.py --apply` turns `CONFIRMED`/`ANCHORED` deployments into new audit targets. Do not count recon as coverage.
