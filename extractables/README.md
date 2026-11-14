@@ -1,6 +1,6 @@
 # Extractables — live fund-draining findings
 
-Fifteen unique findings survived the Stage 3 live audit with a positive net for an external unprivileged actor (18 target rows; Prospective World, Reserve and MANTRA each have duplicate target rows for the same live bug). EX-15 is a timing-gated keeper opportunity rather than a code bug - see its dossier for the exact-second liquidation calendar.
+Sixteen unique findings survived the Stage 3 live audit with a positive net for an external unprivileged actor (19 target rows; Prospective World, Reserve and MANTRA each have duplicate target rows for the same live bug). EX-15 is a timing-gated keeper opportunity rather than a code bug - see its dossier for the exact-second liquidation calendar.
 
 | ID | Protocol | Chain | Net | Confidence | Gate | Dossier |
 |---|---|---|---:|---|---|---|
@@ -19,7 +19,7 @@ Fifteen unique findings survived the Stage 3 live audit with a positive net for 
 | EX-13 | Marginswap — stale SUSHI oracle | Ethereum | $11.31 | HIGH | none | `13-marginswap-stale-oracle-11.md` |
 | EX-14 | Doefin — expired orders / raw target | Arbitrum | $6.78 | HIGH | none | `14-doefin-stale-orders-6.md` |
 
-**Total unique headline value: ~$574,387** (includes EX-15's $14,337 timing-gated keeper opportunity).
+**Total unique headline value: ~$574,402** (includes EX-15's $14,337 timing-gated keeper opportunity and EX-16's $15.18 per-attack capture).
 
 Each dossier contains: contracts, live state, bug, step-by-step path, PoC location/evidence, economics, risks, and handover steps. PoCs live under `stage3/work/<batch>/<protocol>/poc/`.
 
