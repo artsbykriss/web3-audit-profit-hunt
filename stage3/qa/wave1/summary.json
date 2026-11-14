@@ -1,0 +1,90 @@
+{
+ "sample_size": 96,
+ "accept": 88,
+ "reject": 8,
+ "acceptance_pct": 91.7,
+ "rejects": [
+  {
+   "target_id": "S3-1786",
+   "batch_id": "S3-412",
+   "issues": [
+    "tvl_source arithmetic is 1000x wrong for the current token: 0xC9E3 totalSupply is 23,251.387851 USD+ (raw 0x569e405cb at 6 decimals), not 23,251,387.851. Ethereum total is 7,718,964.394398 + 23,251.387851 = 7,742,215.78 USD+, so value_at_risk_usd should be about $7.74M, not $30,970,352. The batch sample repeats the inflated figure.",
+    "The all-chain total (~$39.96M) inherits the same error on the current Ethereum token and must be recomputed.",
+    "The raw forge fork-test output is not attached (folder removed); only a summary is quoted. I independently reproduced the decisive gate on-chain, but the artifact trail is thinner than the standard prefers.",
+    "Token coverage has minor non-value-moving drift: 42 rows against 42 dispatcher selectors, but publicVersion() and UPGRADE_INTERFACE_VERSION() are not itemized while burnFrom(address,uint256) is listed although 0x79cc6790 is not in the live dispatcher (it reverts). No value mover is missing."
+   ]
+  },
+  {
+   "target_id": "S3-1484",
+   "batch_id": "S3-375",
+   "issues": [
+    "Step-0 scope failure: the sampled finding RT1 is in LiquidatableManager.sol (Altitude v1 lending, Team Omega 2022), but the target and every derived address are the ALTD OFT token 0x8929e9Db... No source URL or bytecode check ties LiquidatableManager to the audit. The token's EXACT_MATCH is a match against the token's own verified source, not against the audited contract, so version_match is not established for the code the finding names.",
+    "The 'audited 2022 v1 contract is not live' conclusion rests on an Ethereum Blockscout name search only. The audit record's chains field is 'unknown' and the project is multi-chain (the same token address is live on BSC, Arbitrum, Optimism and Avalanche, and I verified 8,760 bytes on Polygon too), so absence on Ethereum does not rule out a live LiquidatableManager deployment on another chain.",
+    "Coverage is the token's 30 ABI functions (30/30, I re-counted from Etherscan V2), not the LiquidatableManager transferFrom/allowance path that RT1 describes. The fork test (1000e18 -> 600e18 allowance) proves the token decrements allowance; it does not exercise the audited vault code.",
+    "value_at_risk_usd 2109.25 is recorded with a source, but it is the token bridge escrow (15,486,437 ALTD), not value reachable through the audited finding; nothing ties that $2,109 to the LiquidatableManager path the finding names. The Polygon sibling was left unverified in the result (RPC 401), although I confirmed its 8,760-byte code."
+   ]
+  },
+  {
+   "target_id": "S3-1831",
+   "batch_id": "S3-419",
+   "issues": [
+    "No live deployment identity. The target chain 5064014 is unreachable: rpc.ethereal.trade and explorer.ethereal.trade are NXDOMAIN, rpc-ethereal-mainnet-0.t.conduit.xyz is NXDOMAIN, ethereal-mainnet.rpc.conduit.xyz returns 503, 5064014.rpc.thirdweb.com returns 'Invalid chain', ethereal.drpc.org returns 404, and api.ethereal.trade/v1/rpc/config returns 503 (docs.ethereal.trade still advertises the dead endpoints). The only eth_getCode results are 0x on Ethereum/Arbitrum/Base/OP/BSC, which do not establish the Ethereal deployment.",
+    "All 8 coverage rows are checked:false. There is no per-entry-point coverage, no ABI or dispatcher selector count, and the two safe_reasons are generic ('no endpoint to reach', 'RPC is gone') rather than one concrete gate per value-moving path.",
+    "No closure artifact of any kind: no fresh-EOA revert/simulate/fork, no patched-code match plus live gate, no on-chain zero-value proof. The negative rests on infrastructure downtime and a DefiLlama TVL of $0 since 2026-11-06.",
+    "extractability_confidence is MEDIUM, but the hardened checklist requires HIGH for a negative verdict; the report itself calls headline_status UNVERIFIED because the fix commit cannot be compared to the private sequencer build.",
+    "The headline finding is an off-chain TypeScript guard (order.service.ts) in the closed-source meridianxyz/sequencer, not an EVM entry point, so an EVM audit cannot confirm it patched; the target duplicates S3-1830, which already covers this address/deployment."
+   ]
+  },
+  {
+   "target_id": "S3-1661",
+   "batch_id": "S3-399",
+   "issues": [
+    "Sibling/instance coverage incomplete and mis-stated: the notes admit 'a full scan for a second YesArena it may have created was not completed' and no instance count is recorded. I scanned the deployer EOA 0x874fd122d940050e0ac9b98d0eeb43a54d268917 via Routescan txlist (block range 5,000,000-5,300,000) and found at least three more 4288-byte YesArena deployments using the same YES token 0x1a49351b..: 0xbd85fca270418b611afd7ef898931443a5c93852 (started=false, claimed=false, depositNumber=0, 0 ETH/0 YES), 0x6bec5ad302989b93bab1827efafd69db1d0fb539 (started=false, claimed=false, depositNumber=0, 0 ETH/0 YES), and 0xe1f96b78951018cd8c4009e83f52cb01ddc3ad33 (started=true, claimed=true, depositNumber=239, winner=0x8279179f8e4556ae0fde74de944c2126599bad0b, 0 ETH/0 YES). An older 4084-byte variant, 0x76b7a24381044e7e8a726704f0919704aeabec04, also exists. The negative is therefore instance-specific, not protocol-wide, which the checklist calls out as a reject.",
+    "The statement 'there is no factory, clone or proxy ... it is a standalone deployment' is true but does not establish single-instance status; the protocol is multi-instance in practice (the target arena had the paid 12,882.763 YES jackpot, but three sibling arenas exist).",
+    "Closure artifact is weak: fresh-EOA eth_calls through Routescan return only a generic 'error code 3' with no revert data, so the artifact is a revert-at-RPC-level result plus the zero-value proof (0 ETH, YES.balanceOf(arena)=0), not a decoded revert trace. The zero-value proof is what actually carries the negative."
+   ]
+  },
+  {
+   "target_id": "S3-1571",
+   "batch_id": "S3-387",
+   "issues": [
+    "Coverage is not one row per external/public entry point: the live registered action 0xaA45 has 35 ABI functions, but coverage has only 21 rows and 8 selectors are not listed in any row: actionFee() 0x1441d227, estimatedGasUsage() 0x9466f301, getEthRequiredForGas(address) 0x7dc31846, getHealthFactor(bytes32,bytes32,bytes) 0x779b6620, isPaused() 0xb187bd26, isShutdown() 0xbf86d690, roleManager() 0x00435da5, and topUpHandlers(bytes32) 0x55c4552b. They are views/getters, but that is 8/35 (23%) missing, above the >10% threshold, and isPaused/isShutdown/actionFee are only mentioned in evidence, not in coverage rows.",
+    "The two library selector labels in coverage are swapped: verified TopUpActionLibrary ABI at 0x4226/0x6f55 shows 0xd3847216 = calcExchangeAmount(IAddressProvider,address,address,uint256) and 0xdc488298 = lockFunds(address,address,address,uint256,uint256). The coverage rows label 0xd3847216 as lockFunds and 0xdc488298 as calcExchangeAmount, a factual entry-point mapping error.",
+    "The batch lead 0x2CA2 is unverified on Etherscan. Its source field is a bare Etherscan address URL plus the internal stage2 index, not a project source, and its EXACT_MATCH is a runtime comparison to verified 0x4226 (differing only in the embedded self-address and metadata hash), not a verified-source match. The actual live code 0x6f55 is verified and is identified, so the economic conclusion is not invalidated, but the deployment-identity evidence for the lead is weaker than stated.",
+    "The v1 sibling holds ~$51.4k in vaults and allActions()=[] is recorded, but the artifact does not quote the authorization gate on addAction. I verified addAction from a fresh EOA reverts 'unauthorized access' on both 0x139c and 0xa298, so the conclusion holds, but the highest-value sibling's closure is incomplete in the submitted artifact."
+   ]
+  },
+  {
+   "target_id": "S3-1521",
+   "batch_id": "S3-382",
+   "issues": [
+    "Implementation 0x92728968236cf856503ac4a15c21ebf1d7539fe7 is unverified, so the 27 rows cannot be checked against source; the dispatcher has 27 distinct PUSH4/EQ selectors, only 19 map to a coverage row, and 8 have none (30% missing).",
+    "The 8 unmapped selectors are 0x13af4035 setOwner(address), 0x2e1a7d4d withdraw(uint256), 0x9e281a98 withdrawToken(address,uint256), 0x83b58323 setTransferFeePercentage(uint256), 0x9d11aaaa transferFeePercentage(), 0x84c4828b (returns relayerManager 0xCE1B1849..), 0x6ce713ee (custom error 0x54d52a76) and 0xabef0e76 (custom error 0xac12284e). withdraw/withdrawToken/setOwner are value or privilege movers; setTransferFeePercentage is confirmed callable by the owner, and transferFeePercentage() is live and returns 90.",
+    "RelayerManager impl 0x8f987fb5.. has 22 dispatcher selectors but only 7 coverage rows (~11 functions unaccounted), and no safe_reason addresses the uncovered withdraw/withdrawToken paths.",
+    "Zero-value closure is solid (proxy ETH 0; token balances <$0.05), so the negative direction is likely right, but the per-entry-point coverage standard is not met for an unverified implementation."
+   ]
+  },
+  {
+   "target_id": "S3-2179",
+   "batch_id": "S3-465",
+   "issues": [
+    "Multi-instance coverage is incomplete and self-declared as such. Maple is a registry/multi-pool deployment (the batch source is MapleAddressRegistryETH.md, and the pool was created by PoolManager factory 0x7aD5.../0xE463cD...), yet the result names only one sibling - 'sister syrupUSDT pool 0x356B exists and was not audited' - and records no pool/instance count. The hardened checklist says the instance count must be recorded and that a negative on a single instance of a multi-instance protocol is a reject. I checked the sibling myself: name()='Syrup USDT', totalAssets()=255,353,017.271338 USDC and maxDeposit(0x...dEaD)=0, i.e. the same permission gate, but the batch did not perform or record that check.",
+    "Version anchor is only partially tied to the audit. The bytecode_match=EXACT_MATCH on 0x80ac is against maple-labs/pool-v2 v5.0.0 repo HEAD, not against a public audited commit; the Three Sigma 'Maple Finance III' report is private and the result itself records headline_status=UNVERIFIED and says 'the exact audited claim cannot be diffed'. The reason is honest, but the audit-to-deployment identity is therefore unverified for the finding that motivated the target.",
+    "value_at_risk_usd=890,919,133.52 is >$100k and the negative does explain unreachability: checkCall('P:deposit')/('P:withdraw') -> PM:CC:NOT_ALLOWED for a fresh EOA (I reproduced both live at block 26,411,8xx, revert string PM:CC:NOT_ALLOWED), WithdrawalManagerQueue previewRedeem=0 / manualSharesAvailable=0, maxWithdraw=0 because processWithdraw is hard-disabled (PM:PW:NOT_ENABLED), and the 13/13 fork tests are quoted. This box passes; the pool's cash is 4.77M USDC now vs 7.20M at the recorded block 26,411,260 with totalAssets 888,492,840.16 vs 890,919,133.52 (0.27% drift), and totalSupply 744,749,643.70 vs 746,790,150.93, consistent with ordinary flows rather than a discrepancy.",
+    "The rest is strong: the pool is 11,660 bytes, manager 0x7aD5 is a 155-byte proxy with impl 0x47fe..., the verified MaplePool ABI has exactly 42 functions and the coverage table has 42 rows with all 42 names present (no selector gap), and the 11 safe_reasons name the concrete gate per path. The reject is solely the instance-coverage box, which is a Step 0 requirement for a multi-pool protocol and is explicitly unmet in the report."
+   ]
+  },
+  {
+   "target_id": "S3-1883",
+   "batch_id": "S3-428",
+   "issues": [
+    "Step 0 identity is not established: no source URL ties 0xB4FA to Fraction AI. The verified source at that address self-identifies as '@author OpenHedge - EIP-7702-inspired session-key authorization system', and the sibling 0xd6d3 is the same OpenHedge code. The Halborn in-scope suite (upgradeable AgentController with createAgent/setAgentNFT/takeSessionsEntryFees, plus AgentNFT, Space, NodeController) is a different codebase, so this is a corpus misattribution (wrong project's contract), not Fraction AI.",
+    "Because of that misattribution the headline_status 'PATCHED by redesign' is unjustified - nothing was patched; the audited contract was simply never located. The honest status is UNVERIFIED / deployment-not-found.",
+    "The 'no instance of the audited 0.8.27 code was found on Base' claim rests on a name-only Blockscout search for 'AgentController'. The audited family's own contract names (AgentNFT, Space, NodeController, AgentFactory) were not searched; I checked NodeController myself and it returns no items, but that is not what the record documents.",
+    "Sibling facts are wrong: 0xd6d3 is recorded as '4153 bytes ... only 6 functions'; eth_getCode returns 2,075 bytes (4,152 hex chars - a hex-vs-bytes slip) and the verified ABI has 10 functions.",
+    "Sibling coverage is 8/10: agentVault, transferOwnership and renounceOwnership have no row.",
+    "value_at_risk_usd = 0 and the zero balances are correct, but for a wrong-contract address that fact does not support a NOT_EXTRACTABLE verdict on the audited protocol."
+   ]
+  }
+ ]
+}

@@ -65,3 +65,12 @@ S3-861,3,1,S3-2637,S3-2637:Sienna.Network AMM Protocol (Updated code) CosmWasm S
 S3-862,3,1,S3-2711,S3-2711:SteakHut Liquidity V2 [Avalanche]
 S3-863,3,1,S3-2897,S3-2897:Vader Protocol contest [Kovan (testnet)]
 S3-865,3,1,S3-3202,S3-3202:Illuvium yield farming rewards (Quantstamp 2021) [Ethereum]
+S3-419,3,2,S3-1830;S3-1831,Ethereal appchain RPC/explorer NXDOMAIN; re-audit when reachable
+S3-450,3,1,S3-2070,KairosSwap buyer adapter not located
+S3-412,3,1,S3-1786,"QA reject: tvl_source arithmetic is 1000x wrong for the current token: 0xC9E3 totalSupply is 23,251.387851 USD+ (raw 0x569e405cb at"
+S3-375,3,1,S3-1484,"QA reject: Step-0 scope failure: the sampled finding RT1 is in LiquidatableManager.sol (Altitude v1 lending, Team Omega 2022), but "
+S3-399,3,1,S3-1661,QA reject: Sibling/instance coverage incomplete and mis-stated: the notes admit 'a full scan for a second YesArena it may have crea
+S3-387,3,1,S3-1571,"QA reject: Coverage is not one row per external/public entry point: the live registered action 0xaA45 has 35 ABI functions, but cov"
+S3-382,3,1,S3-1521,"QA reject: Implementation 0x92728968236cf856503ac4a15c21ebf1d7539fe7 is unverified, so the 27 rows cannot be checked against source"
+S3-465,3,1,S3-2179,QA reject: Multi-instance coverage is incomplete and self-declared as such. Maple is a registry/multi-pool deployment (the batch so
+S3-428,3,1,S3-1883,QA reject: Step 0 identity is not established: no source URL ties 0xB4FA to Fraction AI. The verified source at that address self-i
