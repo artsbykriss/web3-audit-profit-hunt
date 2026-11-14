@@ -74,3 +74,5 @@ S3-387,3,1,S3-1571,"QA reject: Coverage is not one row per external/public entry
 S3-382,3,1,S3-1521,"QA reject: Implementation 0x92728968236cf856503ac4a15c21ebf1d7539fe7 is unverified, so the 27 rows cannot be checked against source"
 S3-465,3,1,S3-2179,QA reject: Multi-instance coverage is incomplete and self-declared as such. Maple is a registry/multi-pool deployment (the batch so
 S3-428,3,1,S3-1883,QA reject: Step 0 identity is not established: no source URL ties 0xB4FA to Fraction AI. The verified source at that address self-i
+S3-524,3,1,S3-2604,QA/re-audit: MEDIUM
+S3-535,3,1,S3-2680,QA/re-audit: MEDIUM
